@@ -1,3 +1,0 @@
-2021-09-15 20:02:09,556 LOG ERROR basepage.py-219 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待失败！ERROR:Message: 
-
-2021-09-15 20:02:10,079 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 

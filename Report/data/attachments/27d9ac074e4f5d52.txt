@@ -1,5 +1,0 @@
-2021-09-16 20:55:21,808 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-09-16 20:55:25,923 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
-2021-09-16 20:55:25,923 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
-2021-09-16 20:55:25,971 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
-2021-09-16 20:55:26,354 LOG INFO conftest.py-43 line：========== close browser ===========
