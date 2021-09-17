@@ -6,3 +6,5 @@
 *.pyc
 __pycache__
 __*pycache__
+PIC/
+Report/
