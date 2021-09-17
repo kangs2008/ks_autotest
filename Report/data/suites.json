@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "TestCases.Login",
+    "children" : [ {
+      "name" : "test_baidu",
+      "children" : [ {
+        "name" : "TestLogin",
+        "children" : [ {
+          "name" : "test_login[data0]",
+          "uid" : "806734bca1e7eaad",
+          "parentUid" : "0705819da237d19f485d4d009be9b7a2",
+          "status" : "failed",
+          "time" : {
+            "start" : 1631888834297,
+            "stop" : 1631888835119,
+            "duration" : 822
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+        } ],
+        "uid" : "0705819da237d19f485d4d009be9b7a2"
+      } ],
+      "uid" : "e08205ce35aeffaf0a7a25425c64b22f"
+    } ],
+    "uid" : "92355321ce0c6990cd59ca4955291ae3"
+  } ]
+}

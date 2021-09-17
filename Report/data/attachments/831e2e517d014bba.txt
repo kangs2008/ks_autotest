@@ -1,0 +1,15 @@
+INFO     LOG:conftest.py:37 ========== open browser ===========
+INFO     LOG:test_baidu.py:19  执行 TestLogin 测试套件Suite 
+INFO     LOG:test_baidu.py:20  执行 test_login 测试用例Case 
+INFO     LOG:basepage.py:89 [BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 21:46:17.820076/00.053s
+INFO     LOG:basepage.py:61 [save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-17_news_link_loc.png TIME:20210917 21:46:17.927507/00.247
+INFO     LOG:basepage.py:322 [BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 21:46:17.911516/00.263
+INFO     LOG:basepage.py:89 [BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 21:46:18.177022/00.027s
+INFO     LOG:basepage.py:61 [save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_text_loc.png TIME:20210917 21:46:18.408244/00.278
+INFO     LOG:basepage.py:227 [BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 21:46:18.229007/00.458s
+INFO     LOG:basepage.py:89 [BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.687556/00.024s
+INFO     LOG:basepage.py:61 [save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_btn_loc.png TIME:20210917 21:46:18.805892/00.274
+INFO     LOG:basepage.py:290 [BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.735699/00.345s
+INFO     LOG:test_baidu.py:26  结束执行 test_login 测试用例， 测试结果 --- PASS 
+INFO     LOG:basepage.py:34 [save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-19_正常截图.png TIME:
+INFO     LOG:conftest.py:43 ========== close browser ===========

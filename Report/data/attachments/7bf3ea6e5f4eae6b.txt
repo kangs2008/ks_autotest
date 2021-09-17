@@ -1,0 +1,14 @@
+2021-09-16 21:00:06,106 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:00:10,876 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:00:10,876 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:00:10,966 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:10.876234/21:00:10.966284/00.090s
+2021-09-16 21:00:10,996 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:10.966284/21:00:10.996304/00.030s
+2021-09-16 21:00:11,319 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-11_news_link_loc.png TIME:21:00:11.036276/21:00:11.319871/00.283
+2021-09-16 21:00:11,319 LOG INFO basepage.py-295 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [21:00:10.966284/21:00:11.319871/00.353] TIME:新闻
+2021-09-16 21:00:11,369 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:11.319871/21:00:11.369820/00.049s
+2021-09-16 21:00:11,409 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:11.369820/21:00:11.409793/00.039s
+2021-09-16 21:00:12,286 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-11_search_text_loc.png TIME:21:00:11.773549/21:00:12.286762/00.513
+2021-09-16 21:00:12,294 LOG INFO basepage.py-231 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python>. TIME:21:00:11.369820/21:00:12.294782/00.924s
+2021-09-16 21:00:12,294 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 21:00:12,679 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-12_异常截图.png
+2021-09-16 21:00:12,799 LOG INFO conftest.py-43 line：========== close browser ===========

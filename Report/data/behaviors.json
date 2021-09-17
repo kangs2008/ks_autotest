@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "login 异常测试用例，feature",
+    "children" : [ {
+      "name" : "测试login 方法，story",
+      "children" : [ {
+        "name" : "test_login[data0]",
+        "uid" : "806734bca1e7eaad",
+        "parentUid" : "681e9664d1fae5d2ce4abf6ab88659de",
+        "status" : "failed",
+        "time" : {
+          "start" : 1631888834297,
+          "stop" : 1631888835119,
+          "duration" : 822
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+      } ],
+      "uid" : "681e9664d1fae5d2ce4abf6ab88659de"
+    } ],
+    "uid" : "eee54c8f4a13b9395e8f40f71ed8ddbd"
+  } ]
+}

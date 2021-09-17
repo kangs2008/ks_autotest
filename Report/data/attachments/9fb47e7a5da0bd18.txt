@@ -1,0 +1,14 @@
+2021-09-17 22:04:57,594 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:05:01,415 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:05:01,416 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:05:01,504 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:05:01.417407/00.087s
+2021-09-17 22:05:01,933 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-01_news_link_loc.png TIME:20210917 22:05:01.573926/00.359
+2021-09-17 22:05:01,943 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:05:01.534805/00.408
+2021-09-17 22:05:01,973 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:05:01.943416/00.030s
+2021-09-17 22:05:02,574 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-02_search_text_loc.png TIME:20210917 22:05:02.211173/00.363
+2021-09-17 22:05:02,574 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:05:01.993412/00.581s
+2021-09-17 22:05:02,605 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:05:02.584582/00.020s
+2021-09-17 22:05:05,354 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-02_search_btn_loc.png TIME:20210917 22:05:02.706295/02.648
+2021-09-17 22:05:05,354 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:05:02.625320/02.729s
+2021-09-17 22:05:05,674 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-05_异常图.png TIME:
+2021-09-17 22:05:05,677 LOG INFO conftest.py-43 line：========== close browser ===========

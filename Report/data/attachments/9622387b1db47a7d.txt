@@ -1,0 +1,15 @@
+2021-09-17 21:46:14,014 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 21:46:17,819 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 21:46:17,819 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 21:46:17,873 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 21:46:17.820076/00.053s
+2021-09-17 21:46:18,175 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-17_news_link_loc.png TIME:20210917 21:46:17.927507/00.247
+2021-09-17 21:46:18,176 LOG INFO basepage.py-322 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 21:46:17.911516/00.263
+2021-09-17 21:46:18,205 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 21:46:18.177022/00.027s
+2021-09-17 21:46:18,686 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_text_loc.png TIME:20210917 21:46:18.408244/00.278
+2021-09-17 21:46:18,687 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 21:46:18.229007/00.458s
+2021-09-17 21:46:18,711 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.687556/00.024s
+2021-09-17 21:46:19,081 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_btn_loc.png TIME:20210917 21:46:18.805892/00.274
+2021-09-17 21:46:19,082 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.735699/00.345s
+2021-09-17 21:46:19,082 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-17 21:46:21,929 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-19_正常截图.png TIME:
+2021-09-17 21:46:21,949 LOG INFO conftest.py-43 line：========== close browser ===========

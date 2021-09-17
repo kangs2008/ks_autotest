@@ -1,0 +1,435 @@
+{
+  "uid" : "806734bca1e7eaad",
+  "name" : "test_login[data0]",
+  "fullName" : "TestCases.Login.test_baidu.TestLogin#test_login",
+  "historyId" : "f908aac11843ade8edb47c43ceeede51",
+  "time" : {
+    "start" : 1631888834297,
+    "stop" : 1631888835119,
+    "duration" : 822
+  },
+  "description" : "描述！！！！",
+  "descriptionHtml" : "<p>描述！！！！</p>\n",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '新闻' != '新闻'",
+  "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x0000027368868EC8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1ef72534e48b12e83cfed71ab6bc8d9f\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        baidu = BaiduPage(start_session)\n        news = baidu.get_news_text()\n    \n        baidu.search(data['input'])\n>       assert news != data['news']\nE       AssertionError: assert '新闻' != '新闻'\n\nTestCases\\Login\\test_baidu.py:25: AssertionError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1631888830158,
+      "stop" : 1631888830278,
+      "duration" : 120
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_session",
+    "time" : {
+      "start" : 1631888830278,
+      "stop" : 1631888834293,
+      "duration" : 4015
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "描述！！！！",
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '新闻' != '新闻'",
+    "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x0000027368868EC8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"1ef72534e48b12e83cfed71ab6bc8d9f\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        baidu = BaiduPage(start_session)\n        news = baidu.get_news_text()\n    \n        baidu.search(data['input'])\n>       assert news != data['news']\nE       AssertionError: assert '新闻' != '新闻'\n\nTestCases\\Login\\test_baidu.py:25: AssertionError",
+    "steps" : [ {
+      "name" : "[22:27:14.384][BaiduPage.get_news_text][news_link_loc|新闻]('xpath', '//*[@id=\"s-top-left\"]/a[1]')return value:[新闻]",
+      "time" : {
+        "start" : 1631888834385,
+        "stop" : 1631888834385,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : false
+    }, {
+      "name" : "登录Method",
+      "time" : {
+        "start" : 1631888834385,
+        "stop" : 1631888835117,
+        "duration" : 732
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "[22:27:14.384][BaiduPage.search]",
+        "time" : {
+          "start" : 1631888834385,
+          "stop" : 1631888834385,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "[22:27:14.642][BaiduPage.text_input][search_text_loc|首页输入框]('xpath', '//*[@id=\"kw\"]')input:[python]",
+        "time" : {
+          "start" : 1631888834642,
+          "stop" : 1631888835004,
+          "duration" : 362
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "c2ad79b26ce39d92",
+          "name" : "search_text_loc",
+          "source" : "c2ad79b26ce39d92.png",
+          "type" : "image/png",
+          "size" : 75620
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "[22:27:15.115][BaiduPage.search_btn][search_btn_loc|百度一下]('xpath', '//*[@id=\"su\"]')",
+        "time" : {
+          "start" : 1631888835116,
+          "stop" : 1631888835116,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'python'"
+      } ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "81c1fee1455c9d0a",
+      "name" : "异常图",
+      "source" : "81c1fee1455c9d0a.png",
+      "type" : "image/png",
+      "size" : 35232
+    }, {
+      "uid" : "bb02337f02c2b49b",
+      "name" : "log",
+      "source" : "bb02337f02c2b49b.txt",
+      "type" : "text/plain",
+      "size" : 1473
+    }, {
+      "uid" : "650e256739ef80ca",
+      "name" : "stderr",
+      "source" : "650e256739ef80ca.txt",
+      "type" : "text/plain",
+      "size" : 1914
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "start_session::0",
+    "time" : {
+      "start" : 1631888835370,
+      "stop" : 1631888835371,
+      "duration" : 1
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "测试login 方法，story"
+  }, {
+    "name" : "feature",
+    "value" : "login 异常测试用例，feature"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_session')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.Login"
+  }, {
+    "name" : "suite",
+    "value" : "test_baidu"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V8HO8M4"
+  }, {
+    "name" : "thread",
+    "value" : "168-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.Login.test_baidu"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "2c0a8f41ce9ab15",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '新闻' != '新闻'",
+      "time" : {
+        "start" : 1631888706246,
+        "stop" : 1631888707452,
+        "duration" : 1206
+      }
+    }, {
+      "uid" : "11baa8872922af0",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '新闻' != '新闻'",
+      "time" : {
+        "start" : 1631888191107,
+        "stop" : 1631888194663,
+        "duration" : 3556
+      }
+    }, {
+      "uid" : "568ecc7fb00245c4",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '新闻' != '新闻'",
+      "time" : {
+        "start" : 1631888129054,
+        "stop" : 1631888134480,
+        "duration" : 5426
+      }
+    }, {
+      "uid" : "677ce62c43f06e3a",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '新闻' != '新闻'",
+      "time" : {
+        "start" : 1631888037596,
+        "stop" : 1631888041628,
+        "duration" : 4032
+      }
+    }, {
+      "uid" : "dfa471e222f02cb7",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert '新闻' != '新闻'",
+      "time" : {
+        "start" : 1631887501415,
+        "stop" : 1631887505355,
+        "duration" : 3940
+      }
+    }, {
+      "uid" : "c07212092ee53d06",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631886377818,
+        "stop" : 1631886381931,
+        "duration" : 4113
+      }
+    }, {
+      "uid" : "dff6f5378cc7263f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631885505547,
+        "stop" : 1631885510473,
+        "duration" : 4926
+      }
+    }, {
+      "uid" : "8c97b34f38d501fd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631884558651,
+        "stop" : 1631884563473,
+        "duration" : 4822
+      }
+    }, {
+      "uid" : "e0a68d3b385292ba",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631797847611,
+        "stop" : 1631797853522,
+        "duration" : 5911
+      }
+    }, {
+      "uid" : "7294321eb78494a9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631797628874,
+        "stop" : 1631797634114,
+        "duration" : 5240
+      }
+    }, {
+      "uid" : "a50e24861dc1abe7",
+      "status" : "broken",
+      "statusDetails" : "ValueError: Invalid format string",
+      "time" : {
+        "start" : 1631797535609,
+        "stop" : 1631797535917,
+        "duration" : 308
+      }
+    }, {
+      "uid" : "454c60fcdae4402c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631797247984,
+        "stop" : 1631797253539,
+        "duration" : 5555
+      }
+    }, {
+      "uid" : "a21f6ed17c591b7b",
+      "status" : "broken",
+      "statusDetails" : "TypeError: save_capture() takes 2 positional arguments but 3 were given",
+      "time" : {
+        "start" : 1631797210876,
+        "stop" : 1631797212680,
+        "duration" : 1804
+      }
+    }, {
+      "uid" : "7ffb8d7eb408e555",
+      "status" : "broken",
+      "statusDetails" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'",
+      "time" : {
+        "start" : 1631797152963,
+        "stop" : 1631797155775,
+        "duration" : 2812
+      }
+    }, {
+      "uid" : "9b34ec61555c4f36",
+      "status" : "broken",
+      "statusDetails" : "TypeError: save_capture() takes 2 positional arguments but 3 were given",
+      "time" : {
+        "start" : 1631797070446,
+        "stop" : 1631797071273,
+        "duration" : 827
+      }
+    }, {
+      "uid" : "5cdaa360a5a15e30",
+      "status" : "broken",
+      "statusDetails" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'",
+      "time" : {
+        "start" : 1631796925924,
+        "stop" : 1631796926253,
+        "duration" : 329
+      }
+    }, {
+      "uid" : "a240bace17bd0333",
+      "status" : "broken",
+      "statusDetails" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'",
+      "time" : {
+        "start" : 1631796741017,
+        "stop" : 1631796741329,
+        "duration" : 312
+      }
+    }, {
+      "uid" : "8326262cafd597c4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631710361019,
+        "stop" : 1631710364502,
+        "duration" : 3483
+      }
+    }, {
+      "uid" : "8f8f8158f7d07051",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1631707308638,
+        "stop" : 1631707330284,
+        "duration" : 21646
+      }
+    }, {
+      "uid" : "406fc69680ca9975",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1631634996620,
+        "stop" : 1631635018430,
+        "duration" : 21810
+      }
+    }, {
+      "uid" : "4b8c9f5fc610a07c",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.TimeoutException: Message:",
+      "time" : {
+        "start" : 1631634860345,
+        "stop" : 1631634882249,
+        "duration" : 21904
+      }
+    }, {
+      "uid" : "f5655bb4bb61be94",
+      "status" : "broken",
+      "statusDetails" : "AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'",
+      "time" : {
+        "start" : 1631634507698,
+        "stop" : 1631634529305,
+        "duration" : 21607
+      }
+    }, {
+      "uid" : "bbd7e9ff9906939f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1631634075484,
+        "stop" : 1631634079189,
+        "duration" : 3705
+      }
+    } ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "@pytest.mark.usefixtures('start_session')" ]
+  },
+  "source" : "806734bca1e7eaad.json",
+  "parameterValues" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+}

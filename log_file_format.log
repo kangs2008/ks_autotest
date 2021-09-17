@@ -1,0 +1,422 @@
+2021-09-14 22:53:15,840 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 22:53:19,755 LOG INFO test_baidu.py-18 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 22:53:19,755 LOG INFO test_baidu.py-19 line： 执行 test_login 测试用例Case 
+2021-09-14 22:53:19,763 LOG ERROR basepage.py-219 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc新闻>等待失败！ERROR:'NoneType' object has no attribute 'find_element'
+2021-09-14 22:53:19,803 LOG ERROR test_baidu.py-28 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 22:53:20,050 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 22:56:21,004 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 22:56:25,249 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 22:56:25,249 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 22:56:25,327 LOG INFO basepage.py-225 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc新闻>等待可见，等待时间：0.08秒
+2021-09-14 22:56:25,327 LOG INFO basepage.py-400 line：[news_link_loc]<get_ele_text>获取元素<news_link_loc新闻>的文本值
+2021-09-14 22:56:25,371 LOG INFO basepage.py-408 line：[news_link_loc]<get_ele_text>返回值为【新闻】
+2021-09-14 22:56:25,435 LOG INFO basepage.py-225 line：[search_text_loc]<wait_ele_to_visible>页面元素<search_text_loc首页输入框>等待可见，等待时间：0.06秒
+2021-09-14 22:56:25,779 LOG INFO basepage.py-341 line：[search_text_loc]<input_text>输入元素<search_text_loc首页输入框>的内容为<python>
+2021-09-14 22:56:25,835 LOG INFO basepage.py-225 line：[search_btn_loc]<wait_ele_to_visible>页面元素<search_btn_loc百度一下>等待可见，等待时间：0.06秒
+2021-09-14 22:56:25,835 LOG INFO basepage.py-379 line：[search_btn_loc]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 22:56:25,976 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 22:56:28,850 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:03:13,333 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:03:18,704 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:03:18,704 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:03:18,800 LOG INFO basepage.py-225 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.09秒
+2021-09-14 23:03:18,800 LOG INFO basepage.py-402 line：[news_link_loc]<get_ele_text>获取元素<news_link_loc|新闻>的文本值
+2021-09-14 23:03:19,037 LOG INFO basepage.py-282 line：[news_link_loc]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-03-18_news_link_loc.png
+2021-09-14 23:03:19,077 LOG INFO basepage.py-411 line：[news_link_loc]<get_ele_text>返回值为【新闻】
+2021-09-14 23:03:19,120 LOG INFO basepage.py-225 line：[search_text_loc]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.04秒
+2021-09-14 23:03:19,602 LOG INFO basepage.py-282 line：[search_text_loc]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-03-19_search_text_loc.png
+2021-09-14 23:03:19,602 LOG INFO basepage.py-342 line：[search_text_loc]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:03:19,632 LOG INFO basepage.py-225 line：[search_btn_loc]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.03秒
+2021-09-14 23:03:19,632 LOG INFO basepage.py-380 line：[search_btn_loc]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 23:03:19,815 LOG INFO basepage.py-282 line：[search_btn_loc]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-03-19_search_btn_loc.png
+2021-09-14 23:03:19,950 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-14 23:03:22,520 LOG INFO basepage.py-282 line：[正常截图]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-03-19_正常截图.png
+2021-09-14 23:03:22,520 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:13:53,559 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:14:00,867 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:14:00,867 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:14:00,867 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 23:14:01,294 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:14:47,067 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:14:51,465 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:14:51,465 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:14:51,531 LOG INFO basepage.py-225 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.07秒
+2021-09-14 23:14:51,531 LOG INFO basepage.py-402 line：[get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值
+2021-09-14 23:14:51,808 LOG ERROR basepage.py-406 line：[get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值失败！ERROR : [Errno 2] No such file or directory: 'D:\\desk20201127\\ks_web_allure\\Report\\PIC\\2021-09-14_23-14-51_news_link_loc.png'
+2021-09-14 23:14:52,036 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 23:14:52,461 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:15:38,348 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:15:42,679 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:15:42,679 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:15:42,767 LOG INFO basepage.py-225 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.09秒
+2021-09-14 23:15:42,767 LOG INFO basepage.py-402 line：[get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值
+2021-09-14 23:15:43,095 LOG INFO basepage.py-282 line：[news_link_loc]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-15-42_news_link_loc.png
+2021-09-14 23:15:43,119 LOG INFO basepage.py-411 line：[get_news_text]<get_ele_text>返回值为【新闻】
+2021-09-14 23:15:43,145 LOG INFO basepage.py-225 line：[text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.03秒
+2021-09-14 23:15:44,066 LOG INFO basepage.py-282 line：[text_input]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-15-43_text_input.png
+2021-09-14 23:15:44,066 LOG INFO basepage.py-342 line：[search_text_loc]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:15:44,121 LOG INFO basepage.py-225 line：[search_btn_loc]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.05秒
+2021-09-14 23:15:44,121 LOG INFO basepage.py-380 line：[search_btn]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 23:15:44,372 LOG INFO basepage.py-282 line：[search_btn_loc]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-15-44_search_btn_loc.png
+2021-09-14 23:15:44,483 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-14 23:15:47,130 LOG INFO basepage.py-282 line：[正常截图]<save_capture>截图保存在：D:\desk20201127\ks_web_allure\Report\PIC\2021-09-14_23-15-44_正常截图.png
+2021-09-14 23:15:47,130 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:25:20,999 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:25:25,123 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:25:25,123 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:25:25,199 LOG INFO basepage.py-225 line：[news_link_loc]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.08秒
+2021-09-14 23:25:25,199 LOG INFO basepage.py-402 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值
+2021-09-14 23:25:25,476 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-25-25_news_link_loc.png
+2021-09-14 23:25:25,516 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>返回值为【新闻】
+2021-09-14 23:25:25,551 LOG INFO basepage.py-225 line：[BaiduPage.text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.03秒
+2021-09-14 23:25:26,162 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-25-25_BaiduPage.text_input.png
+2021-09-14 23:25:26,162 LOG INFO basepage.py-342 line：[search_text_loc]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:25:26,192 LOG INFO basepage.py-225 line：[search_btn_loc]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.03秒
+2021-09-14 23:25:26,192 LOG INFO basepage.py-380 line：[BaiduPage.search_btn]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 23:25:26,459 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-25-26_search_btn_loc.png
+2021-09-14 23:25:26,547 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-14 23:25:29,100 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-25-26_正常截图.png
+2021-09-14 23:25:29,100 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:30:45,817 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:30:49,706 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:30:49,706 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:30:49,754 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.05秒
+2021-09-14 23:30:49,754 LOG INFO basepage.py-402 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值
+2021-09-14 23:30:49,818 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>返回值为【新闻】
+2021-09-14 23:30:49,885 LOG INFO basepage.py-225 line：[search_text_loc]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.07秒
+2021-09-14 23:30:50,484 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-30-50_BaiduPage.text_input.png
+2021-09-14 23:30:50,484 LOG INFO basepage.py-342 line：[search_text_loc]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:30:50,514 LOG INFO basepage.py-225 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.03秒
+2021-09-14 23:30:50,514 LOG INFO basepage.py-380 line：[BaiduPage.search_btn]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 23:30:50,954 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-30-50_search_btn_loc.png
+2021-09-14 23:30:51,080 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-14 23:30:53,420 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-30-51_正常截图.png
+2021-09-14 23:30:53,420 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:40:31,060 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:40:56,569 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:40:56,569 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:41:11,519 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:41:15,483 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:41:15,483 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:41:15,579 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.1秒
+2021-09-14 23:41:15,611 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-14 23:41:15,659 LOG INFO basepage.py-225 line：[search_text_loc]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.04秒
+2021-09-14 23:41:16,282 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-41-15_BaiduPage.text_input.png
+2021-09-14 23:41:16,282 LOG INFO basepage.py-342 line：[search_text_loc]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:41:16,302 LOG INFO basepage.py-225 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.02秒
+2021-09-14 23:41:16,302 LOG INFO basepage.py-380 line：[BaiduPage.search_btn]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-14 23:41:16,582 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-41-16_search_btn_loc.png
+2021-09-14 23:41:16,672 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-14 23:41:19,189 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-41-16_正常截图.png
+2021-09-14 23:41:19,189 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:48:23,209 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:48:27,697 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:48:27,705 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:48:27,773 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.07秒
+2021-09-14 23:48:27,837 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-14 23:48:27,925 LOG INFO basepage.py-225 line：[BaiduPage.text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.09秒
+2021-09-14 23:48:28,552 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-48-28_search_text_loc.png
+2021-09-14 23:48:28,552 LOG INFO basepage.py-342 line：[BaiduPage.text_input]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:48:48,836 LOG ERROR basepage.py-219 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待失败！ERROR:Message: 
+
+2021-09-14 23:48:48,866 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 23:48:49,305 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-48-48_异常截图.png
+2021-09-14 23:48:49,455 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:54:16,232 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:54:20,344 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:54:20,344 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:54:20,456 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.1秒
+2021-09-14 23:54:20,480 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-14 23:54:20,536 LOG INFO basepage.py-225 line：[BaiduPage.text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.06秒
+2021-09-14 23:54:21,093 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-54-20_search_text_loc.png
+2021-09-14 23:54:21,093 LOG INFO basepage.py-342 line：[BaiduPage.text_input]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:54:41,574 LOG ERROR basepage.py-219 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待失败！ERROR:Message: 
+
+2021-09-14 23:54:41,970 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-54-41_search_btn_loc.png
+2021-09-14 23:54:41,970 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 23:54:42,249 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-54-41_异常截图.png
+2021-09-14 23:54:42,379 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-14 23:56:32,658 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-14 23:56:36,620 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-14 23:56:36,628 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-14 23:56:36,700 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.07秒
+2021-09-14 23:56:36,720 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-14 23:56:36,769 LOG INFO basepage.py-225 line：[BaiduPage.text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.05秒
+2021-09-14 23:56:37,424 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-56-37_search_text_loc.png
+2021-09-14 23:56:37,424 LOG INFO basepage.py-342 line：[BaiduPage.text_input]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-14 23:56:57,795 LOG ERROR basepage.py-219 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待失败！ERROR:Message: 
+
+2021-09-14 23:56:58,250 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-56-57_search_btn_loc.png
+2021-09-14 23:56:58,250 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-14 23:56:58,421 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-14_23-56-58_异常截图.png
+2021-09-14 23:56:58,553 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-15 20:01:44,047 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-15 20:01:48,637 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-15 20:01:48,638 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-15 20:01:48,686 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.05秒
+2021-09-15 20:01:48,736 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-15 20:01:48,935 LOG INFO basepage.py-225 line：[BaiduPage._func_name]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.02秒
+2021-09-15 20:01:49,431 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-01-49_search_text_loc.png
+2021-09-15 20:01:49,431 LOG INFO basepage.py-342 line：[BaiduPage._func_name]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-15 20:02:09,556 LOG ERROR basepage.py-219 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待失败！ERROR:Message: 
+
+2021-09-15 20:02:10,025 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-02-09_search_btn_loc.png
+2021-09-15 20:02:10,079 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-15 20:02:10,282 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-02-10_异常截图.png
+2021-09-15 20:02:10,352 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-15 20:52:36,838 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-15 20:52:41,019 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-15 20:52:41,019 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-15 20:52:41,073 LOG INFO basepage.py-225 line：[BaiduPage.get_news_text]<wait_ele_to_visible>页面元素<news_link_loc|新闻>等待可见，等待时间：0.05秒
+2021-09-15 20:52:41,115 LOG INFO basepage.py-411 line：[BaiduPage.get_news_text]<get_ele_text>获取元素<news_link_loc|新闻>的文本值为【新闻】
+2021-09-15 20:52:41,168 LOG INFO basepage.py-225 line：[BaiduPage.text_input]<wait_ele_to_visible>页面元素<search_text_loc|首页输入框>等待可见，等待时间：0.05秒
+2021-09-15 20:52:41,680 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-52-41_search_text_loc.png
+2021-09-15 20:52:41,680 LOG INFO basepage.py-342 line：[BaiduPage.text_input]<input_text>输入元素<search_text_loc|首页输入框>的内容为<python>
+2021-09-15 20:52:41,710 LOG INFO basepage.py-225 line：[BaiduPage.search_btn]<wait_ele_to_visible>页面元素<search_btn_loc|百度一下>等待可见，等待时间：0.03秒
+2021-09-15 20:52:41,710 LOG INFO basepage.py-380 line：[BaiduPage.search_btn]<click_ele>点击元素<('xpath', '//*[@id="su"]')>
+2021-09-15 20:52:41,860 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-52-41_search_btn_loc.png
+2021-09-15 20:52:41,959 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-15 20:52:44,501 LOG INFO basepage.py-282 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-15_20-52-41_正常截图.png
+2021-09-15 20:52:44,504 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 20:52:16,565 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 20:52:21,016 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 20:52:21,024 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 20:52:21,084 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 20:52:21,449 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 20:55:21,808 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 20:55:25,923 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 20:55:25,923 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 20:55:25,971 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 20:55:26,354 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 20:57:46,458 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 20:57:50,446 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 20:57:50,446 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 20:57:50,542 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20:57:50.446053/20:57:50.542263/00.096s
+2021-09-16 20:57:50,611 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20:57:50.542263/20:57:50.611262/00.068s
+2021-09-16 20:57:50,700 LOG ERROR basepage.py-289 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value fail. TIME:20:57:50.542263/20:57:50.700638/00.158s save_capture() takes 2 positional arguments but 3 were given
+2021-09-16 20:57:50,969 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_20-57-50_news_link_loc.png
+2021-09-16 20:57:50,969 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 20:57:51,273 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_20-57-50_异常截图.png
+2021-09-16 20:57:51,375 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 20:59:08,449 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 20:59:12,962 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 20:59:12,962 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 20:59:13,036 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20:59:12.962549/20:59:13.036076/00.073s
+2021-09-16 20:59:13,066 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20:59:13.046073/20:59:13.066076/00.020s
+2021-09-16 20:59:14,194 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_20-59-13_news_link_loc.png TIME:20:59:13.143767/20:59:14.194595/01.050
+2021-09-16 20:59:14,194 LOG INFO basepage.py-295 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [20:59:13.046073/20:59:14.194595/01.148] TIME:新闻
+2021-09-16 20:59:14,288 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:20:59:14.204559/20:59:14.288209/00.083s
+2021-09-16 20:59:14,344 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:20:59:14.288209/20:59:14.344336/00.056s
+2021-09-16 20:59:15,366 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_20-59-14_search_text_loc.png TIME:20:59:14.820261/20:59:15.366985/00.546
+2021-09-16 20:59:15,398 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 20:59:15,775 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_20-59-15_异常截图.png
+2021-09-16 20:59:16,032 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 21:00:06,106 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:00:10,876 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:00:10,876 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:00:10,966 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:10.876234/21:00:10.966284/00.090s
+2021-09-16 21:00:10,996 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:10.966284/21:00:10.996304/00.030s
+2021-09-16 21:00:11,319 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-11_news_link_loc.png TIME:21:00:11.036276/21:00:11.319871/00.283
+2021-09-16 21:00:11,319 LOG INFO basepage.py-295 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [21:00:10.966284/21:00:11.319871/00.353] TIME:新闻
+2021-09-16 21:00:11,369 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:11.319871/21:00:11.369820/00.049s
+2021-09-16 21:00:11,409 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:11.369820/21:00:11.409793/00.039s
+2021-09-16 21:00:12,286 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-11_search_text_loc.png TIME:21:00:11.773549/21:00:12.286762/00.513
+2021-09-16 21:00:12,294 LOG INFO basepage.py-231 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python>. TIME:21:00:11.369820/21:00:12.294782/00.924s
+2021-09-16 21:00:12,294 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 21:00:12,679 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-12_异常截图.png
+2021-09-16 21:00:12,799 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 21:00:43,702 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:00:47,984 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:00:47,984 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:00:48,044 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:47.984098/21:00:48.044113/00.060s
+2021-09-16 21:00:48,074 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:21:00:48.044113/21:00:48.074114/00.030s
+2021-09-16 21:00:48,350 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-48_news_link_loc.png TIME:21:00:48.126451/21:00:48.350381/00.223
+2021-09-16 21:00:48,350 LOG INFO basepage.py-295 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [21:00:48.044113/21:00:48.350381/00.306] TIME:新闻
+2021-09-16 21:00:48,380 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:48.350381/21:00:48.380377/00.029s
+2021-09-16 21:00:48,400 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:21:00:48.380377/21:00:48.400374/00.019s
+2021-09-16 21:00:48,877 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-48_search_text_loc.png TIME:21:00:48.582677/21:00:48.877326/00.294
+2021-09-16 21:00:48,877 LOG INFO basepage.py-231 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python>. TIME:21:00:48.380377/21:00:48.877326/00.496s
+2021-09-16 21:00:49,220 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-48_search_text_loc.png TIME:21:00:48.877326/21:00:49.220354/00.343
+2021-09-16 21:00:49,250 LOG INFO basepage.py-76 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible，TIME:21:00:49.220354/21:00:49.250332/00.029s
+2021-09-16 21:00:49,280 LOG INFO basepage.py-76 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible，TIME:21:00:49.250332/21:00:49.280328/00.029s
+2021-09-16 21:00:53,173 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-49_search_btn_loc.png TIME:21:00:49.419712/21:00:53.173364/03.753
+2021-09-16 21:00:53,173 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-16 21:00:53,538 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-00-53_正常截图.png
+2021-09-16 21:00:53,538 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 21:05:31,247 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:05:35,608 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:05:35,616 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:05:35,688 LOG ERROR test_baidu.py-29 line： 结束执行 test_login 测试用例， 测试结果 --- False 
+2021-09-16 21:05:36,026 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 21:07:04,226 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:07:08,874 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:07:08,874 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:07:08,936 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20210916 21:07:08.874411/00.061s
+2021-09-16 21:07:08,982 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20210916 21:07:08.936007/00.046s
+2021-09-16 21:07:09,352 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-07-09_news_link_loc.png TIME:20210916 21:07:09.047630/00.304
+2021-09-16 21:07:09,352 LOG INFO basepage.py-295 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [20210916 21:07:08.936007/00.416] TIME:新闻
+2021-09-16 21:07:09,382 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:20210916 21:07:09.352303/00.030s
+2021-09-16 21:07:09,402 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:20210916 21:07:09.382305/00.019s
+2021-09-16 21:07:10,056 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-07-09_search_text_loc.png TIME:20210916 21:07:09.726333/00.329
+2021-09-16 21:07:10,056 LOG INFO basepage.py-231 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python>. TIME:20210916 21:07:09.382305/00.673s
+2021-09-16 21:07:10,398 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-07-10_search_text_loc.png TIME:20210916 21:07:10.056162/00.341
+2021-09-16 21:07:10,418 LOG INFO basepage.py-76 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible，TIME:20210916 21:07:10.398121/00.019s
+2021-09-16 21:07:10,438 LOG INFO basepage.py-76 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible，TIME:20210916 21:07:10.418119/00.019s
+2021-09-16 21:07:13,766 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-07-10_search_btn_loc.png TIME:20210916 21:07:10.588736/03.177
+2021-09-16 21:07:13,766 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-16 21:07:14,114 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-07-13_正常截图.png
+2021-09-16 21:07:14,114 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-16 21:10:43,655 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-16 21:10:47,610 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-16 21:10:47,610 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-16 21:10:47,714 LOG INFO basepage.py-76 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible，TIME:20210916 21:10:47.610643/00.103s
+2021-09-16 21:10:48,115 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-10-47_news_link_loc.png TIME:20210916 21:10:47.802614/00.312
+2021-09-16 21:10:48,115 LOG INFO basepage.py-292 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>value [20210916 21:10:47.610643/00.504] TIME:新闻
+2021-09-16 21:10:48,147 LOG INFO basepage.py-76 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible，TIME:20210916 21:10:48.115344/00.031s
+2021-09-16 21:10:48,829 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-10-48_search_text_loc.png TIME:20210916 21:10:48.355310/00.474
+2021-09-16 21:10:48,829 LOG INFO basepage.py-230 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python>. TIME:20210916 21:10:48.115344/00.714s
+2021-09-16 21:10:49,124 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-10-48_search_text_loc.png TIME:20210916 21:10:48.839536/00.285
+2021-09-16 21:10:49,154 LOG INFO basepage.py-76 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible，TIME:20210916 21:10:49.124995/00.029s
+2021-09-16 21:10:52,771 LOG INFO basepage.py-55 line：[save_capture_paint]take a screenshot D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-10-49_search_btn_loc.png TIME:20210916 21:10:49.255426/03.515
+2021-09-16 21:10:52,771 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-16 21:10:53,522 LOG INFO basepage.py-35 line：[save_capture]截图保存在：D:\desk20201127\ks_web_allure\PIC\2021-09-16_21-10-52_正常截图.png
+2021-09-16 21:10:53,522 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 21:15:54,574 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 21:15:58,651 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 21:15:58,651 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 21:15:58,692 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible. TIME:20210917 21:15:58.651972/00.040s
+2021-09-17 21:15:59,208 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-15-58_news_link_loc.png TIME:20210917 21:15:58.880842/00.327
+2021-09-17 21:15:59,208 LOG INFO basepage.py-315 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>the value:[新闻] TIME:20210917 21:15:58.808882/00.399
+2021-09-17 21:15:59,258 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible. TIME:20210917 21:15:59.208490/00.049s
+2021-09-17 21:15:59,885 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-15-59_search_text_loc.png TIME:20210917 21:15:59.488504/00.396
+2021-09-17 21:15:59,886 LOG INFO basepage.py-224 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python> TIME:20210917 21:15:59.278488/00.608s
+2021-09-17 21:15:59,918 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible. TIME:20210917 21:15:59.887933/00.030s
+2021-09-17 21:16:03,220 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-16-00_search_btn_loc.png TIME:20210917 21:16:00.031853/03.188
+2021-09-17 21:16:03,221 LOG INFO basepage.py-285 line：[BaiduPage.search_btn]<click_ele>click locator<search_btn_loc|百度一下> TIME:20210917 21:15:59.949898/03.271s
+2021-09-17 21:16:03,221 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-17 21:16:03,471 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-16-03_正常截图.png TIME:
+2021-09-17 21:16:03,472 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 21:31:41,214 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 21:31:45,548 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 21:31:45,548 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 21:31:45,583 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible>page locator<news_link_loc|新闻>is viaible. TIME:20210917 21:31:45.549336/00.033s
+2021-09-17 21:31:45,894 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-31-45_news_link_loc.png TIME:20210917 21:31:45.625844/00.268
+2021-09-17 21:31:45,895 LOG INFO basepage.py-316 line：[BaiduPage.get_news_text]<get_ele_text>get locator<news_link_loc|新闻>the value:[新闻] TIME:20210917 21:31:45.610132/00.285
+2021-09-17 21:31:45,925 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible>page locator<search_text_loc|首页输入框>is viaible. TIME:20210917 21:31:45.896601/00.028s
+2021-09-17 21:31:46,400 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-31-46_search_text_loc.png TIME:20210917 21:31:46.096404/00.304
+2021-09-17 21:31:46,402 LOG INFO basepage.py-224 line：[BaiduPage.text_input]<input_text>locator<search_text_loc|首页输入框>input<python> TIME:20210917 21:31:45.951017/00.451s
+2021-09-17 21:31:46,431 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible>page locator<search_btn_loc|百度一下>is viaible. TIME:20210917 21:31:46.402738/00.028s
+2021-09-17 21:31:50,170 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-31-46_search_btn_loc.png TIME:20210917 21:31:46.540404/03.629
+2021-09-17 21:31:50,171 LOG INFO basepage.py-285 line：[BaiduPage.search_btn]<click_ele>click locator<search_btn_loc|百度一下> TIME:20210917 21:31:46.460339/03.710s
+2021-09-17 21:31:50,171 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-17 21:31:50,471 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-31-50_正常截图.png TIME:
+2021-09-17 21:31:50,499 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 21:46:14,014 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 21:46:17,819 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 21:46:17,819 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 21:46:17,873 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 21:46:17.820076/00.053s
+2021-09-17 21:46:18,175 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-17_news_link_loc.png TIME:20210917 21:46:17.927507/00.247
+2021-09-17 21:46:18,176 LOG INFO basepage.py-322 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 21:46:17.911516/00.263
+2021-09-17 21:46:18,205 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 21:46:18.177022/00.027s
+2021-09-17 21:46:18,686 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_text_loc.png TIME:20210917 21:46:18.408244/00.278
+2021-09-17 21:46:18,687 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 21:46:18.229007/00.458s
+2021-09-17 21:46:18,711 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.687556/00.024s
+2021-09-17 21:46:19,081 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-18_search_btn_loc.png TIME:20210917 21:46:18.805892/00.274
+2021-09-17 21:46:19,082 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 21:46:18.735699/00.345s
+2021-09-17 21:46:19,082 LOG INFO test_baidu.py-26 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2021-09-17 21:46:21,929 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_21-46-19_正常截图.png TIME:
+2021-09-17 21:46:21,949 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:03:08,268 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:03:12,052 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:03:12,052 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:03:12,097 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:03:12.053825/00.044s
+2021-09-17 22:03:12,434 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-03-12_news_link_loc.png TIME:20210917 22:03:12.158841/00.275
+2021-09-17 22:03:12,434 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:03:12.137915/00.296
+2021-09-17 22:03:12,464 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:03:12.434449/00.029s
+2021-09-17 22:03:13,028 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-03-12_search_text_loc.png TIME:20210917 22:03:12.673927/00.354
+2021-09-17 22:03:13,028 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:03:12.484432/00.544s
+2021-09-17 22:03:13,058 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:03:13.028699/00.029s
+2021-09-17 22:03:16,007 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-03-13_search_btn_loc.png TIME:20210917 22:03:13.161458/02.846
+2021-09-17 22:03:16,007 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:03:13.078698/02.929s
+2021-09-17 22:03:16,248 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:04:57,594 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:05:01,415 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:05:01,416 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:05:01,504 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:05:01.417407/00.087s
+2021-09-17 22:05:01,933 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-01_news_link_loc.png TIME:20210917 22:05:01.573926/00.359
+2021-09-17 22:05:01,943 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:05:01.534805/00.408
+2021-09-17 22:05:01,973 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:05:01.943416/00.030s
+2021-09-17 22:05:02,574 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-02_search_text_loc.png TIME:20210917 22:05:02.211173/00.363
+2021-09-17 22:05:02,574 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:05:01.993412/00.581s
+2021-09-17 22:05:02,605 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:05:02.584582/00.020s
+2021-09-17 22:05:05,354 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-02_search_btn_loc.png TIME:20210917 22:05:02.706295/02.648
+2021-09-17 22:05:05,354 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:05:02.625320/02.729s
+2021-09-17 22:05:05,674 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-05-05_异常图.png TIME:
+2021-09-17 22:05:05,677 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:13:53,502 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:13:57,596 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:13:57,597 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:13:57,645 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:13:57.598/00.047s
+2021-09-17 22:13:58,036 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-13-57_news_link_loc.png TIME:20210917 22:13:57.695/00.340
+2021-09-17 22:13:58,036 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:13:57.685/00.350
+2021-09-17 22:13:58,076 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:13:58.046/00.029s
+2021-09-17 22:13:58,782 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-13-58_search_text_loc.png TIME:20210917 22:13:58.311/00.470
+2021-09-17 22:13:58,782 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:13:58.096/00.686s
+2021-09-17 22:13:58,820 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:13:58.782/00.037s
+2021-09-17 22:14:01,628 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-13-58_search_btn_loc.png TIME:20210917 22:13:58.976/02.651
+2021-09-17 22:14:01,628 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:13:58.851/02.776s
+2021-09-17 22:14:01,987 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-14-01_异常图.png TIME:
+2021-09-17 22:14:01,990 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:15:25,417 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:15:29,055 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:15:29,055 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:15:29,105 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:15:29.056/00.048s
+2021-09-17 22:15:29,472 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-15-29_news_link_loc.png TIME:20210917 22:15:29.190/00.281
+2021-09-17 22:15:29,472 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:15:29.166/00.305
+2021-09-17 22:15:29,522 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:15:29.472/00.049s
+2021-09-17 22:15:30,329 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-15-29_search_text_loc.png TIME:20210917 22:15:29.812/00.517
+2021-09-17 22:15:30,329 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:15:29.552/00.776s
+2021-09-17 22:15:30,389 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:15:30.329/00.059s
+2021-09-17 22:15:34,479 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-15-30_search_btn_loc.png TIME:20210917 22:15:30.528/03.950
+2021-09-17 22:15:34,479 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:15:30.419/04.059s
+2021-09-17 22:15:34,959 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-15-34_异常图.png TIME:
+2021-09-17 22:15:34,959 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:16:27,261 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:16:31,106 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:16:31,107 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:16:31,174 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:16:31.107/00.067s
+2021-09-17 22:16:31,508 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-31_news_link_loc.png TIME:20210917 22:16:31.251/00.257
+2021-09-17 22:16:31,508 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:16:31.214/00.293
+2021-09-17 22:16:31,538 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:16:31.518/00.019s
+2021-09-17 22:16:32,076 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-31_search_text_loc.png TIME:20210917 22:16:31.730/00.345
+2021-09-17 22:16:32,076 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:16:31.568/00.507s
+2021-09-17 22:16:32,096 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:16:32.076/00.019s
+2021-09-17 22:16:34,663 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-32_search_btn_loc.png TIME:20210917 22:16:32.202/02.460
+2021-09-17 22:16:34,663 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:16:32.126/02.537s
+2021-09-17 22:16:35,115 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-34_异常图.png TIME:
+2021-09-17 22:16:35,115 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:25:01,523 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:25:06,247 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:25:06,248 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:25:06,342 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:25:06.248/00.093s
+2021-09-17 22:25:06,510 LOG INFO basepage.py-323 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:25:06.487/00.023
+2021-09-17 22:25:06,551 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:25:06.510/00.040s
+2021-09-17 22:25:07,088 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-25-06_search_text_loc.png TIME:20210917 22:25:06.753/00.335
+2021-09-17 22:25:07,088 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:25:06.573/00.514s
+2021-09-17 22:25:07,108 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:25:07.088/00.020s
+2021-09-17 22:25:07,450 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-25-07_search_btn_loc.png TIME:20210917 22:25:07.218/00.231
+2021-09-17 22:25:07,451 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:25:07.128/00.322s
+2021-09-17 22:25:07,875 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-25-07_异常图.png TIME:
+2021-09-17 22:25:07,875 LOG INFO conftest.py-43 line：========== close browser ===========
+2021-09-17 22:27:10,278 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:27:14,297 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:27:14,299 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:27:14,331 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:27:14.299/00.032s
+2021-09-17 22:27:14,384 LOG INFO basepage.py-323 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:27:14.364/00.019
+2021-09-17 22:27:14,434 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:27:14.384/00.049s
+2021-09-17 22:27:15,003 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-27-14_search_text_loc.png TIME:20210917 22:27:14.642/00.361
+2021-09-17 22:27:15,003 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:27:14.464/00.539s
+2021-09-17 22:27:15,033 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:27:15.003/00.030s
+2021-09-17 22:27:15,116 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:27:15.053/00.061s
+2021-09-17 22:27:15,366 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-27-15_异常图.png TIME:
+2021-09-17 22:27:15,370 LOG INFO conftest.py-43 line：========== close browser ===========

@@ -1,0 +1,241 @@
+{
+  "uid" : "8326262cafd597c4",
+  "name" : "test_login[data0]",
+  "fullName" : "TestCases.Login.test_baidu.TestLogin#test_login",
+  "historyId" : "f908aac11843ade8edb47c43ceeede51",
+  "time" : {
+    "start" : 1631710361019,
+    "stop" : 1631710364502,
+    "duration" : 3483
+  },
+  "description" : "描述！！！！",
+  "descriptionHtml" : "<p>描述！！！！</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1631710356749,
+      "stop" : 1631710356839,
+      "duration" : 90
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_session",
+    "time" : {
+      "start" : 1631710356839,
+      "stop" : 1631710361017,
+      "duration" : 4178
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "描述！！！！",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "[20:52:41.019][BaiduPage.get_news_text][news_link_loc|新闻]('xpath', '//*[@id=\"s-top-left\"]/a[1]')",
+      "time" : {
+        "start" : 1631710361020,
+        "stop" : 1631710361115,
+        "duration" : 95
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "返回值是：[新闻]",
+        "time" : {
+          "start" : 1631710361115,
+          "stop" : 1631710361115,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "登录Method",
+      "time" : {
+        "start" : 1631710361115,
+        "stop" : 1631710361960,
+        "duration" : 845
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "[20:52:41.115][BaiduPage.search]",
+        "time" : {
+          "start" : 1631710361115,
+          "stop" : 1631710361115,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "[20:52:41.115][BaiduPage.text_input][search_text_loc|首页输入框]('xpath', '//*[@id=\"kw\"]')",
+        "time" : {
+          "start" : 1631710361115,
+          "stop" : 1631710361680,
+          "duration" : 565
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "fc1d8d6e4e9fa07e",
+          "name" : "search_text_loc",
+          "source" : "fc1d8d6e4e9fa07e.png",
+          "type" : "image/png",
+          "size" : 51747
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "[20:52:41.680][BaiduPage.search_btn][search_btn_loc|百度一下]('xpath', '//*[@id=\"su\"]')",
+        "time" : {
+          "start" : 1631710361680,
+          "stop" : 1631710361960,
+          "duration" : 280
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "bc0255d83f9fa318",
+          "name" : "search_btn_loc",
+          "source" : "bc0255d83f9fa318.png",
+          "type" : "image/png",
+          "size" : 51747
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'python'"
+      } ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "9845efb3eb8f743e",
+      "name" : "正常截图",
+      "source" : "9845efb3eb8f743e.png",
+      "type" : "image/png",
+      "size" : 35232
+    }, {
+      "uid" : "ccd094017a81c540",
+      "name" : "log",
+      "source" : "ccd094017a81c540.txt",
+      "type" : "text/plain",
+      "size" : 1572
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "start_session::0",
+    "time" : {
+      "start" : 1631710364504,
+      "stop" : 1631710364504,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "login 异常测试用例，feature"
+  }, {
+    "name" : "story",
+    "value" : "测试login 方法，story"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_session')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.Login"
+  }, {
+    "name" : "suite",
+    "value" : "test_baidu"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V8HO8M4"
+  }, {
+    "name" : "thread",
+    "value" : "4724-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.Login.test_baidu"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('start_session')" ]
+  },
+  "source" : "8326262cafd597c4.json",
+  "parameterValues" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+}

@@ -1,0 +1,243 @@
+{
+  "uid" : "f5655bb4bb61be94",
+  "name" : "test_login[data0]",
+  "fullName" : "TestCases.Login.test_baidu.TestLogin#test_login",
+  "historyId" : "f908aac11843ade8edb47c43ceeede51",
+  "time" : {
+    "start" : 1631634507698,
+    "stop" : 1631634529305,
+    "duration" : 21607
+  },
+  "description" : "描述！！！！",
+  "descriptionHtml" : "<p>描述！！！！</p>\n",
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'",
+  "statusTrace" : "self = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001782357B248>\nloc = ('xpath', '//*[@id=\"su1\"]'), loc_info = 'search_btn_loc|百度一下'\nimg_doc = 'search_btn_loc', m = 'BaiduPage.search_btn', timeout = 20\nfrequency = 0.5\n\n    def wait_ele_to_visible(self, loc, loc_info, img_doc, m, timeout=20, frequency=0.5):\n        \"\"\"\n        等待元素可见\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        try:\n            # case_logger.info(\"[{}]<{}>开始等待页面元素<{}>是否可见！\".format(img_doc, sys._getframe().f_code.co_name, loc_info))\n            start_time = time.time()\n>           WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n\nCommon\\basepage.py:217: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"ff7922b3df22ba3162ce04b5f05e9e4e\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x0000017823588908>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <TestCases.Login.test_baidu.TestLogin object at 0x00000178234316C8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"ff7922b3df22ba3162ce04b5f05e9e4e\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:25: in search\n    self.search_btn()\nPages\\BaiduPage\\baidu_page.py:42: in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\nCommon\\basepage.py:377: in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001782357B248>\nloc = ('xpath', '//*[@id=\"su1\"]'), loc_info = 'search_btn_loc|百度一下'\nimg_doc = 'search_btn_loc', m = 'BaiduPage.search_btn', timeout = 20\nfrequency = 0.5\n\n    def wait_ele_to_visible(self, loc, loc_info, img_doc, m, timeout=20, frequency=0.5):\n        \"\"\"\n        等待元素可见\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        try:\n            # case_logger.info(\"[{}]<{}>开始等待页面元素<{}>是否可见！\".format(img_doc, sys._getframe().f_code.co_name, loc_info))\n            start_time = time.time()\n            WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n        except Exception as e:\n            case_logger.error(\"[{}]<{}>页面元素<{}>等待失败！ERROR:{}\".format(m, sys._getframe().f_code.co_name, loc_info, e))\n>           self.save_screenshot(img_doc)\nE           AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'\n\nCommon\\basepage.py:220: AttributeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1631634503119,
+      "stop" : 1631634503209,
+      "duration" : 90
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "start_session",
+    "time" : {
+      "start" : 1631634503209,
+      "stop" : 1631634507698,
+      "duration" : 4489
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "描述！！！！",
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'",
+    "statusTrace" : "self = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001782357B248>\nloc = ('xpath', '//*[@id=\"su1\"]'), loc_info = 'search_btn_loc|百度一下'\nimg_doc = 'search_btn_loc', m = 'BaiduPage.search_btn', timeout = 20\nfrequency = 0.5\n\n    def wait_ele_to_visible(self, loc, loc_info, img_doc, m, timeout=20, frequency=0.5):\n        \"\"\"\n        等待元素可见\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        try:\n            # case_logger.info(\"[{}]<{}>开始等待页面元素<{}>是否可见！\".format(img_doc, sys._getframe().f_code.co_name, loc_info))\n            start_time = time.time()\n>           WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n\nCommon\\basepage.py:217: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"ff7922b3df22ba3162ce04b5f05e9e4e\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x0000017823588908>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException\n\nDuring handling of the above exception, another exception occurred:\n\nself = <TestCases.Login.test_baidu.TestLogin object at 0x00000178234316C8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"ff7922b3df22ba3162ce04b5f05e9e4e\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:25: in search\n    self.search_btn()\nPages\\BaiduPage\\baidu_page.py:42: in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\nCommon\\basepage.py:377: in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001782357B248>\nloc = ('xpath', '//*[@id=\"su1\"]'), loc_info = 'search_btn_loc|百度一下'\nimg_doc = 'search_btn_loc', m = 'BaiduPage.search_btn', timeout = 20\nfrequency = 0.5\n\n    def wait_ele_to_visible(self, loc, loc_info, img_doc, m, timeout=20, frequency=0.5):\n        \"\"\"\n        等待元素可见\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        try:\n            # case_logger.info(\"[{}]<{}>开始等待页面元素<{}>是否可见！\".format(img_doc, sys._getframe().f_code.co_name, loc_info))\n            start_time = time.time()\n            WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n        except Exception as e:\n            case_logger.error(\"[{}]<{}>页面元素<{}>等待失败！ERROR:{}\".format(m, sys._getframe().f_code.co_name, loc_info, e))\n>           self.save_screenshot(img_doc)\nE           AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'\n\nCommon\\basepage.py:220: AttributeError",
+    "steps" : [ {
+      "name" : "[23:48:27.705][BaiduPage.get_news_text][news_link_loc|新闻]('xpath', '//*[@id=\"s-top-left\"]/a[1]')",
+      "time" : {
+        "start" : 1631634507706,
+        "stop" : 1631634507837,
+        "duration" : 131
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "返回值是：[新闻]",
+        "time" : {
+          "start" : 1631634507837,
+          "stop" : 1631634507837,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "登录Method",
+      "time" : {
+        "start" : 1631634507837,
+        "stop" : 1631634528856,
+        "duration" : 21019
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'\n",
+      "statusTrace" : "  File \"D:\\desk20201127\\ks\\venv\\lib\\site-packages\\allure_commons\\_allure.py\", line 157, in impl\n    return func(*a, **kw)\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 25, in search\n    self.search_btn()\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 42, in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 377, in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 220, in wait_ele_to_visible\n    self.save_screenshot(img_doc)\n",
+      "steps" : [ {
+        "name" : "[23:48:27.837][BaiduPage.search]",
+        "time" : {
+          "start" : 1631634507837,
+          "stop" : 1631634507837,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "[23:48:27.837][BaiduPage.text_input][search_text_loc|首页输入框]('xpath', '//*[@id=\"kw\"]')",
+        "time" : {
+          "start" : 1631634507837,
+          "stop" : 1631634508553,
+          "duration" : 716
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ac1f81ca61b4602e",
+          "name" : "search_text_loc",
+          "source" : "ac1f81ca61b4602e.png",
+          "type" : "image/png",
+          "size" : 53056
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "[23:48:28.552][BaiduPage.search_btn][search_btn_loc|百度一下]('xpath', '//*[@id=\"su1\"]')",
+        "time" : {
+          "start" : 1631634508553,
+          "stop" : 1631634528837,
+          "duration" : 20284
+        },
+        "status" : "broken",
+        "statusMessage" : "AttributeError: 'BaiduPage' object has no attribute 'save_screenshot'\n",
+        "statusTrace" : "  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 42, in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 377, in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 220, in wait_ele_to_visible\n    self.save_screenshot(img_doc)\n",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'python'"
+      } ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "ebe667603cd8bfe7",
+      "name" : "异常截图",
+      "source" : "ebe667603cd8bfe7.png",
+      "type" : "image/png",
+      "size" : 35153
+    }, {
+      "uid" : "7e693c458304c4a2",
+      "name" : "log",
+      "source" : "7e693c458304c4a2.txt",
+      "type" : "text/plain",
+      "size" : 1330
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "start_session::0",
+    "time" : {
+      "start" : 1631634529455,
+      "stop" : 1631634529455,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "测试login 方法，story"
+  }, {
+    "name" : "feature",
+    "value" : "login 异常测试用例，feature"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_session')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.Login"
+  }, {
+    "name" : "suite",
+    "value" : "test_baidu"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V8HO8M4"
+  }, {
+    "name" : "thread",
+    "value" : "14508-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.Login.test_baidu"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('start_session')" ]
+  },
+  "source" : "f5655bb4bb61be94.json",
+  "parameterValues" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+}

@@ -1,0 +1,249 @@
+{
+  "uid" : "4b8c9f5fc610a07c",
+  "name" : "test_login[data0]",
+  "fullName" : "TestCases.Login.test_baidu.TestLogin#test_login",
+  "historyId" : "f908aac11843ade8edb47c43ceeede51",
+  "time" : {
+    "start" : 1631634860345,
+    "stop" : 1631634882249,
+    "duration" : 21904
+  },
+  "description" : "描述！！！！",
+  "descriptionHtml" : "<p>描述！！！！</p>\n",
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+  "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x0000023F75E85108>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fdb9cc7e60029446d74bd385724a5d7a\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:25: in search\n    self.search_btn()\nPages\\BaiduPage\\baidu_page.py:42: in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\nCommon\\basepage.py:377: in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\nCommon\\basepage.py:222: in wait_ele_to_visible\n    raise e\nCommon\\basepage.py:217: in wait_ele_to_visible\n    WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"fdb9cc7e60029446d74bd385724a5d7a\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x0000023F75FD6A48>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "start_session",
+    "time" : {
+      "start" : 1631634856233,
+      "stop" : 1631634860337,
+      "duration" : 4104
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1631634856033,
+      "stop" : 1631634856233,
+      "duration" : 200
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "描述！！！！",
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.TimeoutException: Message:",
+    "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x0000023F75E85108>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"fdb9cc7e60029446d74bd385724a5d7a\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:25: in search\n    self.search_btn()\nPages\\BaiduPage\\baidu_page.py:42: in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\nCommon\\basepage.py:377: in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\nCommon\\basepage.py:222: in wait_ele_to_visible\n    raise e\nCommon\\basepage.py:217: in wait_ele_to_visible\n    WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"fdb9cc7e60029446d74bd385724a5d7a\")>\nmethod = <selenium.webdriver.support.expected_conditions.visibility_of_element_located object at 0x0000023F75FD6A48>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n        return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\n..\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
+    "steps" : [ {
+      "name" : "[23:54:20.352][BaiduPage.get_news_text][news_link_loc|新闻]('xpath', '//*[@id=\"s-top-left\"]/a[1]')",
+      "time" : {
+        "start" : 1631634860353,
+        "stop" : 1631634860481,
+        "duration" : 128
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "返回值是：[新闻]",
+        "time" : {
+          "start" : 1631634860481,
+          "stop" : 1631634860481,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "登录Method",
+      "time" : {
+        "start" : 1631634860481,
+        "stop" : 1631634881970,
+        "duration" : 21489
+      },
+      "status" : "broken",
+      "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+      "statusTrace" : "  File \"D:\\desk20201127\\ks\\venv\\lib\\site-packages\\allure_commons\\_allure.py\", line 157, in impl\n    return func(*a, **kw)\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 25, in search\n    self.search_btn()\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 42, in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 377, in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 222, in wait_ele_to_visible\n    raise e\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 217, in wait_ele_to_visible\n    WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n  File \"D:\\desk20201127\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 80, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+      "steps" : [ {
+        "name" : "[23:54:20.480][BaiduPage.search]",
+        "time" : {
+          "start" : 1631634860481,
+          "stop" : 1631634860481,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "[23:54:20.480][BaiduPage.text_input][search_text_loc|首页输入框]('xpath', '//*[@id=\"kw\"]')",
+        "time" : {
+          "start" : 1631634860481,
+          "stop" : 1631634861093,
+          "duration" : 612
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "2fda9969e9794f1a",
+          "name" : "search_text_loc",
+          "source" : "2fda9969e9794f1a.png",
+          "type" : "image/png",
+          "size" : 53246
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "[23:54:21.093][BaiduPage.search_btn][search_btn_loc|百度一下]('xpath', '//*[@id=\"su1\"]')",
+        "time" : {
+          "start" : 1631634861093,
+          "stop" : 1631634881970,
+          "duration" : 20877
+        },
+        "status" : "broken",
+        "statusMessage" : "selenium.common.exceptions.TimeoutException: Message: \n\n",
+        "statusTrace" : "  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 42, in search_btn\n    self.click_ele(loc, loc_name + '|' + loc_info, loc_name, f'{c}.{m}')\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 377, in click_ele\n    self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 222, in wait_ele_to_visible\n    raise e\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 217, in wait_ele_to_visible\n    WebDriverWait(self.driver, timeout, frequency).until(EC.visibility_of_element_located(loc))\n  File \"D:\\desk20201127\\ks\\venv\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py\", line 80, in until\n    raise TimeoutException(message, screen, stacktrace)\n",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "f86ade6658de1545",
+          "name" : "search_btn_loc",
+          "source" : "f86ade6658de1545.png",
+          "type" : "image/png",
+          "size" : 35153
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'python'"
+      } ],
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "a043871030d6b815",
+      "name" : "异常截图",
+      "source" : "a043871030d6b815.png",
+      "type" : "image/png",
+      "size" : 35153
+    }, {
+      "uid" : "4382ba6d852fa260",
+      "name" : "log",
+      "source" : "4382ba6d852fa260.txt",
+      "type" : "text/plain",
+      "size" : 1463
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 6,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "start_session::0",
+    "time" : {
+      "start" : 1631634882379,
+      "stop" : 1631634882379,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "测试login 方法，story"
+  }, {
+    "name" : "feature",
+    "value" : "login 异常测试用例，feature"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_session')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.Login"
+  }, {
+    "name" : "suite",
+    "value" : "test_baidu"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V8HO8M4"
+  }, {
+    "name" : "thread",
+    "value" : "1632-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.Login.test_baidu"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('start_session')" ]
+  },
+  "source" : "4b8c9f5fc610a07c.json",
+  "parameterValues" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+}

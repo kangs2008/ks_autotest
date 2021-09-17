@@ -1,0 +1,240 @@
+{
+  "uid" : "7ffb8d7eb408e555",
+  "name" : "test_login[data0]",
+  "fullName" : "TestCases.Login.test_baidu.TestLogin#test_login",
+  "historyId" : "f908aac11843ade8edb47c43ceeede51",
+  "time" : {
+    "start" : 1631797152963,
+    "stop" : 1631797155775,
+    "duration" : 2812
+  },
+  "description" : "描述！！！！",
+  "descriptionHtml" : "<p>描述！！！！</p>\n",
+  "status" : "broken",
+  "statusMessage" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'",
+  "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x000001B37F3474C8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e211eb18ae4ea8ac147c727b35c8fa45\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:26: in search\n    self.text_input(text)\nPages\\BaiduPage\\baidu_page.py:34: in text_input\n    self.input_text(loc, loc_name + '|' + loc_info, loc_name, f'{func}', text)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001B37F41B088>\nloc = ('xpath', '//*[@id=\"kw\"]'), loc_info = 'search_text_loc|首页输入框'\nimg_doc = 'search_text_loc', m = 'BaiduPage.text_input', text = 'python'\ntimeout = 20, frequency = 0.5\n\n    def input_text(self, loc, loc_info, img_doc, m, text, timeout=TIMEOUT, frequency=FREQUENCY):\n        \"\"\"\n        对输入框输入文本内容\n        :param text: 输入的文本内容\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n        try:\n            start_time = datetime.datetime.now()\n            ele, pos = self.get_ele_pos(loc, loc_info, img_doc, m, timeout, frequency)\n            ele.clear()\n            ele.send_keys(text)\n            self.save_capture_paint(img_doc, pos)\n        except Exception as e:\n            end_time = datetime.datetime.now()\n            case_logger.error(\"[{}]<{}>locator<{}>input<{}>fail. TIME:{}s {}\".format(m, sys._getframe().f_code.co_name, loc_info, text, usageTime(end_time,start_time), e))\n            self.save_capture(img_doc)\n            raise\n        else:\n            end_time = datetime.datetime.now()\n            case_logger.info(\n                \"[{}]<{}>locator<{}>input<{}>. TIME:{}s\".format(m, sys._getframe().f_code.co_name, loc_info, text,\n>                                                               usageTime(end_time - start_time)))\nE           TypeError: usageTime() missing 1 required positional argument: 'starttime'\n\nCommon\\basepage.py:231: TypeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "start_session",
+    "time" : {
+      "start" : 1631797148449,
+      "stop" : 1631797152955,
+      "duration" : 4506
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1631797148349,
+      "stop" : 1631797148449,
+      "duration" : 100
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "description" : "描述！！！！",
+    "status" : "broken",
+    "statusMessage" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'",
+    "statusTrace" : "self = <TestCases.Login.test_baidu.TestLogin object at 0x000001B37F3474C8>\ndata = {'check': 'python_百度搜索', 'input': 'python', 'news': '新闻', 'title': '百度一下'}\nstart_session = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"e211eb18ae4ea8ac147c727b35c8fa45\")>\n\n    @allure.story(\"测试login 方法，story\")\n    @pytest.mark.parametrize('data', data1)\n    def test_login(self, data, start_session):\n        \"\"\"描述！！！！\"\"\"\n        logger.info(f\" 执行 {self.__class__.__name__} 测试套件Suite \")\n        logger.info(f\" 执行 {sys._getframe().f_code.co_name} 测试用例Case \")\n        try:\n            news = BaiduPage(start_session).get_news_text()\n            assert news == data['news']\n>           BaiduPage(start_session).search(data['input'])\n\nTestCases\\Login\\test_baidu.py:24: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nPages\\BaiduPage\\baidu_page.py:26: in search\n    self.text_input(text)\nPages\\BaiduPage\\baidu_page.py:34: in text_input\n    self.input_text(loc, loc_name + '|' + loc_info, loc_name, f'{func}', text)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Pages.BaiduPage.baidu_page.BaiduPage object at 0x000001B37F41B088>\nloc = ('xpath', '//*[@id=\"kw\"]'), loc_info = 'search_text_loc|首页输入框'\nimg_doc = 'search_text_loc', m = 'BaiduPage.text_input', text = 'python'\ntimeout = 20, frequency = 0.5\n\n    def input_text(self, loc, loc_info, img_doc, m, text, timeout=TIMEOUT, frequency=FREQUENCY):\n        \"\"\"\n        对输入框输入文本内容\n        :param text: 输入的文本内容\n        :param loc: 元素定位的XPATH元组表达式\n        :param img_doc: 截图说明\n        :param timeout: 等待的超时时间\n        :param frequency: 轮询频率\n        :return:\n        \"\"\"\n        self.wait_ele_to_visible(loc, loc_info, img_doc, m, timeout, frequency)\n        try:\n            start_time = datetime.datetime.now()\n            ele, pos = self.get_ele_pos(loc, loc_info, img_doc, m, timeout, frequency)\n            ele.clear()\n            ele.send_keys(text)\n            self.save_capture_paint(img_doc, pos)\n        except Exception as e:\n            end_time = datetime.datetime.now()\n            case_logger.error(\"[{}]<{}>locator<{}>input<{}>fail. TIME:{}s {}\".format(m, sys._getframe().f_code.co_name, loc_info, text, usageTime(end_time,start_time), e))\n            self.save_capture(img_doc)\n            raise\n        else:\n            end_time = datetime.datetime.now()\n            case_logger.info(\n                \"[{}]<{}>locator<{}>input<{}>. TIME:{}s\".format(m, sys._getframe().f_code.co_name, loc_info, text,\n>                                                               usageTime(end_time - start_time)))\nE           TypeError: usageTime() missing 1 required positional argument: 'starttime'\n\nCommon\\basepage.py:231: TypeError",
+    "steps" : [ {
+      "name" : "[20:59:12.962][BaiduPage.get_news_text][news_link_loc|新闻]('xpath', '//*[@id=\"s-top-left\"]/a[1]')",
+      "time" : {
+        "start" : 1631797152963,
+        "stop" : 1631797154205,
+        "duration" : 1242
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "返回值是：[新闻]",
+        "time" : {
+          "start" : 1631797154195,
+          "stop" : 1631797154205,
+          "duration" : 10
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ {
+        "uid" : "fc6877ae2886e333",
+        "name" : "news_link_loc",
+        "source" : "fc6877ae2886e333.png",
+        "type" : "image/png",
+        "size" : 101295
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "登录Method",
+      "time" : {
+        "start" : 1631797154205,
+        "stop" : 1631797155367,
+        "duration" : 1162
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'\n",
+      "statusTrace" : "  File \"D:\\desk20201127\\ks\\venv\\lib\\site-packages\\allure_commons\\_allure.py\", line 157, in impl\n    return func(*a, **kw)\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 26, in search\n    self.text_input(text)\n  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 34, in text_input\n    self.input_text(loc, loc_name + '|' + loc_info, loc_name, f'{func}', text)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 231, in input_text\n    usageTime(end_time - start_time)))\n",
+      "steps" : [ {
+        "name" : "[20:59:14.204][BaiduPage.search]",
+        "time" : {
+          "start" : 1631797154205,
+          "stop" : 1631797154205,
+          "duration" : 0
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "[20:59:14.204][BaiduPage.text_input][search_text_loc|首页输入框]('xpath', '//*[@id=\"kw\"]')",
+        "time" : {
+          "start" : 1631797154205,
+          "stop" : 1631797155367,
+          "duration" : 1162
+        },
+        "status" : "broken",
+        "statusMessage" : "TypeError: usageTime() missing 1 required positional argument: 'starttime'\n",
+        "statusTrace" : "  File \"D:\\desk20201127\\ks_web_allure\\Pages\\BaiduPage\\baidu_page.py\", line 34, in text_input\n    self.input_text(loc, loc_name + '|' + loc_info, loc_name, f'{func}', text)\n  File \"D:\\desk20201127\\ks_web_allure\\Common\\basepage.py\", line 231, in input_text\n    usageTime(end_time - start_time)))\n",
+        "steps" : [ ],
+        "attachments" : [ {
+          "uid" : "ba267cdc790a1b2d",
+          "name" : "search_text_loc",
+          "source" : "ba267cdc790a1b2d.png",
+          "type" : "image/png",
+          "size" : 76920
+        } ],
+        "parameters" : [ ],
+        "attachmentsCount" : 1,
+        "shouldDisplayMessage" : true,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "text",
+        "value" : "'python'"
+      } ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "bfc3434304205f6f",
+      "name" : "异常截图",
+      "source" : "bfc3434304205f6f.png",
+      "type" : "image/png",
+      "size" : 55000
+    }, {
+      "uid" : "bff849341c98cd85",
+      "name" : "log",
+      "source" : "bff849341c98cd85.txt",
+      "type" : "text/plain",
+      "size" : 1694
+    }, {
+      "uid" : "578f571fa8655be9",
+      "name" : "stderr",
+      "source" : "578f571fa8655be9.txt",
+      "type" : "text/plain",
+      "size" : 2047
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 5,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 5,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "start_session::0",
+    "time" : {
+      "start" : 1631797156033,
+      "stop" : 1631797156033,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "测试login 方法，story"
+  }, {
+    "name" : "feature",
+    "value" : "login 异常测试用例，feature"
+  }, {
+    "name" : "tag",
+    "value" : "@pytest.mark.usefixtures('start_session')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "TestCases.Login"
+  }, {
+    "name" : "suite",
+    "value" : "test_baidu"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLogin"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-V8HO8M4"
+  }, {
+    "name" : "thread",
+    "value" : "2608-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "TestCases.Login.test_baidu"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "data",
+    "value" : "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}"
+  } ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.usefixtures('start_session')" ]
+  },
+  "source" : "7ffb8d7eb408e555.json",
+  "parameterValues" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+}

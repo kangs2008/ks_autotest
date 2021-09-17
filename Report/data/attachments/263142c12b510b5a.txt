@@ -1,0 +1,14 @@
+2021-09-17 22:16:27,261 LOG INFO conftest.py-37 line：========== open browser ===========
+2021-09-17 22:16:31,106 LOG INFO test_baidu.py-19 line： 执行 TestLogin 测试套件Suite 
+2021-09-17 22:16:31,107 LOG INFO test_baidu.py-20 line： 执行 test_login 测试用例Case 
+2021-09-17 22:16:31,174 LOG INFO basepage.py-89 line：[BaiduPage.get_news_text]<wait_ele_to_visible><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20210917 22:16:31.107/00.067s
+2021-09-17 22:16:31,508 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-31_news_link_loc.png TIME:20210917 22:16:31.251/00.257
+2021-09-17 22:16:31,508 LOG INFO basepage.py-324 line：[BaiduPage.get_news_text]<get_ele_text><news_link_loc|新闻>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>value:[新闻] TIME:20210917 22:16:31.214/00.293
+2021-09-17 22:16:31,538 LOG INFO basepage.py-89 line：[BaiduPage.text_input]<wait_ele_to_visible><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')> TIME:20210917 22:16:31.518/00.019s
+2021-09-17 22:16:32,076 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-31_search_text_loc.png TIME:20210917 22:16:31.730/00.345
+2021-09-17 22:16:32,076 LOG INFO basepage.py-227 line：[BaiduPage.text_input]<input_text><search_text_loc|首页输入框>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20210917 22:16:31.568/00.507s
+2021-09-17 22:16:32,096 LOG INFO basepage.py-89 line：[BaiduPage.search_btn]<wait_ele_to_visible><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:16:32.076/00.019s
+2021-09-17 22:16:34,663 LOG INFO basepage.py-61 line：[save_capture_paint]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-32_search_btn_loc.png TIME:20210917 22:16:32.202/02.460
+2021-09-17 22:16:34,663 LOG INFO basepage.py-290 line：[BaiduPage.search_btn]<click_ele><search_btn_loc|百度一下>locator<('xpath', '//*[@id="su"]')> TIME:20210917 22:16:32.126/02.537s
+2021-09-17 22:16:35,115 LOG INFO basepage.py-34 line：[save_capture]D:\desk20201127\ks_web_allure\PIC\2021-09-17_22-16-34_异常图.png TIME:
+2021-09-17 22:16:35,115 LOG INFO conftest.py-43 line：========== close browser ===========
