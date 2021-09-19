@@ -3,7 +3,8 @@ import os
 from Common.setting import BASE_DIR
 
 class ReadWriteConfFile(object):
-    path = os.path.join(BASE_DIR, 'exec_file.ini')
+    # path = os.path.join(BASE_DIR, 'exec_file.ini')
+    path = os.path.join(BASE_DIR, 'pytest.ini')
 
     def get_parser(self):
         cf = ConfigParser()

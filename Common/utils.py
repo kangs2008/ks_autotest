@@ -1,9 +1,5 @@
 import datetime
-import time, inspect
-
-
-def get_func_name():
-    return inspect.stack()[1][3]
+import time
 
 
 def mTime():
@@ -40,16 +36,8 @@ def usageTime(endtime, starttime):
     return str(starttime.strftime('%Y%m%d %H:%M:%S.%f'))[:-3] + '/' + str((endtime - starttime))[5:11]
     # return starttime.strftime('%H:%M:%S.%f')
 
-def aa(pic=''):
-    if pic != '':
-        print(pic + '111111')
-        # self.save_capture_paint(loc_name, pos)
-    else:
-        print(pic + '22')
-        pass
-
 if __name__ == '__main__':
-    aa()
+    pass
     # a = datetime.datetime.now()
     # time.sleep(2.1)
     # b = datetime.datetime.now()

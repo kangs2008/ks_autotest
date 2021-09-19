@@ -26,13 +26,15 @@ class BasePage:
         try:
             start_time = datetime.datetime.now()
             file_name = PIC_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
-            relative_name = RELATIVE_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
+            relative_name = RELATIVE_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()),
+                                                                loc_name)
             self.driver.save_screenshot(file_name)
             with open(file_name, mode='rb') as f:
                 file = f.read()
             allure.attach(file, loc_name, allure.attachment_type.PNG)
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]{} TIME:".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]{} TIME:".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
         except Exception as e:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{loc_name}] FAIL"):
                 pass
@@ -50,7 +52,7 @@ class BasePage:
             start_time = datetime.datetime.now()
             file_name = PIC_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
             relative_name = RELATIVE_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()),
-                                                             loc_name)
+                                                                loc_name)
             self.driver.save_screenshot(file_name)
 
             screenvc = cv2.imread(file_name)
@@ -61,7 +63,8 @@ class BasePage:
                 file = f.read()
             allure.attach(file, loc_name, allure.attachment_type.PNG)
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
         except Exception as e:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{loc_name}] FAIL"):
                 pass
@@ -84,7 +87,8 @@ class BasePage:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{url}] FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{url}] FAIL"):
                 if pic != '':
@@ -93,9 +97,9 @@ class BasePage:
                     pass
                 pass
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time, start_time)))
             return d
-
 
     def wait_ele_to_visible(self, loc, loc_info, func_name, timeout=TIMEOUT, frequency=FREQUENCY):
         """
@@ -114,10 +118,14 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                               usageTime(end_time, start_time)))
         else:
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                          usageTime(end_time, start_time)))
 
     def get_ele(self, loc_name, loc, loc_info, func_name, pic, timeout=TIMEOUT, frequency=FREQUENCY):
         """
@@ -139,7 +147,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                               usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}"):
                 if pic != '':
@@ -148,7 +158,9 @@ class BasePage:
                     pass
                 pass
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                          usageTime(end_time, start_time)))
             return ele
 
     def get_ele_pos(self, loc_name, loc, loc_info, func_name, timeout=TIMEOUT, frequency=FREQUENCY):
@@ -183,7 +195,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                               usageTime(end_time, start_time)))
         else:
             # with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}"):
             #     pass
@@ -209,7 +223,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                              usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}"):
                 if pic != '':
@@ -220,7 +236,7 @@ class BasePage:
             end_time = datetime.datetime.now()
             case_logger.error(
                 "[{}]<{}><{}>locator<{}> TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
-                                                                   usageTime(end_time, start_time)))
+                                                         usageTime(end_time, start_time)))
             return eles
 
     def input_text(self, loc_name, loc, loc_info, func_name, pic, text, timeout=TIMEOUT, frequency=FREQUENCY):
@@ -244,7 +260,10 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>input<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, text, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>input<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name,
+                                                                        loc_info, loc, text,
+                                                                        usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}input:[{text}]"):
                 if pic != '':
@@ -254,8 +273,9 @@ class BasePage:
                 pass
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]<{}><{}>locator<{}>input<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, text,
-                                                                usageTime(end_time,start_time)))
+                "[{}]<{}><{}>locator<{}>input<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info,
+                                                                   loc, text,
+                                                                   usageTime(end_time, start_time)))
 
     def clear_text(self, loc_name, loc, loc_info, func_name, pic='', timeout=TIMEOUT, frequency=FREQUENCY):
         """
@@ -276,7 +296,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                              usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}"):
                 if pic != '':
@@ -286,7 +308,8 @@ class BasePage:
                 pass
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]<{}><{}>locaator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+                "[{}]<{}><{}>locaator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                           usageTime(end_time, start_time)))
 
     def click_ele(self, loc_name, loc, loc_info, func_name, pic, timeout=TIMEOUT, frequency=FREQUENCY):
         """
@@ -308,7 +331,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                               usageTime(end_time, start_time)))
 
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}"):
@@ -318,7 +343,9 @@ class BasePage:
                     pass
                 pass
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]<{}><{}>locator<{}> TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                          usageTime(end_time, start_time)))
 
     def get_ele_text(self, loc_name, loc, loc_info, func_name, pic, timeout=TIMEOUT, frequency=FREQUENCY):
         """
@@ -340,7 +367,9 @@ class BasePage:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc} FAIL"):
                 pass
             end_time = datetime.datetime.now()
-            case_logger.error("[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, usageTime(end_time,start_time), e))
+            case_logger.error(
+                "[{}]<{}><{}>locator<{}>FAIL. TIME:{}s".format(func_name, sys._getframe().f_code.co_name, loc_info, loc,
+                                                               usageTime(end_time, start_time), e))
         else:
             with allure.step(f"[{mTime()}][{func_name}][{loc_info}]{loc}return value:[{text}]"):
 
@@ -351,39 +380,10 @@ class BasePage:
                     pass
                 pass
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]<{}><{}>locator<{}>value:[{}] TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info, loc, text, usageTime(end_time,start_time)))
+            case_logger.info(
+                "[{}]<{}><{}>locator<{}>value:[{}] TIME:{}".format(func_name, sys._getframe().f_code.co_name, loc_info,
+                                                                   loc, text, usageTime(end_time, start_time)))
             return text
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     # def get_eles_text(self, loc, loc_info, img_doc, m, timeout=TIMEOUT, frequency=FREQUENCY):
     #     """

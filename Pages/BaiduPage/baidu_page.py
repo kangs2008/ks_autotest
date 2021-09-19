@@ -2,7 +2,7 @@ import allure
 import sys, inspect
 from Locators.baidu_locators import locs
 from Common.basepage import BasePage
-from Common.utils import mTime, get_func_name
+from Common.utils import mTime
 from functools import wraps
 page = 'baidu_page'
 
