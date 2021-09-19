@@ -6,7 +6,7 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
 from Common.handle_logger import logger as case_logger
-from Common.setting import PIC_DIR, FREQUENCY, TIMEOUT
+from Common.setting import PIC_DIR, FREQUENCY, TIMEOUT, RELATIVE_DIR
 from Common.utils import usageTime, mTime
 
 
@@ -26,18 +26,19 @@ class BasePage:
         try:
             start_time = datetime.datetime.now()
             file_name = PIC_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
+            relative_name = RELATIVE_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
             self.driver.save_screenshot(file_name)
             with open(file_name, mode='rb') as f:
                 file = f.read()
             allure.attach(file, loc_name, allure.attachment_type.PNG)
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]{} TIME:".format(sys._getframe().f_code.co_name, file_name, usageTime(end_time,start_time)))
+            case_logger.info("[{}]{} TIME:".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time,start_time)))
         except Exception as e:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{loc_name}] FAIL"):
                 pass
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]{} TIME:".format(sys._getframe().f_code.co_name, file_name, usageTime(end_time, start_time)))
+                "[{}]{} TIME:".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
 
     def save_capture_paint(self, loc_name, pos):
         """
@@ -48,6 +49,8 @@ class BasePage:
         try:
             start_time = datetime.datetime.now()
             file_name = PIC_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()), loc_name)
+            relative_name = RELATIVE_DIR + r"\{}_{}.png".format(time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime()),
+                                                             loc_name)
             self.driver.save_screenshot(file_name)
 
             screenvc = cv2.imread(file_name)
@@ -58,13 +61,41 @@ class BasePage:
                 file = f.read()
             allure.attach(file, loc_name, allure.attachment_type.PNG)
             end_time = datetime.datetime.now()
-            case_logger.info("[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, file_name, usageTime(end_time,start_time)))
+            case_logger.info("[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time,start_time)))
         except Exception as e:
             with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{loc_name}] FAIL"):
                 pass
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, file_name, usageTime(end_time, start_time)))
+                "[{}]{} TIME:{}".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
+
+    def goto_url(self, url, pic, timeout=TIMEOUT, frequency=FREQUENCY):
+        """
+        goto url
+        :param url: url
+        :param pic: '' or None :don't take a screenshot
+        :param timeout: 20s
+        :param frequency: 0.5s
+        """
+        try:
+            start_time = datetime.datetime.now()
+            d = self.driver.get(url)
+        except Exception as e:
+            with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{url}] FAIL"):
+                pass
+            end_time = datetime.datetime.now()
+            case_logger.error("[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time,start_time)))
+        else:
+            with allure.step(f"[{mTime()}][{sys._getframe().f_code.co_name}][{url}] FAIL"):
+                if pic != '':
+                    self.save_capture('goto_url')
+                else:
+                    pass
+                pass
+            end_time = datetime.datetime.now()
+            case_logger.info("[{}]<{}>FAIL. TIME:{}s".format(sys._getframe().f_code.co_name, url, usageTime(end_time,start_time)))
+            return d
+
 
     def wait_ele_to_visible(self, loc, loc_info, func_name, timeout=TIMEOUT, frequency=FREQUENCY):
         """

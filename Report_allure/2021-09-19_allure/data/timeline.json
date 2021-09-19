@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-V8HO8M4",
+    "children" : [ {
+      "name" : "8748-MainThread",
+      "children" : [ {
+        "name" : "test_login[data0]",
+        "uid" : "d307069a8884ae0e",
+        "parentUid" : "8bb6a42e7a2b2ff7f0b91a127ff5058c",
+        "status" : "passed",
+        "time" : {
+          "start" : 1632026639550,
+          "stop" : 1632026640486,
+          "duration" : 936
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+      } ],
+      "uid" : "8bb6a42e7a2b2ff7f0b91a127ff5058c"
+    } ],
+    "uid" : "198725d75e10e48540c358e545372b07"
+  } ]
+}

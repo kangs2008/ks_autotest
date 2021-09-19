@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "TestCases.Login.test_baidu",
+    "children" : [ {
+      "name" : "test_login[data0]",
+      "uid" : "d307069a8884ae0e",
+      "parentUid" : "a43a44eb30fa813f9b1a3b816613a842",
+      "status" : "passed",
+      "time" : {
+        "start" : 1632026639550,
+        "stop" : 1632026640486,
+        "duration" : 936
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "{'title': '百度一下', 'news': '新闻', 'input': 'python', 'check': 'python_百度搜索'}" ]
+    } ],
+    "uid" : "TestCases.Login.test_baidu"
+  } ]
+}

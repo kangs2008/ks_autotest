@@ -23,23 +23,23 @@ class HandleLogger:
                                                                encoding='utf-8', delay=False)
         console_handle = logging.StreamHandler()  # 定义一个控制台输出渠道
         file_handle2 = logging.FileHandler(log_file, encoding='utf-8')  # 定义一个文件输出渠道
-        file_handle = logging.FileHandler('log_file_format.log', encoding='utf-8')
+        # file_handle = logging.FileHandler('log_file_format.log', encoding='utf-8')
 
         console_handle.setLevel(logging.DEBUG)  # 设置控制台输出渠道的日志级别为ERROR
-        file_handle.setLevel(logging.INFO)  # 设置文件输出渠道的日志级别为INFO
+        # file_handle.setLevel(logging.INFO)  # 设置文件输出渠道的日志级别为INFO
         file_handle2.setLevel(logging.INFO)
 
         simple_formatter = logging.Formatter(fmt)  # 定义简洁类型日志格式
         verbose_formatter = logging.Formatter(fmt)  # 定义详细类型日志格式
 
         console_handle.setFormatter(simple_formatter)  # 控制台显示简洁的日志
-        file_handle.setFormatter(verbose_formatter)  # 文件中显示详细的日志
+        # file_handle.setFormatter(verbose_formatter)  # 文件中显示详细的日志
         file_handle2.setFormatter(verbose_formatter)
 
         # 将日志收集器与输出渠道对接
-        self.case_logger.addHandler(sizefilehandler)
+        # self.case_logger.addHandler(sizefilehandler)
         self.case_logger.addHandler(console_handle)
-        self.case_logger.addHandler(file_handle)
+        # self.case_logger.addHandler(file_handle)
         self.case_logger.addHandler(file_handle2)
 
     def get_case_logger(self):  # 获取日志收集器

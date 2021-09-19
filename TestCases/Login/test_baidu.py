@@ -8,6 +8,7 @@ from Common.basepage import BasePage
 
 @allure.feature("login 异常测试用例，feature")
 @pytest.mark.usefixtures('start_session')
+# @pytest.mark.usefixtures('report')
 # @pytest.mark.usefixtures('refresh_page')
 class TestLogin:
 
@@ -22,7 +23,7 @@ class TestLogin:
         news = baidu.get_news_text()
 
         baidu.search(data['input'])
-        assert news != data['news']
+        assert news == data['news']
         logger.info(" 结束执行 {0} 测试用例， 测试结果 --- PASS ".format(sys._getframe().f_code.co_name))
 
 

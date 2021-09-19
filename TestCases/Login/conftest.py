@@ -40,6 +40,7 @@ def start_session():
     driver.maximize_window()
     driver.get('https://www.baidu.com/')
     yield driver
+    driver.quit()
     logger.info("========== close browser ===========")
 
 
