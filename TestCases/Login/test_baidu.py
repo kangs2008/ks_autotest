@@ -1,6 +1,6 @@
 import pytest
 import allure
-import sys
+import sys, time
 from Common.login_datas import data1
 from Common.handle_logger import logger
 from Pages.BaiduPage.baidu_page import BaiduPage
@@ -19,11 +19,24 @@ class TestLogin:
         """描述！！！！"""
         logger.info(f" 执行 {self.__class__.__name__} 测试套件Suite ")
         logger.info(f" 执行 {sys._getframe().f_code.co_name} 测试用例Case ")
-        baidu = BaiduPage(start_session)
-        news = baidu.get_news_text()
 
-        baidu.search(data['input'])
+
+        bb = BaiduPage(start_session)
+        st = bb.news_link_loc.wait_ele_to_visible()
+        time.sleep(2)
+        news = bb.news_link_loc.ele_get_text()
+        # news = bb.news_link_loc.eles_get_elements_text()
         assert news == data['news']
+
+        bb.search_text_loc.kb_paste()
+
+        # bb.search_text_loc.ele_input_text(data['input'],'1')
+        time.sleep(2)
+        bb.search_btn_loc.ele_click('1')
+
+
+
+
         logger.info(" 结束执行 {0} 测试用例， 测试结果 --- PASS ".format(sys._getframe().f_code.co_name))
 
 

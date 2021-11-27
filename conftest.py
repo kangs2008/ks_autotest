@@ -1,14 +1,131 @@
 # -*- coding: utf-8 -*-
 import pytest, os, time, subprocess, sys
 import requests
+from py._xmlgen import html
 from Common.handle_logger import logger
 from Common.handle_config import ReadWriteConfFile
 from Common.utils import start_time_format, use_time, report_date_folder
 from Common.handle_file import file_zip_path, file_del, file_copy, file_and_folder_copy, current_folder_file_copy
 from Common.setting import BASE_DIR, REPORT_DIR, REPORT_CURRENT_DIR
-
+from Common.newbasepage import PageObject, Element
+from selenium import webdriver
+import datetime
 _session = None
 _date = report_date_folder()
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """当测试失败的时候，自动截图，展示到html报告中"""
+    pytest_html = item.config.pluginmanager.getplugin('html')
+    outcome = yield
+    report = outcome.get_result()
+    extra = getattr(report, 'extra', [])
+
+    if report.when == 'call' or report.when == "setup":
+        xfail = hasattr(report, 'wasxfail')
+        if (report.skipped and xfail) or (report.failed and not xfail):
+            _driver = item.funcargs['start_session']
+            fn = PageObject(_driver).save_capture_ob('ERROR')
+
+            extra.append(pytest_html.extras.image(fn))
+        report.extra = extra
+    report.description = str(item.function.__doc__)
+    report.nodeid = report.nodeid.encode('utf-8').decode('unicode_escape')
+
+@pytest.mark.optionalhook
+def pytest_html_results_summary(prefix, summary, postfix):
+    prefix.extend([html.p("测试人: xqc")])
+
+
+def pytest_configure(config):
+    config._metadata['测试地址'] = 'https://www.baidu.com'
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_header(cells):
+    cells.insert(2, html.th('Description'))
+    cells.insert(3, html.th('Time', class_='sortable time', col='time'))
+    # cells.insert(1,html.th("Test_nodeid"))
+    cells.pop()
+
+
+@pytest.mark.optionalhook
+def pytest_html_results_table_row(report, cells):
+    cells.insert(2, html.td(report.description))
+    cells.insert(3, html.td(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), class_='col-time'))
+    # cells.insert(1,html.td(report.nodeid))
+    cells.pop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@pytest.fixture(scope='class', autouse=False)
+def start_session():
+    """
+    所有CLASS只打开一次浏览器
+    :return: driver
+    """
+    logger.info("========== open browser ===========")
+    global driver
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.get('https://www.baidu.com/')
+    yield driver
+    # driver.quit()
+    logger.info("========== close browser ===========")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def pytest_addoption(parser):
@@ -46,10 +163,10 @@ def report(request):
         logger.info(f"the report folder:{mk_report_dir}")
     yield request.config.getoption("--report")
 
-    cmd = 'allure generate ./temp -o ./Report --clean'
-    os.system(cmd)
+    # cmd = 'allure generate ./temp -o ./Report --clean'
+    # os.system(cmd)
 
-    logger.info(f"os.system :{cmd}")
+    # logger.info(f"os.system :{cmd}")
     report_dir = ReadWriteConfFile().get_option('report_dir', 'report_dir_folder')
     copy_to = os.path.join(REPORT_CURRENT_DIR, report_dir)
     file_del(copy_to)

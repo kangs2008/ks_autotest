@@ -28,20 +28,20 @@ driver = None
 #     # driver.quit()
 
 
-@pytest.fixture(scope='class', autouse=False)
-def start_session():
-    """
-    所有CLASS只打开一次浏览器
-    :return: driver
-    """
-    logger.info("========== open browser ===========")
-    global driver
-    driver = webdriver.Chrome()
-    driver.maximize_window()
-    driver.get('https://www.baidu.com/')
-    yield driver
-    driver.quit()
-    logger.info("========== close browser ===========")
+# @pytest.fixture(scope='class', autouse=False)
+# def start_session():
+#     """
+#     所有CLASS只打开一次浏览器
+#     :return: driver
+#     """
+#     logger.info("========== open browser ===========")
+#     global driver
+#     driver = webdriver.Chrome()
+#     driver.maximize_window()
+#     driver.get('https://www.baidu.com/')
+#     yield driver
+#     # driver.quit()
+#     logger.info("========== close browser ===========")
 
 
 # @pytest.fixture()

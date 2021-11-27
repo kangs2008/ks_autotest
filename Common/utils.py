@@ -1,6 +1,8 @@
 import datetime
 import time
-
+from functools import wraps
+from Common.handle_logger import logger as case_logger
+import allure
 
 def mTime():
     return str(datetime.datetime.now().strftime('%H:%M:%S.%f')[:-3])
@@ -35,6 +37,9 @@ def report_date_folder():
 def usageTime(endtime, starttime):
     return str(starttime.strftime('%Y%m%d %H:%M:%S.%f'))[:-3] + '/' + str((endtime - starttime))[5:11]
     # return starttime.strftime('%H:%M:%S.%f')
+
+
+
 
 if __name__ == '__main__':
     pass

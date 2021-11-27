@@ -1,6 +1,6 @@
 import os
 
-TIMEOUT=20
+TIMEOUT=5
 FREQUENCY=0.5
 
 # 获取项目根目录

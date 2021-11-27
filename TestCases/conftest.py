@@ -7,29 +7,29 @@ import pytest
 from Common.basepage import BasePage
 
 
-@pytest.mark.hookwrapper
-def pytest_runtest_makereport(item):
-    """
-    Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
-    :param item:
-    """
-    outcome = yield
-    report = outcome.get_result()
-    extra = getattr(report, 'extra', [])
-
-    if report.when == 'call' or report.when == "setup":
-        xfail = hasattr(report, 'wasxfail')
-        #判断用例是否失败或者xfail跳过的测试
-        if (report.skipped and xfail) or (report.failed and not xfail):
-        	#获取测试用例代码中webDriver参数来获取浏览器进行抓屏
-            for i in item.funcargs:
-                if isinstance(item.funcargs[i], WebDriver):
-                	#截图
-                    BasePage(item.funcargs[i]).save_capture("异常图")
-                    pass
-                pass
-            pass
-        report.extra = extra
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item):
+#     """
+#     Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
+#     :param item:
+#     """
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#
+#     if report.when == 'call' or report.when == "setup":
+#         xfail = hasattr(report, 'wasxfail')
+#         #判断用例是否失败或者xfail跳过的测试
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#         	#获取测试用例代码中webDriver参数来获取浏览器进行抓屏
+#             for i in item.funcargs:
+#                 if isinstance(item.funcargs[i], WebDriver):
+#                 	#截图
+#                     BasePage(item.funcargs[i]).save_capture("异常图")
+#                     pass
+#                 pass
+#             pass
+#         report.extra = extra
 
 
 # def create_driver(options=Options()):
