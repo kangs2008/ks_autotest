@@ -160,5 +160,45 @@ def file_and_folder_copy(input_path, copy_to_path, ignore=[], rename=None):
             s = s + ',' + f
     return s
 
+def del_files(filepath):
+    del_list = os.listdir(filepath)
+    for f in del_list:
+        file_path = os.path.join(filepath, f)
+        if os.path.isfile(file_path):
+            os.remove(file_path)
+        elif os.path.isdir(file_path):
+            os.remove(file_path)
+
+def find_file(filepath, name='', ignore=None):
+    """
+    find all files
+    :param filepath: file path or path+file_name
+    :param name: file name or part name
+    :param ignore: .csv / '' / ...
+    :param return: path+file_name list
+    """
+    pattern = r'(.+)'
+    res = re.findall(pattern, str(name))
+    L = []
+    if os.path.isfile(filepath):
+        return [filepath]
+    for root, dirs, files in os.walk(filepath):
+        for file in files:
+            if name == '':
+                if ignore is None:
+                    L.append(os.path.join(root, file))
+                else:
+                    if os.path.splitext(file)[1] == ignore.lower():
+                        L.append(os.path.join(root, file))
+            else:
+                for r in res:
+                    if r in file:
+                        if ignore is None:
+                            L.append(os.path.join(root, file))
+                        else:
+                            if os.path.splitext(file)[1] == ignore.lower():
+                                L.append(os.path.join(root, file))
+    return L
+
 if __name__ == '__main__':
     pass
