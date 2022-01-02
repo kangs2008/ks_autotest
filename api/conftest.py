@@ -7,7 +7,7 @@ from Common.handle_logger import logger
 
 _session = None
 
-@pytest.fixture(scope="function", autouse=True)
+@pytest.fixture(scope="function", autouse=False)
 def requests_session():
     """
     init requests.session()

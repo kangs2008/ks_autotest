@@ -1,5 +1,5 @@
 import json, re
-
+from Common.handle_logger import logger
 class HandleJson:
     """
     定义一个json格式数据处理类
@@ -54,11 +54,9 @@ class HandleJson:
         :return:
         """
         key_value = key_value[:] if key_value else []
-        print('aaa')
         if isinstance(indict, dict):
-            print(1)
             for key, value in indict.items():
-                tier=-1
+                tier = -1
                 if isinstance(value, dict):
                     if len(value)==0:
                         yield key_value + [key, '{}']
@@ -76,7 +74,6 @@ class HandleJson:
                 else:
                     yield key_value + [key, value]
         else:
-            print(2)
             if not key_value:
                 yield indict
             else:
@@ -126,11 +123,13 @@ class HandleJson:
                             msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >: {E}".format(K=k, A=a_flow[k], E=v))
                             error_count += 1
                             print(msg)
+                            logger.info(msg)
                         else:
                             if str(a_flow[k]) != v:
                                 msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >:{E}".format(K=k,A=str(a_flow[k]), E=v))
                                 error_count += 1
                                 print(msg)
+                                logger.info(msg)
             else: # 默认全部比较
                 for k, v in iter(e_flow.items()):
                     v = str(v)
@@ -139,17 +138,23 @@ class HandleJson:
                             msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞： {A} \n < expect >:{E}".format(K=k, A=str(a_flow[k]), E=v))
                             error_count += 1
                             print(msg)
+                            logger.info(msg)
                     else:
                         if str(a_flow[k]) != v:
                             msg = (
                                 "[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞： {A} \n < expect >:{E}".format(K=k, A=str(a_flow[k]), E=v))
                             error_count += 1
                             print(msg)
+                            logger.info(msg)
         else:
             msg = (
                 f"[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：\n ＜actual＞：{sorted(a_flow.keys())} \n < expect >:{sorted(e_flow.keys())}")
             error_count += 1
             print(msg)
+            logger.info(msg)
+        return  error_count
+        # if error_count != 0:
+        #     raise 'aaaaaa'
 
     def structure_flow_sub(self, json_gen_obj):
         """
@@ -158,7 +163,6 @@ class HandleJson:
         """
         structure = {}
         for i in self.json_generator(json_gen_obj):
-            print(i)
             if '.'.join(i[:-1]) in structure.keys() and not isinstance(structure['.'.join(i[:-1])], list):
                 structure['.'.join(i[:-1])] = [structure['.'.join(i[:-1])]]
                 structure['.'.join(i[:-1])].append(i[-1])

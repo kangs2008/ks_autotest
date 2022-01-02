@@ -1,781 +1,441 @@
-2021-11-27 10:50:01,992 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 10:50:01,992 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 10:50:01,992 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 10:50:06,275 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 10:50:06,276 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 10:50:06,276 LOG ERROR newbasepage.py-117 line：[func_name]<wait_ele_to_visible>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>FAIL. TIME:20211127 10:50:06.276/00s
-2021-11-27 10:50:06,292 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 10:50:06,573 LOG INFO newbasepage.py-333 line：[save_capture]ks_web_allure\PIC\2021-11-27_10-50-06_loc_name.png TIME:
-2021-11-27 10:50:06,574 LOG INFO newbasepage.py-310 line：[func_name]<ele_get_text>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>return value <新闻> TIME:20211127 10:50:06.277/00.297s
-2021-11-27 10:50:06,627 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 10:50:07,064 LOG INFO newbasepage.py-333 line：[save_capture]ks_web_allure\PIC\2021-11-27_10-50-06_loc_name.png TIME:
-2021-11-27 10:50:07,064 LOG INFO newbasepage.py-179 line：[func_name]<ele_input_text>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20211127 10:50:06.574/00.490s
-2021-11-27 10:50:09,088 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 10:50:18,168 LOG INFO newbasepage.py-333 line：[save_capture]ks_web_allure\PIC\2021-11-27_10-50-09_百度一下.png TIME:
-2021-11-27 10:50:18,168 LOG INFO newbasepage.py-244 line：[func_name]<ele_click>locator<('xpath', '//*[@id="su"]')> TIME:20211127 10:50:09.068/09.099s
-2021-11-27 10:50:18,168 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 10:50:18,168 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 10:50:23,921 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 10:50:24,261 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 10:50:24,261 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 10:50:24,261 LOG INFO conftest.py-62 line：Usage time 0:00:22
-2021-11-27 10:50:24,261 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 11:12:04,105 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 11:12:04,105 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:12:04,105 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 11:12:08,733 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 11:12:08,734 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 11:12:08,734 LOG ERROR newbasepage.py-117 line：[func_name]<wait_ele_to_visible>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>FAIL. TIME:20211127 11:12:08.734/00s
-2021-11-27 11:12:08,750 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 11:12:09,014 LOG INFO newbasepage.py-334 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-12-08_loc_name.png TIME:
-2021-11-27 11:12:09,021 LOG INFO newbasepage.py-311 line：[func_name]<ele_get_text>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>return value <新闻> TIME:20211127 11:12:08.734/00.287s
-2021-11-27 11:12:09,035 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 11:12:09,517 LOG INFO newbasepage.py-334 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-12-09_loc_name.png TIME:
-2021-11-27 11:12:09,522 LOG INFO newbasepage.py-180 line：[func_name]<ele_input_text>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20211127 11:12:09.021/00.500s
-2021-11-27 11:12:11,556 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 11:12:11,951 LOG INFO newbasepage.py-334 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-12-11_百度一下.png TIME:
-2021-11-27 11:12:11,963 LOG INFO newbasepage.py-245 line：[func_name]<ele_click>locator<('xpath', '//*[@id="su"]')> TIME:20211127 11:12:11.530/00.432s
-2021-11-27 11:12:11,963 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 11:12:11,967 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 11:12:23,367 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 11:12:23,725 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:12:23,725 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 11:12:23,725 LOG INFO conftest.py-62 line：Usage time 0:00:19
-2021-11-27 11:12:23,725 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 11:14:23,292 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 11:14:23,302 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:14:23,302 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 11:14:28,460 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 11:14:28,460 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 11:14:28,461 LOG ERROR newbasepage.py-117 line：[func_name]<wait_ele_to_visible>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>FAIL. TIME:20211127 11:14:28.461/00s
-2021-11-27 11:14:28,476 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 11:14:28,753 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-14-28_loc_name.png TIME:
-2021-11-27 11:14:28,760 LOG INFO newbasepage.py-319 line：[func_name]<ele_get_text>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>return value <新闻> TIME:20211127 11:14:28.461/00.299s
-2021-11-27 11:14:28,773 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 11:14:29,248 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-14-29_loc_name.png TIME:
-2021-11-27 11:14:29,260 LOG INFO newbasepage.py-180 line：[func_name]<ele_input_text>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20211127 11:14:28.761/00.498s
-2021-11-27 11:14:31,285 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 11:14:31,585 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-14-31_百度一下.png TIME:
-2021-11-27 11:14:31,598 LOG INFO newbasepage.py-249 line：[func_name]<ele_click>locator<('xpath', '//*[@id="su"]')> TIME:20211127 11:14:31.265/00.332s
-2021-11-27 11:14:31,598 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 11:14:31,601 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 11:14:42,280 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 11:14:42,658 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:14:42,661 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 11:14:42,661 LOG INFO conftest.py-62 line：Usage time 0:00:19
-2021-11-27 11:14:42,661 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 11:23:31,038 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 11:23:31,038 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:23:31,039 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 11:23:38,073 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 11:23:38,073 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 11:23:38,135 LOG INFO newbasepage.py-122 line：[func_name]<wait_ele_to_visible>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20211127 11:23:38.074/00.060s
-2021-11-27 11:23:38,157 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 11:23:38,601 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-23-38_loc_name.png TIME:
-2021-11-27 11:23:38,611 LOG INFO newbasepage.py-319 line：[func_name]<ele_get_text>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>return value <新闻> TIME:20211127 11:23:38.135/00.476s
-2021-11-27 11:23:38,630 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 11:23:39,184 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-23-38_loc_name.png TIME:
-2021-11-27 11:23:39,200 LOG INFO newbasepage.py-180 line：[func_name]<ele_input_text>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20211127 11:23:38.612/00.588s
-2021-11-27 11:23:41,225 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 11:23:43,709 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-23-43_百度一下.png TIME:
-2021-11-27 11:23:43,728 LOG INFO newbasepage.py-249 line：[func_name]<ele_click>locator<('xpath', '//*[@id="su"]')> TIME:20211127 11:23:41.213/02.514s
-2021-11-27 11:23:43,729 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 11:23:43,732 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 11:23:51,881 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 11:23:53,833 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:23:53,836 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 11:23:53,836 LOG INFO conftest.py-62 line：Usage time 0:00:22
-2021-11-27 11:23:53,836 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 11:25:22,874 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 11:25:22,874 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:25:22,874 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 11:25:27,208 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 11:25:27,209 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 11:25:27,252 LOG INFO newbasepage.py-122 line：[func_name]<wait_ele_to_visible>locator<('xpath', '//*[@id="s-top-left"]/a[1]')> TIME:20211127 11:25:27.209/00.042s
-2021-11-27 11:25:27,265 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 11:25:27,600 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-25-27_loc_name.png TIME:
-2021-11-27 11:25:27,606 LOG INFO newbasepage.py-319 line：[func_name]<ele_get_text>locator<('xpath', '//*[@id="s-top-left"]/a[1]')>return value <新闻> TIME:20211127 11:25:27.253/00.353s
-2021-11-27 11:25:27,620 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 11:25:28,006 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-25-27_loc_name.png TIME:
-2021-11-27 11:25:28,016 LOG INFO newbasepage.py-180 line：[func_name]<ele_input_text>locator<('xpath', '//*[@id="kw"]')>input<python> TIME:20211127 11:25:27.606/00.409s
-2021-11-27 11:25:30,038 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 11:25:32,478 LOG INFO newbasepage.py-343 line：[save_capture]ks_web_allure\PIC\2021-11-27_11-25-32_百度一下.png TIME:
-2021-11-27 11:25:32,487 LOG INFO newbasepage.py-249 line：[func_name]<ele_click>locator<('xpath', '//*[@id="su"]')> TIME:20211127 11:25:30.026/02.459s
-2021-11-27 11:25:32,487 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 11:25:32,491 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 11:25:43,670 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 11:25:44,090 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 11:25:44,092 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 11:25:44,092 LOG INFO conftest.py-62 line：Usage time 0:00:21
-2021-11-27 11:25:44,092 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 12:21:16,156 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 12:21:16,156 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:21:16,156 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 12:21:21,578 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 12:21:21,578 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 12:21:21,651 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 12:21:21.579/00.072s
-2021-11-27 12:21:21,672 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 12:21:21,961 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122121_新闻.png,time:20211127 12:21:21.732/00.229
-2021-11-27 12:21:21,975 LOG INFO newbasepage.py-318 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 12:21:21.651/00.323s
-2021-11-27 12:21:21,990 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 12:21:22,343 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122122_首页输入框.png,time:20211127 12:21:22.144/00.198
-2021-11-27 12:21:22,352 LOG INFO newbasepage.py-182 line：[ele_input_text]<首页输入框>,locator:<('xpath', '//*[@id="kw"]')>,input:<python>,time:20211127 12:21:21.976/00.376s
-2021-11-27 12:21:24,390 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 12:21:24,678 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122124_百度一下.png,time:20211127 12:21:24.416/00.261
-2021-11-27 12:21:24,793 LOG INFO newbasepage.py-247 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 12:21:24.361/00.431s
-2021-11-27 12:21:24,793 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 12:21:24,796 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 12:21:33,122 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 12:21:33,830 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:21:33,830 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 12:21:33,840 LOG INFO conftest.py-62 line：Usage time 0:00:17
-2021-11-27 12:21:33,840 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 12:23:01,490 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 12:23:01,490 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:23:01,490 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 12:23:07,415 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 12:23:07,415 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 12:23:07,445 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 12:23:07.415/00.030s
-2021-11-27 12:23:07,457 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 12:23:07,739 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122307_新闻.png,time:20211127 12:23:07.489/00.249
-2021-11-27 12:23:07,747 LOG INFO newbasepage.py-318 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 12:23:07.446/00.301s
-2021-11-27 12:23:07,760 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 12:23:08,238 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122307_首页输入框.png,time:20211127 12:23:07.923/00.314
-2021-11-27 12:23:08,247 LOG INFO newbasepage.py-182 line：[ele_input_text]<首页输入框>,locator:<('xpath', '//*[@id="kw"]')>,input:<python>,time:20211127 12:23:07.747/00.499s
-2021-11-27 12:23:10,301 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 12:23:10,601 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122310_百度一下.png,time:20211127 12:23:10.342/00.258
-2021-11-27 12:23:10,688 LOG INFO newbasepage.py-247 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 12:23:10.263/00.425s
-2021-11-27 12:23:10,689 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 12:23:10,724 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 12:23:19,021 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 12:23:19,206 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:23:19,209 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 12:23:19,209 LOG INFO conftest.py-62 line：Usage time 0:00:17
-2021-11-27 12:23:19,209 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 12:26:04,860 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 12:26:04,860 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:26:04,860 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 12:26:09,018 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 12:26:09,019 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 12:26:09,063 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 12:26:09.019/00.044s
-2021-11-27 12:26:09,093 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 12:26:09,380 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122609_新闻.png,time:20211127 12:26:09.144/00.236
-2021-11-27 12:26:09,418 LOG INFO newbasepage.py-318 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 12:26:09.063/00.355s
-2021-11-27 12:26:09,432 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="kw"]') 
-2021-11-27 12:26:09,812 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122609_首页输入框.png,time:20211127 12:26:09.589/00.222
-2021-11-27 12:26:09,825 LOG INFO newbasepage.py-182 line：[ele_input_text]<首页输入框>,locator:<('xpath', '//*[@id="kw"]')>,input:<python>,time:20211127 12:26:09.418/00.406s
-2021-11-27 12:26:11,869 LOG INFO newbasepage.py-93 line：✅ Find element: ('xpath', '//*[@id="su"]') 
-2021-11-27 12:26:12,129 LOG INFO newbasepage.py-342 line：[save_capture]ks_web_allure\PIC20211127_122611_百度一下.png,time:20211127 12:26:11.910/00.218
-2021-11-27 12:26:12,224 LOG INFO newbasepage.py-247 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 12:26:11.829/00.394s
-2021-11-27 12:26:12,225 LOG INFO test_baidu.py-36 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 12:26:12,227 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 12:26:20,973 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 12:26:21,101 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 12:26:21,103 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 12:26:21,103 LOG INFO conftest.py-62 line：Usage time 0:00:16
-2021-11-27 12:26:21,103 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:29:43,391 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:29:43,391 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:29:43,391 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:29:49,147 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:29:49,147 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:29:49,239 LOG INFO newbasepage.py-125 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 13:29:49.147/00.092s
-2021-11-27 13:29:49,614 LOG INFO newbasepage.py-355 line：[save_capture]ks_web_allure\PIC20211127_132949_新闻.png,time:20211127 13:29:49.339/00.275
-2021-11-27 13:29:49,631 LOG INFO newbasepage.py-331 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 13:29:49.239/00.392s
-2021-11-27 13:29:49,898 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-29-49_异常图.png TIME:
-2021-11-27 13:29:49,908 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:29:55,246 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:29:55,379 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:29:55,379 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:29:55,379 LOG INFO conftest.py-62 line：Usage time 0:00:11
-2021-11-27 13:29:55,379 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:32:00,824 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:32:00,824 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:32:00,824 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:32:05,966 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:32:05,967 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:32:06,014 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:32:06,078 LOG INFO newbasepage.py-511 line：[eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[ALL]],time:20211127 13:32:05.967/00.111s
-2021-11-27 13:32:06,078 LOG INFO newbasepage.py-512 line：[{}]elements:<{}>
-2021-11-27 13:32:06,465 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-32-06_异常图.png TIME:
-2021-11-27 13:32:06,475 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:32:16,235 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:32:16,375 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:32:16,385 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:32:16,385 LOG INFO conftest.py-62 line：Usage time 0:00:15
-2021-11-27 13:32:16,385 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:34:00,159 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:34:00,159 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:34:00,159 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:34:04,488 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:34:04,488 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:34:04,508 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:34:04,547 LOG INFO newbasepage.py-511 line：[eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[ALL]],time:20211127 13:34:04.489/00.058s
-2021-11-27 13:34:04,547 LOG INFO newbasepage.py-512 line：[{}]elements:<{}>
-2021-11-27 13:34:04,981 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-34-04_异常图.png TIME:
-2021-11-27 13:34:04,981 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:34:13,633 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:34:13,793 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:34:13,793 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:34:13,803 LOG INFO conftest.py-62 line：Usage time 0:00:13
-2021-11-27 13:34:13,803 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:35:29,015 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:35:29,015 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:35:29,015 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:35:33,651 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:35:33,651 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:35:33,672 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:35:33,714 LOG INFO newbasepage.py-511 line：[eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[ALL]],time:20211127 13:35:33.652/00.061s
-2021-11-27 13:35:33,715 LOG INFO newbasepage.py-512 line：[eles_get_elements_text]elements:<['新闻']>
-2021-11-27 13:35:34,228 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-35-33_异常图.png TIME:
-2021-11-27 13:35:34,232 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:35:41,990 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:35:42,212 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:35:42,212 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:35:42,212 LOG INFO conftest.py-62 line：Usage time 0:00:13
-2021-11-27 13:35:42,212 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:37:55,876 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:37:55,876 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:37:55,876 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:38:01,382 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:38:01,382 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:38:01,417 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:38:01,418 LOG ERROR newbasepage.py-506 line：[FAIL][eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[0]],time:20211127 13:38:01.383/00.034s
-2021-11-27 13:38:01,856 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-38-01_异常图.png TIME:
-2021-11-27 13:38:01,866 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:38:11,145 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:38:11,316 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:38:11,316 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:38:11,316 LOG INFO conftest.py-62 line：Usage time 0:00:15
-2021-11-27 13:38:11,316 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:39:01,099 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:39:01,099 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:39:01,099 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:39:05,721 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:39:05,722 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:39:05,782 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:39:05,782 LOG ERROR newbasepage.py-506 line：[FAIL][eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[0]],time:20211127 13:39:05.722/00.059s
-2021-11-27 13:39:06,316 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-39-06_异常图.png TIME:
-2021-11-27 13:39:06,326 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:39:11,987 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:39:12,777 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:39:12,777 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:39:12,777 LOG INFO conftest.py-62 line：Usage time 0:00:11
-2021-11-27 13:39:12,777 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:42:22,607 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:42:22,607 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:42:22,607 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:42:27,157 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:42:27,157 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:42:27,174 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:42:27,175 LOG ERROR newbasepage.py-507 line：[FAIL][eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[0]],time:20211127 13:42:27.157/00.017s
-2021-11-27 13:42:28,070 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-42-27_异常图.png TIME:
-2021-11-27 13:42:28,073 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:42:36,937 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:42:37,177 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:42:37,177 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:42:37,177 LOG INFO conftest.py-62 line：Usage time 0:00:14
-2021-11-27 13:42:37,177 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:43:23,238 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:43:23,238 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:43:23,238 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:43:28,306 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:43:28,306 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:43:28,372 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:43:28,373 LOG ERROR newbasepage.py-508 line：[FAIL][eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,[self.index[0]],time:20211127 13:43:28.307/00.065s
-2021-11-27 13:43:28,848 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-43-28_异常图.png TIME:
-2021-11-27 13:43:28,848 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:43:39,259 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:43:39,469 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:43:39,469 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:43:39,469 LOG INFO conftest.py-62 line：Usage time 0:00:16
-2021-11-27 13:43:39,469 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 13:47:02,657 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 13:47:02,657 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:47:02,657 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 13:47:07,288 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 13:47:07,288 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 13:47:07,343 LOG INFO newbasepage.py-429 line：❓ Find '1' element: ('xpath', '//*[@id="s-top-left"]/a[1]') 
-2021-11-27 13:47:07,393 LOG INFO newbasepage.py-516 line：[eles_get_elements_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,<self.index[0]>,time:20211127 13:47:07.289/00.104s
-2021-11-27 13:47:07,393 LOG INFO newbasepage.py-517 line：[eles_get_elements_text]elements:<['新闻']>
-2021-11-27 13:47:07,831 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_13-47-07_异常图.png TIME:
-2021-11-27 13:47:07,833 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 13:47:13,471 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 13:47:14,021 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 13:47:14,021 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 13:47:14,021 LOG INFO conftest.py-62 line：Usage time 0:00:11
-2021-11-27 13:47:14,021 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 14:50:42,462 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 14:50:42,462 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:50:42,462 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 14:50:47,983 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 14:50:47,983 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 14:50:48,035 LOG INFO newbasepage.py-428 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<None>time:20211127 14:50:47.983/00.052s
-2021-11-27 14:50:48,411 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_14-50-48_异常图.png TIME:
-2021-11-27 14:50:48,411 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 14:50:54,523 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 14:50:54,865 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:50:54,870 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 14:50:54,871 LOG INFO conftest.py-62 line：Usage time 0:00:12
-2021-11-27 14:50:54,871 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 14:52:23,476 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 14:52:23,476 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:52:23,476 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 14:52:27,904 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 14:52:27,904 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 14:52:27,975 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 14:52:27.905/00.070s
-2021-11-27 14:52:28,025 LOG INFO newbasepage.py-428 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<None>time:20211127 14:52:27.975/00.048s
-2021-11-27 14:52:28,407 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_14-52-28_异常图.png TIME:
-2021-11-27 14:52:28,407 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 14:52:33,652 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 14:52:33,969 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:52:33,969 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 14:52:33,969 LOG INFO conftest.py-62 line：Usage time 0:00:10
-2021-11-27 14:52:33,969 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 14:54:32,470 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 14:54:32,470 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:54:32,470 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 14:54:37,191 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 14:54:37,191 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 14:54:37,265 LOG INFO newbasepage.py-125 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 14:54:37.191/00.074s
-2021-11-27 14:54:37,323 LOG INFO newbasepage.py-429 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<None>time:20211127 14:54:37.265/00.058s
-2021-11-27 14:54:37,710 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_14-54-37_异常图.png TIME:
-2021-11-27 14:54:37,710 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 14:54:45,235 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 14:54:45,505 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:54:45,505 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 14:54:45,505 LOG INFO conftest.py-62 line：Usage time 0:00:13
-2021-11-27 14:54:45,505 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 14:56:30,926 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 14:56:30,926 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:56:30,926 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 14:56:35,464 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 14:56:35,464 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 14:56:35,501 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 14:56:35.464/00.036s
-2021-11-27 14:56:37,870 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_14-56-37_异常图.png TIME:
-2021-11-27 14:56:37,870 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 14:56:46,018 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 14:56:46,552 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:56:46,552 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 14:56:46,552 LOG INFO conftest.py-62 line：Usage time 0:00:15
-2021-11-27 14:56:46,552 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 14:58:29,475 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 14:58:29,475 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:58:29,475 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 14:58:33,893 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 14:58:33,894 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 14:58:33,961 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 14:58:33.895/00.064s
-2021-11-27 14:58:36,269 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_14-58-36_异常图.png TIME:
-2021-11-27 14:58:36,269 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 14:58:44,611 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 14:58:44,911 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 14:58:44,911 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 14:58:44,911 LOG INFO conftest.py-62 line：Usage time 0:00:15
-2021-11-27 14:58:44,911 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 15:00:20,688 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:00:20,688 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:00:20,688 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:00:25,030 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:00:25,031 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:00:25,066 LOG INFO newbasepage.py-124 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:00:25.031/00.035s
-2021-11-27 15:00:27,162 LOG INFO newbasepage.py-330 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 15:00:27.071/00.091s
-2021-11-27 15:00:27,286 LOG INFO utils.py-47 line：[kb_paste.kb_paste]
-2021-11-27 15:00:29,559 LOG INFO newbasepage.py-354 line：[save_capture]ks_web_allure\PIC20211127_150029_百度一下.png,time:20211127 15:00:29.330/00.229
-2021-11-27 15:00:29,676 LOG INFO newbasepage.py-247 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 15:00:29.289/00.386s
-2021-11-27 15:00:29,677 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 15:00:29,679 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 15:00:36,757 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 15:00:37,277 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:00:37,287 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 15:00:37,287 LOG INFO conftest.py-62 line：Usage time 0:00:16
-2021-11-27 15:00:37,287 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 15:10:32,552 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:10:32,552 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:10:32,552 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:10:37,648 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:10:37,648 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:10:37,796 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:10:37.648/00.148s
-2021-11-27 15:10:39,914 LOG INFO newbasepage.py-339 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 15:10:39.806/00.107s
-2021-11-27 15:10:40,040 LOG INFO newbasepage.py-59 line：[self.__class__.__name__.kb_paste]
-2021-11-27 15:10:42,422 LOG INFO newbasepage.py-363 line：[save_capture]ks_web_allure\PIC20211127_151042_百度一下.png,time:20211127 15:10:42.113/00.308
-2021-11-27 15:10:42,577 LOG INFO newbasepage.py-256 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 15:10:42.050/00.526s
-2021-11-27 15:10:42,577 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 15:10:42,582 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 15:10:50,939 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 15:10:51,199 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:10:51,199 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 15:10:51,209 LOG INFO conftest.py-62 line：Usage time 0:00:18
-2021-11-27 15:10:51,209 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 15:14:11,882 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:14:11,882 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:14:11,882 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:14:16,755 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:14:16,755 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:14:16,865 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:14:16.756/00.109s
-2021-11-27 15:14:18,982 LOG INFO newbasepage.py-339 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 15:14:18.869/00.112s
-2021-11-27 15:14:19,291 LOG INFO newbasepage.py-59 line：[self.__class__.__name__.kb_paste]
-2021-11-27 15:14:21,601 LOG INFO newbasepage.py-363 line：[save_capture]ks_web_allure\PIC20211127_151421_百度一下.png,time:20211127 15:14:21.342/00.259
-2021-11-27 15:14:21,723 LOG INFO newbasepage.py-256 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 15:14:21.301/00.422s
-2021-11-27 15:14:21,723 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 15:14:21,727 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 15:14:29,795 LOG INFO conftest.py-52 line：os.system :allure generate ./temp -o ./Report --clean
-2021-11-27 15:14:30,292 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:14:30,295 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 15:14:30,296 LOG INFO conftest.py-62 line：Usage time 0:00:18
-2021-11-27 15:14:30,296 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 15:43:28,184 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:43:28,184 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:43:28,184 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:43:32,841 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:43:32,841 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:43:32,970 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:43:32.842/00.127s
-2021-11-27 15:58:38,865 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:58:38,865 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:58:38,865 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:58:44,437 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:58:44,438 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:58:44,536 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:58:44.438/00.096s
-2021-11-27 15:58:46,575 LOG INFO newbasepage.py-339 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 15:58:46.536/00.038s
-2021-11-27 15:58:46,699 LOG INFO newbasepage.py-59 line：[Method:kb_paste]
-2021-11-27 15:58:48,973 LOG INFO newbasepage.py-363 line：[save_capture]ks_web_allure\PIC20211127_155848_百度一下.png,time:20211127 15:58:48.738/00.234
-2021-11-27 15:58:49,089 LOG INFO newbasepage.py-256 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 15:58:48.703/00.385s
-2021-11-27 15:58:49,089 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 15:58:49,090 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 15:58:49,147 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:58:49,147 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 15:58:49,147 LOG INFO conftest.py-62 line：Usage time 0:00:10
-2021-11-27 15:58:49,147 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 15:59:42,078 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 15:59:42,078 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:59:42,078 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 15:59:46,674 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 15:59:46,674 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 15:59:46,969 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 15:59:46.675/00.293s
-2021-11-27 15:59:49,071 LOG INFO newbasepage.py-339 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 15:59:48.978/00.092s
-2021-11-27 15:59:49,179 LOG INFO newbasepage.py-59 line：[Method:kb_paste]
-2021-11-27 15:59:51,485 LOG INFO newbasepage.py-363 line：[save_capture]ks_web_allure\PIC20211127_155951_百度一下.png,time:20211127 15:59:51.244/00.241
-2021-11-27 15:59:51,599 LOG INFO newbasepage.py-256 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 15:59:51.183/00.416s
-2021-11-27 15:59:51,600 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 15:59:51,601 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 15:59:51,602 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 15:59:51,604 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 15:59:51,605 LOG INFO conftest.py-62 line：Usage time 0:00:09
-2021-11-27 15:59:51,605 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 16:00:41,355 LOG INFO conftest.py-45 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:00:41,355 LOG INFO conftest.py-46 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:00:41,355 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 16:00:45,581 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:00:45,581 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:00:45,618 LOG INFO newbasepage.py-133 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 16:00:45.581/00.036s
-2021-11-27 16:00:47,673 LOG INFO newbasepage.py-339 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 16:00:47.622/00.050s
-2021-11-27 16:00:47,818 LOG INFO newbasepage.py-59 line：[Method:kb_paste]
-2021-11-27 16:00:50,079 LOG INFO newbasepage.py-363 line：[save_capture]ks_web_allure\PIC20211127_160049_百度一下.png,time:20211127 16:00:49.860/00.218
-2021-11-27 16:00:50,178 LOG INFO newbasepage.py-256 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 16:00:49.820/00.358s
-2021-11-27 16:00:50,179 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 16:00:50,181 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 16:00:50,187 LOG INFO conftest.py-57 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:00:50,191 LOG INFO conftest.py-61 line：------------------------
-2021-11-27 16:00:50,191 LOG INFO conftest.py-62 line：Usage time 0:00:08
-2021-11-27 16:00:50,191 LOG INFO conftest.py-63 line：------------------------
-2021-11-27 16:23:25,715 LOG INFO conftest.py-91 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:23:25,715 LOG INFO conftest.py-92 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:23:25,715 LOG INFO conftest.py-37 line：========== open browser ===========
-2021-11-27 16:23:30,517 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:23:30,517 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:23:30,550 LOG INFO newbasepage.py-160 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 16:23:30.518/00.032s
-2021-11-27 16:23:32,609 LOG INFO newbasepage.py-366 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 16:23:32.553/00.056s
-2021-11-27 16:23:32,745 LOG INFO newbasepage.py-86 line：[Method:kb_paste]
-2021-11-27 16:23:35,251 LOG INFO newbasepage.py-390 line：[save_capture]ks_web_allure\PIC20211127_162334_百度一下.png,time:20211127 16:23:34.781/00.470
-2021-11-27 16:23:35,376 LOG INFO newbasepage.py-283 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 16:23:34.761/00.615s
-2021-11-27 16:23:35,376 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 16:23:35,377 LOG INFO conftest.py-44 line：========== close browser ===========
-2021-11-27 16:23:35,383 LOG INFO conftest.py-103 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:23:35,387 LOG INFO conftest.py-107 line：------------------------
-2021-11-27 16:23:35,391 LOG INFO conftest.py-108 line：Usage time 0:00:09
-2021-11-27 16:23:35,391 LOG INFO conftest.py-109 line：------------------------
-2021-11-27 16:38:14,736 LOG INFO conftest.py-106 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:38:14,736 LOG INFO conftest.py-107 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:38:14,736 LOG INFO conftest.py-53 line：========== open browser ===========
-2021-11-27 16:38:19,906 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:38:19,906 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:38:19,979 LOG INFO newbasepage.py-160 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20211127 16:38:19.906/00.073s
-2021-11-27 16:38:22,099 LOG INFO newbasepage.py-366 line：[ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20211127 16:38:21.983/00.115s
-2021-11-27 16:38:22,231 LOG INFO newbasepage.py-86 line：[Method:kb_paste]
-2021-11-27 16:38:24,529 LOG INFO newbasepage.py-390 line：[save_capture]ks_web_allure\PIC20211127_163824_百度一下.png,time:20211127 16:38:24.281/00.248
-2021-11-27 16:38:24,634 LOG INFO newbasepage.py-283 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20211127 16:38:24.240/00.394s
-2021-11-27 16:38:24,635 LOG INFO test_baidu.py-40 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
-2021-11-27 16:38:24,636 LOG INFO conftest.py-60 line：========== close browser ===========
-2021-11-27 16:38:24,643 LOG INFO conftest.py-118 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:38:24,646 LOG INFO conftest.py-122 line：------------------------
-2021-11-27 16:38:24,646 LOG INFO conftest.py-123 line：Usage time 0:00:09
-2021-11-27 16:38:24,646 LOG INFO conftest.py-124 line：------------------------
-2021-11-27 16:39:14,575 LOG INFO conftest.py-106 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:39:14,575 LOG INFO conftest.py-107 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:39:14,575 LOG INFO conftest.py-53 line：========== open browser ===========
-2021-11-27 16:39:19,369 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:39:19,370 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:39:24,547 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:39:19.370/05.176s
-2021-11-27 16:39:26,562 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:39:26,562 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:39:26.552/00.009s
-2021-11-27 16:39:26,869 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_163926_ERROR.png,time:20211127 16:39:26.662/00.207
-2021-11-27 16:39:27,055 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-39-26_异常图.png TIME:
-2021-11-27 16:39:27,055 LOG INFO conftest.py-60 line：========== close browser ===========
-2021-11-27 16:39:27,055 LOG INFO conftest.py-118 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:39:27,065 LOG INFO conftest.py-122 line：------------------------
-2021-11-27 16:39:27,065 LOG INFO conftest.py-123 line：Usage time 0:00:12
-2021-11-27 16:39:27,065 LOG INFO conftest.py-124 line：------------------------
-2021-11-27 16:49:22,901 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:49:22,901 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:49:22,901 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:49:27,886 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:49:27,887 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:49:33,075 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:49:27.888/05.187s
-2021-11-27 16:49:35,093 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:49:35,093 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:49:35.083/00.009s
-2021-11-27 16:49:35,649 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_164935_ERROR.png,time:20211127 16:49:35.213/00.436
-2021-11-27 16:49:35,864 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-49-35_异常图.png TIME:
-2021-11-27 16:49:35,865 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:49:35,871 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:49:35,874 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:49:35,874 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 16:49:35,875 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:50:30,291 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:50:30,291 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:50:30,291 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:50:35,682 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:50:35,682 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:50:40,738 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:50:35.683/05.055s
-2021-11-27 16:50:42,749 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:50:42,749 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:50:42.739/00.009s
-2021-11-27 16:50:43,309 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165042_ERROR.png,time:20211127 16:50:42.879/00.430
-2021-11-27 16:50:43,516 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-50-43_异常图.png TIME:
-2021-11-27 16:50:43,516 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:50:43,516 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:50:43,516 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:50:43,516 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 16:50:43,516 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:51:39,097 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:51:39,097 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:51:39,097 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:51:43,492 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:51:43,492 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:51:48,777 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:51:43.493/05.283s
-2021-11-27 16:51:50,798 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:51:50,798 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:51:50.778/00.019s
-2021-11-27 16:51:51,348 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165150_ERROR.png,time:20211127 16:51:50.898/00.450
-2021-11-27 16:51:51,545 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-51-51_异常图.png TIME:
-2021-11-27 16:51:51,545 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:51:51,545 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:51:51,555 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:51:51,555 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 16:51:51,555 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:53:43,837 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:53:43,837 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:53:43,837 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:53:48,652 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:53:48,652 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:53:53,887 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:53:48.652/05.235s
-2021-11-27 16:53:55,908 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:53:55,908 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:53:55.888/00.019s
-2021-11-27 16:53:56,657 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165356_ERROR.png,time:20211127 16:53:56.178/00.479
-2021-11-27 16:53:56,985 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-53-56_异常图.png TIME:
-2021-11-27 16:53:56,985 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:53:56,995 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:53:56,995 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:53:56,995 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 16:53:56,995 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:56:20,883 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:56:20,883 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:56:20,883 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:56:25,157 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:56:25,157 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:56:30,208 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:56:25.158/05.049s
-2021-11-27 16:56:32,238 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:56:32,248 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:56:32.208/00.039s
-2021-11-27 16:56:32,797 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165632_ERROR.png,time:20211127 16:56:32.368/00.428
-2021-11-27 16:56:33,095 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-56-32_异常图.png TIME:
-2021-11-27 16:56:33,098 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:56:33,104 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:56:33,107 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:56:33,107 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 16:56:33,108 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:57:00,637 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:57:00,637 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:57:00,637 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:57:04,998 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:57:04,998 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:57:10,452 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:57:04.999/05.452s
-2021-11-27 16:57:12,467 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:57:12,467 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:57:12.457/00.010s
-2021-11-27 16:57:13,003 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165712_ERROR.png,time:20211127 16:57:12.617/00.386
-2021-11-27 16:57:13,277 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-57-13_异常图.png TIME:
-2021-11-27 16:57:13,279 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:57:13,286 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:57:13,289 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:57:13,289 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 16:57:13,290 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:58:25,488 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:58:25,488 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:58:25,488 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:58:30,201 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:58:30,202 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 16:58:35,653 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:58:30.203/05.449s
-2021-11-27 16:58:37,675 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 16:58:37,675 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:58:37.655/00.019s
-2021-11-27 16:58:38,120 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_165837_ERROR.png,time:20211127 16:58:37.805/00.315
-2021-11-27 16:58:38,434 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_16-58-38_异常图.png TIME:
-2021-11-27 16:58:38,434 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 16:58:38,450 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:58:38,453 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 16:58:38,453 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 16:58:38,454 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 16:59:52,758 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 16:59:52,758 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 16:59:52,758 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 16:59:57,722 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 16:59:57,723 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:00:03,073 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 16:59:57.724/05.348s
-2021-11-27 17:00:05,110 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:00:05,110 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:00:05.080/00.029s
-2021-11-27 17:00:05,651 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170005_ERROR.png,time:20211127 17:00:05.231/00.419
-2021-11-27 17:00:05,904 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-00-05_异常图.png TIME:
-2021-11-27 17:00:05,904 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:00:05,914 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:00:05,914 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:00:05,914 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 17:00:05,914 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:02:51,537 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:02:51,537 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:02:51,537 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:02:56,695 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:02:56,695 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:03:02,110 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:02:56.695/05.415s
-2021-11-27 17:03:04,122 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:03:04,122 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:03:04.112/00.010s
-2021-11-27 17:03:04,728 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170304_ERROR.png,time:20211127 17:03:04.252/00.475
-2021-11-27 17:03:05,035 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-03-04_异常图.png TIME:
-2021-11-27 17:03:05,035 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:03:05,045 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:03:05,045 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:03:05,045 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 17:03:05,045 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:03:58,155 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:03:58,155 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:03:58,165 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:04:02,709 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:04:02,710 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:04:07,973 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:04:02.710/05.263s
-2021-11-27 17:04:09,990 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:04:09,990 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:04:09.980/00.010s
-2021-11-27 17:04:10,517 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170410_ERROR.png,time:20211127 17:04:10.090/00.426
-2021-11-27 17:04:10,695 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-04-10_异常图.png TIME:
-2021-11-27 17:04:10,697 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:04:10,702 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:04:10,704 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:04:10,704 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 17:04:10,705 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:04:31,181 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:04:31,181 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:04:31,181 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:04:35,883 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:04:35,884 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:04:41,056 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:04:35.884/05.172s
-2021-11-27 17:04:43,067 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:04:43,067 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:04:43.057/00.009s
-2021-11-27 17:04:43,713 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170443_ERROR.png,time:20211127 17:04:43.168/00.544
-2021-11-27 17:04:43,881 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-04-43_异常图.png TIME:
-2021-11-27 17:04:43,881 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:04:43,895 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:04:43,897 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:04:43,898 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 17:04:43,898 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:05:07,113 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:05:07,113 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:05:07,113 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:05:12,159 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:05:12,159 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:05:17,397 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:05:12.160/05.237s
-2021-11-27 17:05:19,415 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:05:19,415 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:05:19.405/00.009s
-2021-11-27 17:05:20,174 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170519_ERROR.png,time:20211127 17:05:19.555/00.618
-2021-11-27 17:05:20,435 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-05-20_异常图.png TIME:
-2021-11-27 17:05:20,435 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:05:20,435 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:05:20,445 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:05:20,445 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 17:05:20,445 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:07:23,487 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:07:23,487 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:07:23,487 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:07:28,513 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:07:28,513 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:07:33,706 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:07:28.513/05.192s
-2021-11-27 17:07:35,807 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:07:35,807 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:07:35.718/00.088s
-2021-11-27 17:07:36,436 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170735_ERROR.png,time:20211127 17:07:35.967/00.468
-2021-11-27 17:07:36,774 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-07-36_异常图.png TIME:
-2021-11-27 17:07:36,776 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:07:36,782 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:07:36,786 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:07:36,787 LOG INFO conftest.py-189 line：Usage time 0:00:13
-2021-11-27 17:07:36,787 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:08:10,775 LOG INFO conftest.py-172 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:08:10,775 LOG INFO conftest.py-173 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:08:10,775 LOG INFO conftest.py-119 line：========== open browser ===========
-2021-11-27 17:08:15,506 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:08:15,507 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:08:20,760 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:08:15.507/05.253s
-2021-11-27 17:08:22,800 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:08:22,800 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:08:22.760/00.039s
-2021-11-27 17:08:23,422 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_170822_ERROR.png,time:20211127 17:08:22.930/00.491
-2021-11-27 17:08:23,631 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-08-23_异常图.png TIME:
-2021-11-27 17:08:23,631 LOG INFO conftest.py-126 line：========== close browser ===========
-2021-11-27 17:08:23,641 LOG INFO conftest.py-184 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:08:23,641 LOG INFO conftest.py-188 line：------------------------
-2021-11-27 17:08:23,641 LOG INFO conftest.py-189 line：Usage time 0:00:12
-2021-11-27 17:08:23,641 LOG INFO conftest.py-190 line：------------------------
-2021-11-27 17:17:48,708 LOG INFO conftest.py-162 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:17:48,708 LOG INFO conftest.py-163 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:17:48,708 LOG INFO conftest.py-109 line：========== open browser ===========
-2021-11-27 17:17:53,493 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:17:53,494 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:17:58,786 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:17:53.494/05.292s
-2021-11-27 17:18:00,800 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:18:00,800 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:18:00.790/00.009s
-2021-11-27 17:18:01,475 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_171800_ERROR.png,time:20211127 17:18:00.950/00.525
-2021-11-27 17:18:01,688 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-18-01_异常图.png TIME:
-2021-11-27 17:18:01,698 LOG INFO conftest.py-116 line：========== close browser ===========
-2021-11-27 17:18:01,708 LOG INFO conftest.py-174 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:18:01,711 LOG INFO conftest.py-178 line：------------------------
-2021-11-27 17:18:01,712 LOG INFO conftest.py-179 line：Usage time 0:00:13
-2021-11-27 17:18:01,712 LOG INFO conftest.py-180 line：------------------------
-2021-11-27 17:18:38,050 LOG INFO conftest.py-162 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:18:38,050 LOG INFO conftest.py-163 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:18:38,050 LOG INFO conftest.py-109 line：========== open browser ===========
-2021-11-27 17:18:42,602 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:18:42,604 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:18:48,091 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:18:42.604/05.487s
-2021-11-27 17:18:50,103 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:18:50,103 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:18:50.093/00.009s
-2021-11-27 17:18:50,643 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_171850_ERROR.png,time:20211127 17:18:50.214/00.429
-2021-11-27 17:18:50,850 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-18-50_异常图.png TIME:
-2021-11-27 17:18:50,853 LOG INFO conftest.py-116 line：========== close browser ===========
-2021-11-27 17:18:50,862 LOG INFO conftest.py-174 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:18:50,864 LOG INFO conftest.py-178 line：------------------------
-2021-11-27 17:18:50,865 LOG INFO conftest.py-179 line：Usage time 0:00:12
-2021-11-27 17:18:50,865 LOG INFO conftest.py-180 line：------------------------
-2021-11-27 17:20:34,716 LOG INFO conftest.py-162 line：custom addopts for the report folder:[report],param[--report],value[2021-11-27]
-2021-11-27 17:20:34,716 LOG INFO conftest.py-163 line：the report folder:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:20:34,716 LOG INFO conftest.py-109 line：========== open browser ===========
-2021-11-27 17:20:39,574 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
-2021-11-27 17:20:39,574 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
-2021-11-27 17:20:44,786 LOG ERROR newbasepage.py-154 line：[FAIL][wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:20:39.575/05.210s
-2021-11-27 17:20:46,800 LOG INFO newbasepage.py-134 line：❌ Find '0' elements : {loc}
-2021-11-27 17:20:46,800 LOG ERROR newbasepage.py-356 line：[FAIL][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[11]')>,time:20211127 17:20:46.791/00.010s
-2021-11-27 17:20:47,247 LOG INFO newbasepage.py-69 line：[save_capture_ob]ks_web_allure\PIC20211127_172046_ERROR.png,time:20211127 17:20:46.940/00.306
-2021-11-27 17:20:47,477 LOG INFO basepage.py-37 line：[save_capture]ks_web_allure\PIC\2021-11-27_17-20-47_异常图.png TIME:
-2021-11-27 17:20:47,477 LOG INFO conftest.py-116 line：========== close browser ===========
-2021-11-27 17:20:47,487 LOG INFO conftest.py-174 line：file_and_folder_copy:D:\desk20201127\ks_web_allure\Report_allure\2021-11-27_allure
-2021-11-27 17:20:47,487 LOG INFO conftest.py-178 line：------------------------
-2021-11-27 17:20:47,487 LOG INFO conftest.py-179 line：Usage time 0:00:12
-2021-11-27 17:20:47,487 LOG INFO conftest.py-180 line：------------------------
+2022-01-02 18:20:18,655 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:20:18,748 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:20:18,748 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:20:18,748 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:20:18,748 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:20:18,748 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:20:18,858 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:20:18,858 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:20:18,858 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:20:18,858 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:20:18,858 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:20:18,858 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x00000284FC226A88>
+2022-01-02 18:20:18,858 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:20:18,858 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:20:19,405 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17c63-16b89d56291b3e6d7ef323db'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:20:19,405 LOG INFO test_api_excel.py-56 line：{'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:20:19,405 LOG INFO apiKeyWords3.py-338 line：执行函数search_value2:httpbin.org
+2022-01-02 18:20:19,420 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:20:19,420 LOG INFO apiKeyWords3.py-387 line："{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}"
+2022-01-02 18:20:19,420 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:20:19,420 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:20:19,420 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:20:19,420 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:20:19,420 LOG ERROR apiKeyWords3.py-400 line：Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2022-01-02 18:20:19,420 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:20:19,420 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:22:10,938 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:22:11,032 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:22:11,032 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:22:11,032 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:22:11,032 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:22:11,032 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:22:11,204 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:22:11,204 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:22:11,204 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:11,204 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:22:11,204 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:11,204 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000002414D06C108>
+2022-01-02 18:22:11,204 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:22:11,204 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:22:11,766 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17cd3-5e67f1997b5119524d4d0c2f'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:22:11,766 LOG INFO test_api_excel.py-56 line：{'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:11,766 LOG INFO apiKeyWords3.py-338 line：执行函数search_value2:httpbin.org
+2022-01-02 18:22:11,766 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-387 line："{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}"
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:22:11,782 LOG INFO apiKeyWords3.py-398 line：执行函数:assertResp2Json--
+2022-01-02 18:22:11,782 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:22:11,782 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:22:43,376 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:22:43,470 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:22:43,470 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:22:43,470 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:22:43,470 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:22:43,470 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:22:43,610 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:22:43,610 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:22:43,610 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:43,626 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:22:43,626 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:43,626 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000002398A315308>
+2022-01-02 18:22:43,626 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:22:43,626 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17cf3-5972aad95ea0b30104a67566'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:22:44,173 LOG INFO test_api_excel.py-56 line：{'num': '4', 'exec': '3', 'title': '充4', 'method': 'assertAbsPath', 'input': 'headers.Host', 'request_data': 'httpbin.org', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-338 line：执行函数search_value2:httpbin.org
+2022-01-02 18:22:44,173 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '4', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-387 line："{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}"
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:22:44,173 LOG INFO apiKeyWords3.py-398 line：执行函数:assertResp2Json--
+2022-01-02 18:22:44,173 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:22:44,189 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:24:20,320 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:24:20,414 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:24:20,414 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:24:20,414 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:24:20,414 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:24:20,414 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:24:20,591 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:24:20,591 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:24:20,591 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:24:20,591 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:24:20,591 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:24:20,591 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x00000218130FD448>
+2022-01-02 18:24:20,591 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:24:20,591 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17d54-26d4cfea25e8421f037d39b3'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:24:21,138 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-387 line："{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}"
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:24:21,138 LOG INFO apiKeyWords3.py-398 line：执行函数:assertResp2Json--
+2022-01-02 18:24:21,138 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:24:21,153 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:25:59,923 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:26:00,032 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:26:00,032 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:26:00,032 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:26:00,032 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:26:00,032 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:26:00,173 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:26:00,173 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:26:00,173 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:26:00,173 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:26:00,173 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:26:00,173 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000014540A078C8>
+2022-01-02 18:26:00,173 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:26:00,173 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17db8-30c4c9605d3e2b6924e72c83'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:26:00,735 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17db8-30c4c9605d3e2b6924e72c83'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:26:00,735 LOG INFO apiKeyWords3.py-398 line：执行函数:assertResp2Json--
+2022-01-02 18:26:00,735 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:26:00,751 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:27:32,935 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:27:33,029 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:27:33,029 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:27:33,029 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:27:33,029 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:27:33,029 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:27:33,154 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:27:33,154 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:27:33,154 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:27:33,154 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:27:33,154 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:27:33,154 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000020395E15748>
+2022-01-02 18:27:33,154 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:27:33,154 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17e15-0dbca1d64ffffab11a8269f8'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:27:33,732 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d17e15-0dbca1d64ffffab11a8269f8'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-394 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:27:33,732 LOG INFO apiKeyWords3.py-395 line：---_dict_dict_dict----------------------
+2022-01-02 18:27:33,732 LOG ERROR apiKeyWords3.py-400 line：exceptions must derive from BaseException
+2022-01-02 18:27:33,732 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:27:33,732 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:42:19,272 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:42:19,397 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:42:19,397 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:42:19,397 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:42:19,397 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:42:19,397 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:42:19,601 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:42:19,601 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:42:19,601 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:42:19,601 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:42:19,601 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:42:19,601 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000001E15D73ED08>
+2022-01-02 18:42:19,601 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:42:19,601 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1818b-3684dd5e4ec458bf3c052a1e'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:42:20,163 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1818b-3684dd5e4ec458bf3c052a1e'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-393 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:42:20,163 LOG INFO apiKeyWords3.py-394 line：---_dict_dict_dict----------------------
+2022-01-02 18:42:20,163 LOG ERROR apiKeyWords3.py-400 line：exceptions must derive from BaseException
+2022-01-02 18:42:20,163 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:42:20,163 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:43:10,727 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:43:10,836 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:43:10,836 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:43:10,836 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:43:10,836 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:43:10,836 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:43:11,086 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:43:11,086 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:43:11,086 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:43:11,086 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:43:11,086 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:43:11,086 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000001BAD4E1A348>
+2022-01-02 18:43:11,086 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:43:11,086 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d181bf-2ebc58750c67a45f2bcb2363'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:43:11,633 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d181bf-2ebc58750c67a45f2bcb2363'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-393 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:43:11,633 LOG INFO apiKeyWords3.py-394 line：---_dict_dict_dict----------------------
+2022-01-02 18:43:11,773 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:45:01,402 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:45:01,496 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:45:01,496 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:45:01,496 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:45:01,496 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:45:01,496 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:45:01,668 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:45:01,668 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:45:01,668 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:45:01,668 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:45:01,668 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:45:01,668 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000020AEE754088>
+2022-01-02 18:45:01,668 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:45:01,668 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1822d-54f98c595680a4f878d43859'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:45:02,231 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1822d-54f98c595680a4f878d43859'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-393 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:45:02,231 LOG INFO apiKeyWords3.py-394 line：---_dict_dict_dict----------------------
+2022-01-02 18:45:02,231 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['args', 'headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url'] 
+ < expect >:['headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url']
+2022-01-02 18:45:02,356 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:46:08,395 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:46:08,504 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:46:08,504 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:46:08,504 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:46:08,504 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:46:08,504 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:46:08,676 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:46:08,676 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:46:08,676 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:46:08,676 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:46:08,676 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:46:08,676 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000002444D62C688>
+2022-01-02 18:46:08,676 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:46:08,676 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18270-5bf9833b33192f1b3db2e557'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:46:09,254 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-387 line：{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18270-5bf9833b33192f1b3db2e557'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-388 line：-------------------------
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-393 line：{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-394 line：---_dict_dict_dict----------------------
+2022-01-02 18:46:09,254 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['args', 'headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url'] 
+ < expect >:['headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url']
+2022-01-02 18:46:09,254 LOG INFO apiKeyWords3.py-396 line：执行函数:assertResp2Json--
+2022-01-02 18:46:09,254 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:46:09,254 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:48:43,914 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:48:44,023 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:48:44,023 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:48:44,023 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:48:44,023 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:48:44,023 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:48:44,289 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:48:44,289 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:48:44,289 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:48:44,289 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:48:44,289 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:48:44,289 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000021409AD5948>
+2022-01-02 18:48:44,289 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:48:44,289 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:48:44,851 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1830c-78dade2b24fa0b2b1a09c979'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:48:44,851 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:48:44,851 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:48:44,851 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['args', 'headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url'] 
+ < expect >:['headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url']
+2022-01-02 18:48:44,851 LOG INFO apiKeyWords3.py-392 line：执行函数:assertResp2Json--
+2022-01-02 18:48:44,851 LOG ERROR apiKeyWords3.py-396 line：aaaaaa
+2022-01-02 18:48:44,851 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:48:44,851 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:49:19,196 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:49:19,289 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:49:19,289 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:49:19,289 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:49:19,289 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:49:19,289 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:49:19,445 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:49:19,445 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:49:19,445 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:49:19,445 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:49:19,445 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:49:19,445 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000002B9FFF13148>
+2022-01-02 18:49:19,445 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:49:19,445 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:49:20,008 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1832f-067db79f6ef7d19d551465c0'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:49:20,008 LOG INFO test_api_excel.py-56 line：{'num': '5', 'exec': '3', 'title': '充5', 'method': 'assertResp2Json', 'input': 'all', 'request_data': "{'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d178bc-4029b6ef14698e256025c629'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:49:20,008 LOG INFO apiKeyWords3.py-71 line：{"headers": {"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d178bc-4029b6ef14698e256025c629"}, "origin": "112.42.5.90", "url": "http://httpbin.org/get"}
+2022-01-02 18:49:20,008 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['args', 'headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url'] 
+ < expect >:['headers.Accept', 'headers.Accept-Encoding', 'headers.Host', 'headers.User-Agent', 'headers.X-Amzn-Trace-Id', 'origin', 'url']
+2022-01-02 18:49:20,008 LOG INFO apiKeyWords3.py-392 line：执行函数:assertResp2Json--
+2022-01-02 18:49:20,102 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:50:40,188 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:50:40,282 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:50:40,297 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:50:40,297 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:50:40,297 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:50:40,297 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:50:40,438 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:50:40,438 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:50:40,438 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:50:40,438 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:50:40,438 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:50:40,438 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000018A18272B88>
+2022-01-02 18:50:40,438 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:50:40,438 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:50:41,000 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18380-0cb46ade5d4cee1f6491f608'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:50:41,000 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:50:41,000 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18380-0cb46ade5d4cee1f6491f608'}
+2022-01-02 18:50:41,110 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:52:16,245 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:52:16,323 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:52:16,323 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:52:16,323 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:52:16,323 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:52:16,323 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:52:16,433 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:52:16,433 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:52:16,433 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:16,433 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:52:16,433 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:16,433 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000029F25416688>
+2022-01-02 18:52:16,433 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:52:16,433 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:52:16,995 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d183e0-7e5205a96a5d74c10d0d5655'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:52:16,995 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:16,995 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d183e0-7e5205a96a5d74c10d0d5655'}
+2022-01-02 18:52:17,011 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['Accept', 'Accept-Encoding', 'Host', 'User-Agent', 'X-Amzn-Trace-Id'] 
+ < expect >:['".{.\'.A.c.c.e.p.t.\'.:. .\'.*./.*.\'.,. .\'.A.c.c.e.p.t.-.E.n.c.o.d.i.n.g.\'.:. .\'.g.z.i.p.,. .d.e.f.l.a.t.e.\'.,. .\'.H.o.s.t.\'.:. .\'.h.t.t.p.b.i.n...o.r.g.\'.,. .\'.U.s.e.r.-.A.g.e.n.t.\'.:. .\'.p.y.t.h.o.n.-.r.e.q.u.e.s.t.s./.2...2.4...0.\'.,. .\'.X.-.A.m.z.n.-.T.r.a.c.e.-.I.d.\'.:. .\'.R.o.o.t.=.1.-.6.1.d.1.7.4.d.d.-.6.5.8.4.8.c.8.2.0.8.f.d.1.b.2.5.3.8.f.1.3.2.a.f.\'.}']
+2022-01-02 18:52:17,136 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:52:32,480 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:52:32,558 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:52:32,558 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:52:32,558 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:52:32,558 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:52:32,558 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:52:32,668 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:52:32,668 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:52:32,668 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:32,668 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:52:32,668 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:32,668 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000001F937186088>
+2022-01-02 18:52:32,668 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:52:32,668 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:52:33,214 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d183f0-4a9155701e0edbc209a97e7f'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:52:33,230 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:52:33,230 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d183f0-4a9155701e0edbc209a97e7f'}
+2022-01-02 18:52:33,230 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['Accept', 'Accept-Encoding', 'Host', 'User-Agent', 'X-Amzn-Trace-Id'] 
+ < expect >:["{.'.A.c.c.e.p.t.'.:. .'.*./.*.'.,. .'.A.c.c.e.p.t.-.E.n.c.o.d.i.n.g.'.:. .'.g.z.i.p.,. .d.e.f.l.a.t.e.'.,. .'.H.o.s.t.'.:. .'.h.t.t.p.b.i.n...o.r.g.'.,. .'.U.s.e.r.-.A.g.e.n.t.'.:. .'.p.y.t.h.o.n.-.r.e.q.u.e.s.t.s./.2...2.4...0.'.,. .'.X.-.A.m.z.n.-.T.r.a.c.e.-.I.d.'.:. .'.R.o.o.t.=.1.-.6.1.d.1.7.4.d.d.-.6.5.8.4.8.c.8.2.0.8.f.d.1.b.2.5.3.8.f.1.3.2.a.f.'"]
+2022-01-02 18:52:33,402 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:53:50,125 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:53:50,219 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:53:50,219 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:53:50,219 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:53:50,219 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:53:50,219 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:53:50,328 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:53:50,328 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:53:50,328 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:53:50,328 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:53:50,328 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:53:50,328 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x00000193F004FE48>
+2022-01-02 18:53:50,328 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:53:50,344 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:53:50,906 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1843e-53e2ec872ee03d29796855cc'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:53:50,906 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:53:50,906 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d1843e-53e2ec872ee03d29796855cc'}
+2022-01-02 18:53:50,906 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['Accept', 'Accept-Encoding', 'Host', 'User-Agent', 'X-Amzn-Trace-Id'] 
+ < expect >:['".{.\'.A.c.c.e.p.t.\'.:. .\'.*./.*.\'.,. .\'.A.c.c.e.p.t.-.E.n.c.o.d.i.n.g.\'.:. .\'.g.z.i.p.,. .d.e.f.l.a.t.e.\'.,. .\'.H.o.s.t.\'.:. .\'.h.t.t.p.b.i.n...o.r.g.\'.,. .\'.U.s.e.r.-.A.g.e.n.t.\'.:. .\'.p.y.t.h.o.n.-.r.e.q.u.e.s.t.s./.2...2.4...0.\'.,. .\'.X.-.A.m.z.n.-.T.r.a.c.e.-.I.d.\'.:. .\'.R.o.o.t.=.1.-.6.1.d.1.7.4.d.d.-.6.5.8.4.8.c.8.2.0.8.f.d.1.b.2.5.3.8.f.1.3.2.a.f.\'.}']
+2022-01-02 18:53:51,016 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:54:44,827 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:54:44,920 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:54:44,920 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:54:44,920 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:54:44,920 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:54:44,920 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:54:45,017 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:54:45,017 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:54:45,017 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:54:45,017 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:54:45,017 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:54:45,017 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000014221B40DC8>
+2022-01-02 18:54:45,017 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:54:45,017 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:54:45,673 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18475-03802e2c13ebc12e682e23f1'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:54:45,673 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:54:45,673 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18475-03802e2c13ebc12e682e23f1'}
+2022-01-02 18:54:45,673 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['Accept', 'Accept-Encoding', 'Host', 'User-Agent', 'X-Amzn-Trace-Id'] 
+ < expect >:['".{.\'.A.c.c.e.p.t.\'.:. .\'.*./.*.\'.,. .\'.A.c.c.e.p.t.-.E.n.c.o.d.i.n.g.\'.:. .\'.g.z.i.p.,. .d.e.f.l.a.t.e.\'.,. .\'.H.o.s.t.\'.:. .\'.h.t.t.p.b.i.n...o.r.g.\'.,. .\'.U.s.e.r.-.A.g.e.n.t.\'.:. .\'.p.y.t.h.o.n.-.r.e.q.u.e.s.t.s./.2...2.4...0.\'.,. .\'.X.-.A.m.z.n.-.T.r.a.c.e.-.I.d.\'.:. .\'.R.o.o.t.=.1.-.6.1.d.1.7.4.d.d.-.6.5.8.4.8.c.8.2.0.8.f.d.1.b.2.5.3.8.f.1.3.2.a.f.\'.}']
+2022-01-02 18:54:45,782 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:55:14,477 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:55:14,555 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:55:14,555 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:55:14,555 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:55:14,555 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:55:14,555 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:55:14,649 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:55:14,649 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:55:14,649 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:55:14,649 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:55:14,649 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:55:14,649 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x0000026196AC9B48>
+2022-01-02 18:55:14,649 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:55:14,665 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:55:15,448 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18492-081b06240943ea4e6f0d1874'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:55:15,448 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:55:15,448 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d18492-081b06240943ea4e6f0d1874'}
+2022-01-02 18:55:15,448 LOG INFO handle_json.py-154 line：[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：
+ ＜actual＞：['Accept', 'Accept-Encoding', 'Host', 'User-Agent', 'X-Amzn-Trace-Id'] 
+ < expect >:['".{.\'.A.c.c.e.p.t.\'.:. .\'.*./.*.\'.,. .\'.A.c.c.e.p.t.-.E.n.c.o.d.i.n.g.\'.:. .\'.g.z.i.p.,. .d.e.f.l.a.t.e.\'.,. .\'.H.o.s.t.\'.:. .\'.h.t.t.p.b.i.n...o.r.g.\'.,. .\'.U.s.e.r.-.A.g.e.n.t.\'.:. .\'.p.y.t.h.o.n.-.r.e.q.u.e.s.t.s./.2...2.4...0.\'.,. .\'.X.-.A.m.z.n.-.T.r.a.c.e.-.I.d.\'.:. .\'.R.o.o.t.=.1.-.6.1.d.1.7.4.d.d.-.6.5.8.4.8.c.8.2.0.8.f.d.1.b.2.5.3.8.f.1.3.2.a.f.\'.}']
+2022-01-02 18:55:15,448 LOG INFO apiKeyWords3.py-425 line：--Pass--用例成功--
+2022-01-02 18:55:15,448 LOG INFO test_api_excel.py-67 line：Write Excel：save_excel_teardown
+2022-01-02 18:55:15,463 LOG INFO test_api_excel.py-35 line：teardown-----------
+2022-01-02 18:56:41,555 LOG INFO test_api_excel.py-25 line：[{'sheetname': 't_接', 'file': 'test_apidata.xlsx', 'filepath': WindowsPath('D:/desk20201127/ks_web_allure/Datas/test_apidata.xlsx'), 'filesheet': [{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-01-02 18:56:41,648 LOG INFO test_api_excel.py-32 line：setup-----------
+2022-01-02 18:56:41,648 LOG INFO test_api_excel.py-44 line：API_interface_test
+2022-01-02 18:56:41,648 LOG INFO test_api_excel.py-45 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:56:41,664 LOG INFO test_api_excel.py-46 line：D:\desk20201127\ks_web_allure\Datas\test_apidata.xlsx
+2022-01-02 18:56:41,664 LOG INFO test_api_excel.py-104 line：aaaaaaaaD:\desk20201127\ks_web_allure\Report\test_apidata_report(1).xlsx
+2022-01-02 18:56:41,758 LOG INFO test_api_excel.py-52 line：Execute test suite: TestAPI
+2022-01-02 18:56:41,758 LOG INFO test_api_excel.py-53 line：Execute test case: t_接
+2022-01-02 18:56:41,758 LOG INFO test_api_excel.py-56 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:56:41,758 LOG INFO apiKeyWords3.py-63 line：[seturl]-->http://httpbin.org
+2022-01-02 18:56:41,758 LOG INFO test_api_excel.py-56 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'get_api', 'input': 'get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:56:41,758 LOG INFO apiKeyWords3.py-244 line：[create_session]after--><requests.sessions.Session object at 0x000001C4E7BAB788>
+2022-01-02 18:56:41,758 LOG INFO apiKeyWords3.py-145 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-02 18:56:41,758 LOG INFO apiKeyWords3.py-149 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-02 18:56:42,320 LOG INFO apiKeyWords3.py-154 line：[get_api]after-->[Response.json()==>>{'args': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d184e9-65c234f85490c1664c0e23e0'}, 'origin': '112.42.5.90', 'url': 'http://httpbin.org/get'}]
+2022-01-02 18:56:42,320 LOG INFO test_api_excel.py-56 line：{'num': '6', 'exec': '3', 'title': '充6', 'method': 'assertMatch2Json', 'input': 'headers', 'request_data': "{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d174dd-65848c8208fd1b2538f132af'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-02 18:56:42,320 LOG INFO apiKeyWords3.py-415 line：执行函数----search_value:{'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d184e9-65c234f85490c1664c0e23e0'}
+2022-01-02 18:56:42,320 LOG INFO apiKeyWords3.py-71 line：{"Accept": "*/*", "Accept-Encoding": "gzip, deflate", "Host": "httpbin.org", "User-Agent": "python-requests/2.24.0", "X-Amzn-Trace-Id": "Root=1-61d174dd-65848c8208fd1b2538f132af"}
+2022-01-02 18:56:42,320 LOG INFO handle_json.py-148 line：[!] RESPONSE-JSON＝＝＞ [X-Amzn-Trace-Id]的＊＊VALUE＊＊不同：
+ ＜actual＞： Root=1-61d184e9-65c234f85490c1664c0e23e0 
+ < expect >:Root=1-61d174dd-65848c8208fd1b2538f132af
+2022-01-02 18:56:42,430 LOG INFO test_api_excel.py-35 line：teardown-----------

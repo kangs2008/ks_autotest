@@ -72,7 +72,8 @@ class Handle_excel():
             pos = [i for i, title in enumerate(title_row) if title == exec_value]
             openpyxl_pos = pos[0] + 1  # 1 start
             for rownum in range(2, row_num + 1):
-                value = sheet_obj.cell(rownum, openpyxl_pos).value
+                # value = sheet_obj.cell(rownum, openpyxl_pos).value
+                value = self.get_cell_value(sheet_obj, rownum, openpyxl_pos)
                 if value is None:
                     value = ''
                 column_values_list.append(value)
@@ -89,14 +90,16 @@ class Handle_excel():
         row_num = self.get_max_row(sheet_config)
         tempdict = {}
         for row in range(2, row_num + 1):
-            key = sheet_config.cell(row, 1).vlaue  # title key
-            value = sheet_config.cell(row, 2).value
+            # key = sheet_config.cell(row, 1).vlaue  # title key
+            key = self.get_cell_value(sheet_config, row, 1)
+            # value = sheet_config.cell(row, 2).value
+            value = self.get_cell_value(sheet_config, row, 2)
             if value is None:
                 value = ''
             tempdict[key] = value
         return tempdict
 
-    def get_exec_dict_from_sheet(self, sheet_obj_config, exec_value='exec', exec_type='y'):
+    def get_exec_dictConfig_from_sheet(self, sheet_obj_config, exec_value='exec', exec_type='y'):
         """
         get_exec_dict_from_sheet  {'pwd': 134455, 'trade': 410}
         :param sheet_obj_config: worksheet obj
@@ -109,14 +112,20 @@ class Handle_excel():
         if exec_value is None or exec_value == '':
             tempdict = self.get_dictConfig_from_sheet(sheet_obj_config)
         else:
-            title_value = sheet_obj_config.cell(1, 3).vlaue
+            print(sheet_obj_config)
+            # title_value = sheet_obj_config.cell(1, 3).vlaue
+            title_value = self.get_cell_value(sheet_obj_config, 1, 3)
+            print(title_value)
             for row in range(2, row_num + 1):
-                value = sheet_obj_config.cell(row, 3).vlaue
+                # value = sheet_obj_config.cell(row, 3).vlaue
+                value = self.get_cell_value(sheet_obj_config, row, 3)
                 if value is None:
                     value = ''
                 if title_value == exec_value and value.lower() == exec_type:
-                    key = sheet_obj_config.cell(row, 1).value
-                    value = sheet_obj_config.cell(row, 2).value
+                    # key = sheet_obj_config.cell(row, 1).value
+                    key = self.get_cell_value(sheet_obj_config, row, 1)
+                    # value = sheet_obj_config.cell(row, 2).value
+                    value = self.get_cell_value(sheet_obj_config, row, 2)
                     tempdict[key] = value
         return tempdict
 
@@ -132,13 +141,15 @@ class Handle_excel():
         for row in range(2, row_num + 1):
             tempdict = {}
             for column in range(1, column_num + 1):
-                title_value = sheet_obj.cell(1, column).value
-                value = sheet_obj.cell(row, column).value
+                # title_value = sheet_obj.cell(1, column).value
+                title_value = self.get_cell_value(sheet_obj, 1, column)
+                # value = sheet_obj.cell(row, column).value
+                value = self.get_cell_value(sheet_obj, row, column)
                 if value is None:
                     value = ''
                 tempdict[title_value] = value
             sheet_values_list.append(tempdict)
-        return tempdict
+        return sheet_values_list
 
 
     def get_exec_dictvList_from_sheet(self, sheet_obj, exec_value='exec', exec_type='y'):
@@ -160,8 +171,10 @@ class Handle_excel():
             for row in range(2, row_num + 1):
                 tempdict = {}
                 for column in range(1, column_num + 1):
-                    title_value = sheet_obj.cell(1, column) # title key
-                    value = sheet_obj.cell(row, column).value
+                    # title_value = sheet_obj.cell(1, column) # title key
+                    title_value = self.get_cell_value(sheet_obj, 1, column)
+                    # value = sheet_obj.cell(row, column).value
+                    value = self.get_cell_value(sheet_obj, row, column)
                     if value is None:
                         value = ''
                     if title_value == exec_value and value.lower() == exec_type:
@@ -170,7 +183,7 @@ class Handle_excel():
                 sheet_values_list.append(tempdict)
         return sheet_values_list
 
-    def get_exec_dictList_from_sheet_re(self, sheet_obj, config_list=[], exec_value='exec', exec_type='y'):
+    def get_exec_dictList_from_sheet_re(self, sheet_obj, config_list, exec_value='exec', exec_type='y'):
         """
         get_exec_dictList_from_sheet_re
         :param sheet_obj_config: worksheet obj
@@ -187,11 +200,12 @@ class Handle_excel():
             for one in config_list:
                 if one != '':
                     _sheet_obj = self.get_sheet_by_name(one)
-                    _dict = self.get_exec_dictvList_from_sheet(_sheet_obj, exec_value, exec_type)
+                    print(_sheet_obj)
+                    _dict = self.get_exec_dictConfig_from_sheet(_sheet_obj, exec_value, exec_type)
                     _dict_conf.update(_dict)
         elif config_list != '' and config_list is not None:
             _sheet_obj = self.get_sheet_by_name(config_list)
-            _dict = self.get_exec_dictvList_from_sheet(_sheet_obj, exec_value, exec_type)
+            _dict = self.get_exec_dictConfig_from_sheet(_sheet_obj, exec_value, exec_type)
             _dict_conf.update(_dict)
         else:
             print(f'Input configList is "{config_list}".')
@@ -205,8 +219,10 @@ class Handle_excel():
                 tempdict = {}
                 if exec_column_values[row-2].lower() == exec_type:
                     for column in range(1, column_num + 1):
-                        title_value = sheet_obj.cell(1, column).value # title key
-                        value = sheet_obj.cell(row, column).value
+                        # title_value = sheet_obj.cell(1, column).value # title key
+                        title_value = self.get_cell_value(sheet_obj, 1, column)
+                        # value = sheet_obj.cell(row, column).value
+                        value = self.get_cell_value(sheet_obj, row, column)
                         if value is None:
                             value = ''
                         if title_value == exec_value:
@@ -252,16 +268,16 @@ def _check_input_sheet_name_in_excel(multi_excel_list, sheet_name_list):
                             count += 1
                             msg = f'Input sheet name "{one_sheet}" not in excel file "{Path(file_name)}", please check it. Excel file sheets:{all_sheet_names}'
                             err.append(msg)
-                if count ==len(sheet_name_list):
-                    _list.append(count)
+                    if count ==len(sheet_name_list):
+                        _list.append(count)
             else:
                 if sheet_name_list != '' and sheet_name_list != None:
                     if sheet_name_list not in all_sheet_names:
                         count += 1
                         msg = f'Input sheet name "{sheet_name_list}" not in excel file "{Path(file_name)}", please check it. Excel file sheets:{all_sheet_names}'
                         err.append(msg)
-                if count == 1:
-                    _list.append(count)
+                    if count == 1:
+                        _list.append(count)
         if _list:
             print(err)
             raise
@@ -299,7 +315,7 @@ def _check_input_sheet_name_rule_in_excel(sheet_name_list, sheet_name_rule):
             else:
                 if sheet_name_rule not in one_sheet:
                     count += 1
-        if count != 0:
+        if count != len(sheet_name_list):
             print(f'Input sheet_name_rule "{sheet_name_rule}" not in sheet_name_list "{sheet_name_list}".')
             raise
     else:
@@ -410,6 +426,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], sheet_name_rule='t_', co
             case_kv = {}
             sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_name_list)
             if sheet_obj is not None:
+                print(config_list)
                 excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re(sheet_obj, config_list,
                                                                                         exec_value, exec_type)
                 case_kv[f'sheetname'] = sheet_name_list

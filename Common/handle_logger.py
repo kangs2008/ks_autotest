@@ -2,13 +2,29 @@ import logging, os
 import logging.handlers
 from Common.setting import REPORT_DIR, LOG_DIR
 from Common.handle_config import ReadWriteConfFile
-
+from pathlib import Path
 # get_logdir = ReadWriteConfFile().get_option('report_dir', 'report_dir_folder')
 # num = ReadWriteConfFile().get_option('report_file', 'file_num')
 # log_dir = os.path.join(REPORT_DIR, get_logdir)
 # log_file_format = os.path.join(log_dir, f'{get_logdir}_{num}.log')
 
-log_file = os.path.join(LOG_DIR, 'Test.log')
+
+get_log = ReadWriteConfFile().get_option('test_log', 'test_log_file')
+if str(get_log).startswith("Test_api"):
+    log_file = Path().joinpath(LOG_DIR, 'Test_api.log')
+elif str(get_log).startswith("Test_web"):
+    if not Path().joinpath(LOG_DIR, get_log).exists():
+        os.mknod(Path().joinpath(LOG_DIR, get_log))
+    log_file = Path().joinpath(LOG_DIR, 'Test_web.log')
+elif str(get_log).startswith("Test_app"):
+    if not Path().joinpath(LOG_DIR, get_log).exists():
+        os.mknod(Path().joinpath(LOG_DIR, get_log))
+    log_file = Path().joinpath(LOG_DIR, 'Test_app.log')
+else:
+    log_file = Path().joinpath(LOG_DIR, 'Test.log')
+
+
+
 
 class HandleLogger:
     """
