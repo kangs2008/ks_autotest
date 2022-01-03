@@ -23,6 +23,9 @@ DATAS_FILE_PATH = os.path.join(DATAS_DIR, 'TestDatas.xlsx')
 # 获取Report目录路径
 REPORT_DIR = os.path.join(BASE_DIR, 'Report')
 
+# 获取Report_html_api目录路径
+REPORT_HTML_API_DIR = os.path.join(REPORT_DIR, 'Html_api')
+
 REPORT_CURRENT_DIR = os.path.join(BASE_DIR, 'Report_allure')
 # 获取Log目录路径
 LOG_DIR = os.path.join(BASE_DIR, 'Logs')

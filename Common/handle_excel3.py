@@ -241,13 +241,13 @@ def load_excel(file_name, sheet_name):
 
 def write_to_excel(sheet_obj, set_value, row_pos, col_pos):
     # 字体格式，颜色和大小
-    sheet_obj.cell(int(row_pos) + 1, int(col_pos[0]) + 1).value = set_value
+    sheet_obj.cell(int(row_pos) + 1, int(col_pos)).value = set_value
     if set_value == 'FAIL':
         font_s = Font(bold=False, color="FF0000", size=10)
-        sheet_obj.cell(int(row_pos) + 1, int(col_pos[0]) + 1).font = font_s
+        sheet_obj.cell(int(row_pos) + 1, int(col_pos)).font = font_s
     elif set_value == 'PASS':
         font_s = Font(bold=False, color="00FF00", size=10)
-        sheet_obj.cell(int(row_pos) + 1, int(col_pos[0]) + 1).font = font_s
+        sheet_obj.cell(int(row_pos) + 1, int(col_pos)).font = font_s
     else:
         pass
 

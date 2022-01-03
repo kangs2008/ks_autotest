@@ -41,20 +41,20 @@ _date = report_date_folder()
 #     config._metadata['测试地址'] = 'https://www.baidu.com'
 
 
-@pytest.mark.optionalhook
-def pytest_html_results_table_header(cells):
-    cells.insert(2, html.th('Description'))
-    cells.insert(3, html.th('Time', class_='sortable time', col='time'))
-    # cells.insert(1,html.th("Test_nodeid"))
-    cells.pop()
-
-
-@pytest.mark.optionalhook
-def pytest_html_results_table_row(report, cells):
-    cells.insert(2, html.td(report.description))
-    cells.insert(3, html.td(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), class_='col-time'))
-    # cells.insert(1,html.td(report.nodeid))
-    cells.pop()
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_header(cells):
+#     cells.insert(2, html.th('Description'))
+#     cells.insert(3, html.th('Time', class_='sortable time', col='time'))
+#     # cells.insert(1,html.th("Test_nodeid"))
+#     cells.pop()
+#
+#
+# @pytest.mark.optionalhook
+# def pytest_html_results_table_row(report, cells):
+#     cells.insert(2, html.td(report.description))
+#     cells.insert(3, html.td(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), class_='col-time'))
+#     # cells.insert(1,html.td(report.nodeid))
+#     cells.pop()
 
 
 

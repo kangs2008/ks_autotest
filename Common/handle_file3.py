@@ -439,7 +439,7 @@ def find_copy_current_folder(input_path, copy_to_path, ignore=[], rename=''):
     if Path(input_path).exists() and Path(input_path).is_file():
         dirs_f = Path(input_path).parent
         dirs_to = Path(copy_to_path)
-        Path(copy_to_path).mkdir(exist_ok=True)
+        Path(copy_to_path).mkdir(parents=True, exist_ok=True)
         f_name = Path(input_path).name
         f_name_tmp = Path(input_path).name
         f = file_copy(dirs_f, f_name, f_name_tmp, dirs_to, rename)
@@ -451,7 +451,7 @@ def find_copy_current_folder(input_path, copy_to_path, ignore=[], rename=''):
         for i in range(0, len(file_path_list)):
             dirs_f = Path(file_path_list[i]).parent
             dirs_to = Path(copy_to_path)
-            Path(copy_to_path).mkdir(exist_ok=True)
+            Path(copy_to_path).mkdir(parents=True, exist_ok=True)
             f_name = file_name_list[i]
             f_name_tmp = file_name_list[i]
             f = file_copy(dirs_f, f_name, f_name_tmp, dirs_to, rename)
@@ -491,7 +491,7 @@ def find_copy_all_folder(input_path, copy_to_path, ignore=[], rename=''):
     if Path(input_path).exists() and Path(input_path).is_file():
         dirs_f = Path(input_path).parent
         dirs_to = str(dirs_f).replace(str(Path(input_path).parent), str(Path(copy_to_path)))
-        Path(dirs_to).mkdir(exist_ok=True)
+        Path(dirs_to).mkdir(parents=True, exist_ok=True)
         f_name = Path(input_path).name
         f_name_tmp = Path(input_path).name
         f = file_copy(dirs_f, f_name, f_name_tmp, dirs_to, rename)
@@ -503,7 +503,7 @@ def find_copy_all_folder(input_path, copy_to_path, ignore=[], rename=''):
         for i in range(0, len(file_path_list)):
             dirs_f = Path(file_path_list[i]).parent
             dirs_to = str(dirs_f).replace(str(Path(input_path)), str(Path(copy_to_path)))
-            Path(dirs_to).mkdir(exist_ok=True)
+            Path(dirs_to).mkdir(parents=True, exist_ok=True)
             f_name = file_name_list[i]
             f_name_tmp = file_name_list[i]
             f = file_copy(dirs_f, f_name, f_name_tmp, dirs_to, rename)
@@ -538,7 +538,7 @@ def file_zip(input_path, output_path, ignore=[]):
     file_name_list = []
 
     if not Path(output_path).is_file():
-        Path(input_path).parent.mkdir(exist_ok=True)
+        Path(input_path).parent.mkdir(parents=True, exist_ok=True)
     z_file = zipfile.ZipFile(Path(output_path), 'w', zipfile.ZIP_DEFLATED)
     if Path(input_path).exists() and Path(input_path).is_file():
         z_file.write(Path(input_path), Path(input_path).name)
