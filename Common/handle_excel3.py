@@ -313,7 +313,7 @@ def _check_input_sheet_name_rule_in_excel(sheet_name_list, sheet_name_rule):
                     msg = f'Input sheet_name_rule type "string", type "list" incorrect.'
                     raise
             else:
-                if sheet_name_rule not in one_sheet:
+                if sheet_name_rule in one_sheet:
                     count += 1
         if count != len(sheet_name_list):
             print(f'Input sheet_name_rule "{sheet_name_rule}" not in sheet_name_list "{sheet_name_list}".')

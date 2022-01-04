@@ -25,7 +25,7 @@ class ReadWriteConfFile(object):
             cf.add_section(section)
             ReadWriteConfFile().write_parser(cf)
 
-    def get_option(self, section, key):
+    def get_option(self, section: object, key: object) -> object:
         cf = ReadWriteConfFile().get_parser()
         return cf.get(section, key)
 

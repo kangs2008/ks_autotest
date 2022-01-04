@@ -4,27 +4,32 @@ import pytest
 import allure
 import requests
 from Common.handle_logger import logger
+from Common.handle_config import ReadWriteConfFile
+from Common.utils import mDate, mDateTime
+
 
 _session = None
 
 @pytest.fixture(scope="function", autouse=False)
-def requests_session():
+def set_report_folder_api(request):
+    """get command line parameters
+    :param request: --report
     """
-    init requests.session()
-    """
-    logger.info('*'*100)
-    logger.info('*'*20 + '测试执行开始' + '*'*20)
-    global _session
-    _session = requests.session()
-    # allure.step(f'获取session：{_session}')
-    logger.info(f'----------requests_session setup----------')
-    logger.info(f'获取session：{_session}')
-    yield _session
-    _session.close()
-    logger.info(f'销毁session：{_session}')
-    logger.info(f'----------requests_session teardown----------')
-    # allure.environment(test_platform=host["test_platform"])
-    # allure.environment(mock=host["mock"])
-    logger.info('*'*20 + '测试执行结束' + '*'*20)
-    logger.info('*' * 100)
+    report_dir = ReadWriteConfFile().get_option('report', 'report_dir_folder')
+    logger.info('----set_report_folder_api---report_dir--------')
+    if report_dir == '':
+        _set_exec_ini('report', 'report_dir_folder', mDate()+'_html_api')
+        _set_exec_ini('report', 'report_file_name', f'report_{mDateTime()}.html')
+    yield
+    _set_exec_ini('report', 'report_dir_folder', '')
+    _set_exec_ini('report', 'report_file_name', '')
 
+    _set_exec_ini('test_data', 'excel_file_path', '')
+    _set_exec_ini('test_data', 'excel_file_name', '')
+    _set_exec_ini('test_data', 'sheet_names', '')
+    _set_exec_ini('test_data', 'sheet_rule', '')
+    _set_exec_ini('test_data', 'sheet_kvconfig', '')
+
+def _set_exec_ini(section, option, value):
+    ReadWriteConfFile().add_section(section)
+    ReadWriteConfFile().set_option(section, option, value)

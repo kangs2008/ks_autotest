@@ -6,7 +6,10 @@ import allure
 
 def mTime():
     return str(datetime.datetime.now().strftime('%H:%M:%S.%f')[:-3])
-
+def mDate():
+    return str(datetime.datetime.now().strftime('%Y%m%d'))
+def mDateTime():
+    return str(datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
 
 def formatTime():
     return time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())

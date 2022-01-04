@@ -106,7 +106,7 @@ def _dfs_zip_file(input_path, resultpath, resultfile, ignore=[]):
 
 def _dfs_current_folder(input_path, resultpath, resultfile, ignore=[]):
     files = os.listdir(input_path)
-
+    print(files)
     for file in files:
         filepath = os.path.join(input_path, file)
         if os.path.isdir(filepath):
@@ -389,22 +389,22 @@ def del_files(file_path, f_name='', f_suffix=None):
 
 
 def file_copy(file_path, file_name, file_tmp, copy_to_path, rename):
-    pattert = '\((\d+)\)'
+    pattern = r'\((\d+)\)'
     tmpf = Path(file_path, file_tmp)
-    if rename and not re.findall(pattert, file_name):
+    if rename and not re.findall(pattern, file_name):
         file_name = rename + Path(file_name).suffix
     tmpt = Path(copy_to_path, file_name)
     if not tmpt.exists():
         shutil.copy(tmpf, tmpt)
         return file_name
     num = 1
-    if re.findall(pattert, file_name):
-        num = re.findall(pattert, file_name)
+    if re.findall(pattern, file_name):
+        num = re.findall(pattern, file_name)
         new_num = str(int(num[0])+1)
-        file_name = re.sub(pattert, '('+new_num+')', file_name)
+        file_name = re.sub(pattern, '('+new_num+')', file_name)
         return file_copy(file_path, file_name, file_tmp, copy_to_path, rename)
 
-    if rename and not re.findall(pattert, file_name):
+    if rename and not re.findall(pattern, file_name):
         file_name = rename +f'({str(num)})'+ str(Path(file_name).suffix)
     else:
         file_name = str(file_name).replace(str(Path(file_name).suffix), '') +f'({str(num)})'+ str(Path(file_name).suffix)
@@ -413,15 +413,16 @@ def file_copy(file_path, file_name, file_tmp, copy_to_path, rename):
 def __dfs_find_copy_current_folder(file_path, file_path_list, file_name_list, ignore):
     for file in Path(file_path).iterdir():
         if file.is_file():
-            if ignore:
-                for one in ignore:
-                    if str(one) in str(file):
-                        file_path_list.append(file)
-                        file_name_list.append(file.name)
-            else:
+            if not Path(file).name.startswith('~'):
+                if ignore:
+                    for one in ignore:
+                        if str(one) in str(file):
+                            file_path_list.append(file)
+                            file_name_list.append(file.name)
+                else:
 
-                file_path_list.append(file)
-                file_name_list.append(file.name)
+                    file_path_list.append(file)
+                    file_name_list.append(file.name)
 
 def find_copy_current_folder(input_path, copy_to_path, ignore=[], rename=''):
     """
@@ -458,19 +459,21 @@ def find_copy_current_folder(input_path, copy_to_path, ignore=[], rename=''):
             L.append(f)
     else:
         print(f'File name/path not exist. "{input_path}"')
+    return L
 
 
 def __dfs_find_copy_all_folder(file_path, file_path_list, file_name_list, ignore):
     for file in Path(file_path).iterdir():
         if file.is_file():
-            if ignore:
-                for one in ignore:
-                    if str(one) in str(file):
-                        file_path_list.append(file)
-                        file_name_list.append(file.name)
-            else:
-                file_path_list.append(file)
-                file_name_list.append(file.name)
+            if not Path(file).name.startswith('~'):
+                if ignore:
+                    for one in ignore:
+                        if str(one) in str(file):
+                            file_path_list.append(file)
+                            file_name_list.append(file.name)
+                else:
+                    file_path_list.append(file)
+                    file_name_list.append(file.name)
         else:
             __dfs_find_copy_all_folder(file, file_path_list, file_name_list, ignore)
 
