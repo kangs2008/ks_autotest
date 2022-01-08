@@ -4,13 +4,9 @@ import allure
 import jsonpath
 import requests
 
-from Common.utils import mTime
 from Common.handle_logger import logger
-from Common.handle_excel import write_to_excel
 from Common.handle_json import HandleJson
 import jmespath
-import functools
-
 
 class Http(object):
 
@@ -165,7 +161,7 @@ class Http(object):
     def __params2get(self, param):
         """ for get_api self.param """
         if str(param).strip().startswith('{') and str(param).strip().endswith('}'): # for py
-            return param
+            return eval(param) # 20220108
         else:
             if '=' not in param:
                 logger.error("The input parameters should contain '='.  e.g. xx1=aa,xx2=bb")
@@ -338,40 +334,6 @@ class Http(object):
             logger.info(f"执行函数search_value2:{search_value}")
             assert search_value, expect_value
         pass
-
-
-
-
-    # def assertInRe(self, apidata, sheet, row_pos, col_pos_c, col_pos_v):
-    #     logger.info(f"执行函数:{sys._getframe().f_code.co_name}")
-    #     expect_value = str(apidata['request_data']).strip()
-    #     d_k = str(apidata['input']).strip()
-    #     pattern = f'"{d_k}": "(.+?)"'
-    #
-    #     result_to_json = json.dumps(self.jsonres)
-    #
-    #     res = re.findall(pattern, result_to_json)  # 正则从json中取值
-    #     with allure.step(
-    #             f"[{mTime()}]['assertInRe'][key:{d_k},actual_value:{res}][expect_value:{expect_value}]"):
-    #         logger.info(f"key:{d_k}")
-    #         logger.info(f"ACTUAL_VALUE:[{res}]")
-    #         logger.info(f"EXPECT_VALUE:[{expect_value}]")
-    #         try:
-    #             assert expect_value in res
-    #         except AssertionError as e:
-    #             self.return_value('FAIL')
-    #             logger.info('--Fail--用例失败--')
-    #             logger.exception(e)
-    #             # raise
-    #             str_result = 'FAIL'
-    #         else:
-    #             self.return_value('PASS')
-    #             logger.info('--Pass--用例成功--')
-    #             str_result = 'PASS'
-    #     self.__allurestep(str_result)
-    #     write_to_excel(sheet, str_result, row_pos, col_pos_c)
-    #     write_to_excel(sheet, str(res), row_pos, col_pos_v)
-    #     return str_result
 
     def assertResp2Json(self, *args, **kwargs):
         """

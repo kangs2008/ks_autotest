@@ -339,6 +339,7 @@ class Element(object):
         :param timeout: 20s
         :param frequency: 0.5s
         """
+        f_num = self._get_case_line_num()
         func = sys._getframe().f_code.co_name
         start_time = datetime.datetime.now()
         try:
@@ -352,7 +353,7 @@ class Element(object):
                 self.__return_value(e)
             end_time = datetime.datetime.now()
             case_logger.error(
-                "[FAIL][{}]<{}>,locator:<{}>,time:{}s".format(func, self.desc, self.locator,
+                "[FAIL][{}][{}]<{}>,locator:<{}>,time:{}s".format(f_num, func, self.desc, self.locator,
                                                                usageTime(end_time, start_time)))
         else:
             with allure.step(f"[{mTime()}][{func}][{self.desc}][{self.locator}]"):
@@ -362,7 +363,7 @@ class Element(object):
             self.context.execute_script("arguments[0].removeAttribute('style')", ele)
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]<{}>,locator:<{}>,return:<{}>time:{}s".format(func, self.desc, self.locator, text,
+                "[{}][{}]<{}>,locator:<{}>,return:<{}>time:{}s".format(f_num, func, self.desc, self.locator, text,
                                                                usageTime(end_time, start_time)))
             return text
 
@@ -370,11 +371,13 @@ class Element(object):
         with allure.step(f"VALUE:[{value}]"):
             pass
 
-    def save_capture(self, loc_name):
+    def save_capture(self, loc_name, f_num=''):
         """
         take a screenshot
         :param loc_name: capture name
         """
+        if f_num == '':
+            f_num = self._get_case_line_num()
         loc_name = loc_name.replace(' ', '_').replace('　', '_')
         time.sleep(0.01)
         start_time = datetime.datetime.now()
@@ -393,7 +396,7 @@ class Element(object):
                 self.__return_value(e)
             end_time = datetime.datetime.now()
             case_logger.info(
-                "[{}]{},time:{}".format(sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
+                "[{}][{}]{},time:{}".format(f_num, sys._getframe().f_code.co_name, relative_name, usageTime(end_time, start_time)))
 
 
     def save_capture_paint(self, loc_name, pos):
@@ -521,7 +524,35 @@ class Element(object):
         ele = self._get_element()
         ele.send_keys(Keys.SPACE)
 
+    def _get_case_line_num(self):
+        num = ''
+        for i in range (0, 4):
 
+            if i == 0:
+                aa = sys._getframe().f_back.f_code.co_filename
+                p, f = os.path.split(aa)
+                if f.startswith('test_'):
+                    num = str(sys._getframe().f_back.f_lineno).zfill(3)
+                    break
+            elif i == 1:
+                aa = sys._getframe().f_back.f_back.f_code.co_filename
+                p, f = os.path.split(aa)
+                if f.startswith('test_'):
+                    num = str(sys._getframe().f_back.f_back.f_lineno).zfill(3)
+                    break
+            elif i == 2:
+                aa = sys._getframe().f_back.f_back.f_back.f_code.co_filename
+                p, f = os.path.split(aa)
+                if f.startswith('test_'):
+                    num = str(sys._getframe().f_back.f_back.f_back.f_lineno).zfill(3)
+                    break
+            elif i == 3:
+                aa = sys._getframe().f_back.f_back.f_back.f_back.f_code.co_filename
+                p, f = os.path.split(aa)
+                if f.startswith('test_'):
+                    num = str(sys._getframe().f_back.f_back.f_back.f_back.f_lineno).zfill(3)
+                    break
+        return num
 
 
 

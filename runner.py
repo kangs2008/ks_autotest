@@ -5,10 +5,10 @@ from Common.setting import BASE_DIR, REPORT_DIR
 # os.system(cmd)
 
 
-pytest.main(['./TestCases/Login/test_baidu.py', '-sv', '--alluredir', './temp'])  # '--report','re2021'
+pytest.main(['./TestCasesWeb/Login/test_baidu.py', '-sv', '--alluredir', './temp'])  # '--report','re2021'
 cmd = 'allure generate ./temp -o ./Report --clean'
 os.system(cmd)
 
-# pytest.main(['./TestCases/Login/test_baidu.py', '--html=./Report/html/report_.html', '--self-contained-html'])
+# pytest.main(['./TestCasesWeb/Login/test_baidu.py', '--html=./Report/html/report_.html', '--self-contained-html'])
 
 

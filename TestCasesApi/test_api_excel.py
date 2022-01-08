@@ -1,27 +1,17 @@
 import pytest
 import allure
-import os, sys
+import os
 from pathlib import Path
 from Common.handle_logger import logger
-from api.apikeywords.apiKeyWords3 import Http
-from Common.handle_excel3 import excel_to_case, load_excel, excel_to_save, Handle_excel, write_to_excel
+from Common.api_key_words import Http
+from Common.handle_excel3 import load_excel, excel_to_save, Handle_excel, write_to_excel
 from Common.handle_config import ReadWriteConfFile
-from Common.setting import REPORT_DIR, BASE_DIR, REPORT_HTML_API_DIR
+from Common.setting import REPORT_HTML_API_DIR
 from Common.handle_file3 import find_copy_current_folder
 
-# excel_file_path = ReadWriteConfFile().get_option('test_data', 'excel_file_path')
-# excel_file_name = ReadWriteConfFile().get_option('test_data', 'excel_file_name')
-sheet_names = ReadWriteConfFile().get_option('test_data', 'sheet_names')
-sheet_rule = ReadWriteConfFile().get_option('test_data', 'sheet_rule')
-sheet_kvconfig = ReadWriteConfFile().get_option('test_data', 'sheet_kvconfig')
-
-
-
-
-# excel_file_path = r'D:\desk20201127\ks_web_allure\Datas'
-# excel_file_name = 'test_apidata.xlsx'
-# path = Path().joinpath(excel_file_path, excel_file_name)
-# api_data = excel_to_case(path, 't_接', 't_', ['config'])
+# sheet_names = ReadWriteConfFile().get_option('test_data', 'sheet_names')
+# sheet_rule = ReadWriteConfFile().get_option('test_data', 'sheet_rule')
+# sheet_kvconfig = ReadWriteConfFile().get_option('test_data', 'sheet_kvconfig')
 
 class TestAPI():
     def setup(self):
@@ -50,7 +40,7 @@ class TestAPI():
         logger.info('-----------teardown-----------')
     # @pytest.mark.parametrize('data', api_data)
     @pytest.mark.usefixtures('set_report_folder_api')
-    def test_all_api(self, set_report_folder_api, data):
+    def test_all_api(self, data):
 
         http = Http()
 
@@ -117,10 +107,3 @@ class TestAPI():
 
     def save_excel_teardown(self, wb, file_path):
         excel_to_save(wb, file_path)
-
-    def __to_list(self, file_str, name):
-        fileList = str(file_str).split(',')
-        for one in fileList:
-            pre = os.path.splitext(one)[0]
-            if pre in name:
-                return name

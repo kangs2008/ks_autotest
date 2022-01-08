@@ -1,13 +1,13 @@
 import pytest
 import allure
 import sys, time
-from Common.login_datas import data1
+from TestDatas.login_datas import data1
 from Common.handle_logger import logger
 from Pages.BaiduPage.baidu_page import BaiduPage
-from Common.basepage import BasePage
+
 
 @allure.feature("login 异常测试用例，feature")
-@pytest.mark.usefixtures('start_session')
+@pytest.mark.usefixtures('web_driver_start')
 # @pytest.mark.usefixtures('report')
 # @pytest.mark.usefixtures('refresh_page')
 class TestLogin:
@@ -15,13 +15,14 @@ class TestLogin:
     # 异常测试用例
     @allure.story("测试login 方法，story")
     @pytest.mark.parametrize('data', data1)
-    def test_login(self, data, start_session):
+    def test_login(self, data, web_driver_start):
         """描述！！！！"""
         logger.info(f" 执行 {self.__class__.__name__} 测试套件Suite ")
         logger.info(f" 执行 {sys._getframe().f_code.co_name} 测试用例Case ")
 
 
-        bb = BaiduPage(start_session)
+        bb = BaiduPage(web_driver_start)
+        bb.goto('http://www.baidu.com')
         st = bb.news_link_loc.wait_ele_to_visible()
         time.sleep(2)
         news = bb.news_link_loc.ele_get_text()

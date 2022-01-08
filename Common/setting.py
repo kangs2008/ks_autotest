@@ -15,7 +15,7 @@ BASE_NAME = os.path.split(BASE_DIR)[1]
 #CONFIG_FILE_PATH = os.path.join(CONFIG_DIR, 'init.ini')
 
 # 获取TestDatas目录路径
-DATAS_DIR = os.path.join(BASE_DIR, 'Datas')
+DATAS_DIR = os.path.join(BASE_DIR, 'TestDatas')
 
 # 获取excel文件路径
 DATAS_FILE_PATH = os.path.join(DATAS_DIR, 'TestDatas.xlsx')
@@ -24,7 +24,7 @@ DATAS_FILE_PATH = os.path.join(DATAS_DIR, 'TestDatas.xlsx')
 REPORT_DIR = os.path.join(BASE_DIR, 'Report')
 
 # 获取Report_html_api目录路径
-REPORT_HTML_API_DIR = os.path.join(REPORT_DIR, 'Html_api')
+REPORT_HTML_API_DIR = os.path.join(REPORT_DIR, 'html_api')
 
 REPORT_CURRENT_DIR = os.path.join(BASE_DIR, 'Report_allure')
 # 获取Log目录路径
@@ -36,4 +36,4 @@ PIC_DIR = os.path.join(BASE_DIR, 'PIC')
 RELATIVE_DIR = os.path.join(BASE_NAME, 'PIC')
 
 # 获取TestCases目录路径
-CASES_DIR = os.path.join(BASE_DIR, 'TestCases')
+CASES_DIR = os.path.join(BASE_DIR, 'TestCasesWeb')

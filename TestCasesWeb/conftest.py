@@ -4,7 +4,6 @@ from Common.handle_logger import logger
 
 from selenium.webdriver.remote.webdriver import WebDriver
 import pytest
-from Common.basepage import BasePage
 
 
 # @pytest.mark.hookwrapper
@@ -52,15 +51,15 @@ from Common.basepage import BasePage
 #     return driver
 #     pass
 
-# @pytest.fixture(scope='class', autouse=False)
-# def project_session_start():
-#     logger.info("========== open browser ===========")
-#     global driver
-#     driver = webdriver.Chrome()
-#     driver.maximize_window()
-#     yield driver
-#     driver.quit()
-#     logger.info("========== close browser ===========")
+@pytest.fixture(scope='class', autouse=False)
+def web_driver_start():
+    logger.info("========== open browser ===========")
+    global driver
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    yield driver
+    driver.quit()
+    logger.info("========== close browser ===========")
 
 # @pytest.fixture()
 # def project_func():

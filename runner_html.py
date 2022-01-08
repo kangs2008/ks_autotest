@@ -10,7 +10,7 @@ from Common.setting import BASE_DIR, REPORT_DIR
 
 
 file_name = "test_apidata.xlsx"
-datas_path = os.path.join(BASE_DIR, "Datas")
+datas_path = os.path.join(BASE_DIR, "TestDatas")
 
 @click.command()
 @click.option('--file', default='datas_path', help='指定文件名字:datas_path_file or 文件夹:datas_path')

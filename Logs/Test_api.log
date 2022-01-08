@@ -1,0 +1,84 @@
+2022-01-08 11:09:36,467 LOG INFO conftest.py-50 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas--------
+2022-01-08 11:09:36,467 LOG INFO conftest.py-54 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas\test_apidata.xlsx--------
+2022-01-08 11:09:36,467 LOG INFO conftest.py-55 line：----pytest_generate_tests---path2--------
+2022-01-08 11:09:36,702 LOG INFO conftest.py-57 line：----pytest_generate_tests---api_data--------
+2022-01-08 11:09:36,811 LOG INFO conftest.py-12 line：----set_report_folder_api---report_dir--------
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-22 line：-----------setup-----------
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-33 line：The report file name is test_apidata.xlsx
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-36 line：The report file name is ['test_apidata_report.xlsx']
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-37 line：The report file path is D:\desk20201127\ks_web_allure\Report\Html_api\20220108_html_api
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-50 line：API_interface_test
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-51 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_web_allure\TestDatas\test_apidata.xlsx
+2022-01-08 11:09:36,811 LOG INFO test_api_excel.py-101 line：['test_apidata_report.xlsx']
+2022-01-08 11:09:36,873 LOG INFO test_api_excel.py-103 line：<openpyxl.workbook.workbook.Workbook object at 0x000001E7A1D17C88>
+2022-01-08 11:09:36,873 LOG INFO test_api_excel.py-104 line：<Worksheet "t_接">
+2022-01-08 11:09:36,952 LOG INFO test_api_excel.py-58 line：Execute test suite: TestAPI
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-59 line：Execute test case: t_接
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-62 line：{'num': '1', 'exec': '1', 'title': '充1', 'method': 'seturl', 'input': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-59 line：[seturl]-->http://httpbin.org
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-71 line：Function return value：None
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-62 line：{'num': '2', 'exec': '2', 'title': '充2', 'method': 'save2dict', 'input': 'auser', 'request_data': 'hh', 'status': 'nihao!!!mm', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-67 line：hh
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-124 line：aaaaaaaaaaaaaaahh
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-125 line：[save2dict]before-->self.relations==>>{}
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-71 line：Function return value：{'auser': 'hh'}
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-62 line：{'num': '3', 'exec': '3', 'title': '充3', 'method': 'saveparam', 'input': 'xcode', 'request_data': '20001', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-97 line：20001
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-67 line：20001
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-102 line：-----------request_data_value   20001
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-105 line：[saveparam]after-->self.param==>>{'xcode': '20001'}
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-71 line：Function return value：{'xcode': '20001'}
+2022-01-08 11:09:36,967 LOG INFO test_api_excel.py-62 line：{'num': '4', 'exec': '4', 'title': '充4', 'method': 'get_api', 'input': 'get', 'request_data': "za={'a':'a1'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-240 line：[create_session]after--><requests.sessions.Session object at 0x000001E7A1DC7408>
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-141 line：[get_api]before-->[URL:http://httpbin.org/get],[**KWARGS:{'data': "za={'a':'a1'}", 'proxies': None}]
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-67 line：{"a":"a1"}
+2022-01-08 11:09:36,967 LOG INFO api_key_words.py-145 line：[get_api]before-->[params/kwargs['data']:za={'a':'a1'}]
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-150 line：[get_api]after-->[Response.json()==>>{'args': {'xcode': '20001', 'za': '{"a":"a1"}'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d9006a-5d103aa92a2deefc19622009'}, 'origin': '112.42.6.207', 'url': 'http://httpbin.org/get?xcode=20001&za={"a"%3A"a1"}'}]
+2022-01-08 11:09:37,639 LOG INFO test_api_excel.py-71 line：Function return value：{'args': {'xcode': '20001', 'za': '{"a":"a1"}'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d9006a-5d103aa92a2deefc19622009'}, 'origin': '112.42.6.207', 'url': 'http://httpbin.org/get?xcode=20001&za={"a"%3A"a1"}'}
+2022-01-08 11:09:37,639 LOG INFO test_api_excel.py-62 line：{'num': '5', 'exec': '5', 'title': '充5', 'method': 'post_api', 'input': 'post', 'request_data': 'zss=${auser}', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-210 line：[post_api]before-->[URL:http://httpbin.org/post],[**KWARGS:{'data': 'zss=${auser}', 'proxies': None}]
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-185 line：----_data--zss=${auser}
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-67 line：${auser}
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-77 line：----------数据预处理after:--self.relations[auser]>>hh--
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-198 line：----_valuen--hh
+2022-01-08 11:09:37,639 LOG INFO api_key_words.py-213 line：[post_api]before-->[json/kwargs['data']/self.__params2post:{'zss': 'hh'}]
+2022-01-08 11:09:37,983 LOG INFO api_key_words.py-218 line：[post_api]after-->[Response.json()==>>{'args': {}, 'data': '{"zss": "hh"}', 'files': {}, 'form': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '13', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d9006a-75c8204f1fab0ae52caa15ca'}, 'json': {'zss': 'hh'}, 'origin': '112.42.6.207', 'url': 'http://httpbin.org/post'}]
+2022-01-08 11:09:37,983 LOG INFO test_api_excel.py-71 line：Function return value：{'args': {}, 'data': '{"zss": "hh"}', 'files': {}, 'form': {}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Content-Length': '13', 'Content-Type': 'application/json', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.24.0', 'X-Amzn-Trace-Id': 'Root=1-61d9006a-75c8204f1fab0ae52caa15ca'}, 'json': {'zss': 'hh'}, 'origin': '112.42.6.207', 'url': 'http://httpbin.org/post'}
+2022-01-08 11:09:37,983 LOG INFO test_api_excel.py-62 line：{'num': '7', 'exec': '6', 'title': '充6', 'method': 'get_api', 'input': 'get/${auser}', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:37,983 LOG INFO api_key_words.py-67 line：http://httpbin.org/get/${auser}
+2022-01-08 11:09:37,983 LOG INFO api_key_words.py-77 line：----------数据预处理after:--self.relations[auser]>>hh--
+2022-01-08 11:09:37,998 LOG INFO api_key_words.py-141 line：[get_api]before-->[URL:http://httpbin.org/get/hh],[**KWARGS:{'data': '', 'proxies': None}]
+2022-01-08 11:09:37,998 LOG INFO api_key_words.py-145 line：[get_api]before-->[params/kwargs['data']:]
+2022-01-08 11:09:38,264 LOG INFO api_key_words.py-153 line：warning: Expecting value: line 1 column 1 (char 0)
+2022-01-08 11:09:38,264 LOG INFO api_key_words.py-154 line：[get_api]after-->[Response.text==>>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.</p>
+]
+2022-01-08 11:09:38,264 LOG INFO test_api_excel.py-71 line：Function return value：None
+2022-01-08 11:09:38,264 LOG INFO test_api_excel.py-62 line：{'num': '8', 'exec': '7', 'title': '充7', 'method': 'savejson', 'input': 'next', 'request_data': 'headers,X-Amzn-Trace-Id', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}
+2022-01-08 11:09:38,264 LOG INFO api_key_words.py-262 line：[savejson]before-->self.relations==>>{'auser': 'hh'}
+2022-01-08 11:09:38,264 LOG INFO api_key_words.py-252 line：----------数据预处理after:--__abs(datan)>>headers,X-Amzn-Trace-Id>>['headers']['X-Amzn-Trace-Id']--
+2022-01-08 11:09:38,264 LOG INFO api_key_words.py-267 line：[savejson]after-->self.relations==>>{'auser': 'hh', 'next': 'Root=1-61d9006a-75c8204f1fab0ae52caa15ca'}
+2022-01-08 11:09:38,280 LOG INFO test_api_excel.py-71 line：Function return value：{'next': 'Root=1-61d9006a-75c8204f1fab0ae52caa15ca'}
+2022-01-08 11:09:38,530 LOG INFO test_api_excel.py-75 line：Write Excel：save_excel_teardown
+2022-01-08 11:09:38,530 LOG INFO test_api_excel.py-40 line：-----------teardown-----------
+2022-01-08 11:10:41,340 LOG INFO conftest.py-50 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas--------
+2022-01-08 11:10:41,340 LOG INFO conftest.py-54 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas\test_apidata.xlsx--------
+2022-01-08 11:10:41,340 LOG INFO conftest.py-55 line：----pytest_generate_tests---path2--------
+2022-01-08 11:10:41,496 LOG INFO conftest.py-57 line：----pytest_generate_tests---api_data--------
+2022-01-08 11:13:33,453 LOG INFO conftest.py-57 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas--------
+2022-01-08 11:13:33,453 LOG INFO conftest.py-61 line：----pytest_generate_tests---D:\desk20201127\ks_web_allure\TestDatas\test_apidata.xlsx--------
+2022-01-08 11:13:33,453 LOG INFO conftest.py-62 line：----pytest_generate_tests---path2--------
+2022-01-08 11:13:33,656 LOG INFO conftest.py-64 line：----pytest_generate_tests---api_data--------
+2022-01-08 11:32:00,440 LOG INFO conftest.py-56 line：========== open browser ===========
+2022-01-08 11:32:02,231 LOG INFO test_baidu.py-20 line： 执行 TestLogin 测试套件Suite 
+2022-01-08 11:32:02,231 LOG INFO test_baidu.py-21 line： 执行 test_login 测试用例Case 
+2022-01-08 11:32:04,821 LOG INFO base_page.py-160 line：[wait_ele_to_visible]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,time:20220108 11:32:04.773/00.047s
+2022-01-08 11:32:06,936 LOG INFO base_page.py-367 line：[028][ele_get_text]<新闻>,locator:<('xpath', '//*[@id="s-top-left"]/a[1]')>,return:<新闻>time:20220108 11:32:06.825/00.111s
+2022-01-08 11:32:07,234 LOG INFO base_page.py-86 line：[Method:kb_paste]
+2022-01-08 11:32:09,720 LOG INFO base_page.py-393 line：[save_capture]ks_web_allure\PIC20220108_113209_百度一下.png,time:20220108 11:32:09.305/00.415
+2022-01-08 11:32:09,835 LOG INFO base_page.py-283 line：[ele_click]<百度一下>,locator:<('xpath', '//*[@id="su"]')>,time:20220108 11:32:09.235/00.599s
+2022-01-08 11:32:09,835 LOG INFO test_baidu.py-41 line： 结束执行 test_login 测试用例， 测试结果 --- PASS 
+2022-01-08 11:32:12,959 LOG INFO conftest.py-62 line：========== close browser ===========

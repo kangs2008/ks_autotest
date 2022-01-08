@@ -1,11 +1,6 @@
 import allure
 import sys, inspect
-from Locators.baidu_locators import locs
-from Common.newbasepage import PageObject, Element, Elements
-from Common.utils import mTime
-from functools import wraps
-page = 'baidu_page'
-
+from Common.base_page import PageObject, Element, Elements
 
 class BaiduPage(PageObject):
 

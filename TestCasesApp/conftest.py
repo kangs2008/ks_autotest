@@ -7,13 +7,9 @@ from Common.handle_logger import logger
 from Common.handle_config import ReadWriteConfFile
 from Common.utils import mDate, mDateTime
 
-
-_session = None
-
 @pytest.fixture(scope="function", autouse=False)
 def set_report_folder_api(request):
-    """get command line parameters
-    :param request: --report
+    """set_report_folder_api
     """
     report_dir = ReadWriteConfFile().get_option('report', 'report_dir_folder')
     logger.info('----set_report_folder_api---report_dir--------')
