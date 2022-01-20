@@ -3,7 +3,7 @@ import allure
 import os
 from pathlib import Path
 from Common.handle_logger import logger
-from Common.api_key_words import Http
+from Common.api_keywords_excel import Http
 from Common.handle_excel3 import load_excel, excel_to_save, Handle_excel, write_to_excel
 from Common.handle_config import ReadWriteConfFile
 from Common.setting import REPORT_HTML_API_DIR
@@ -58,19 +58,29 @@ class TestAPI():
         logger.info(f"Execute test suite: {self.__class__.__name__}")
         logger.info(f"Execute test case: {list(data.values())[0]}")
 
-        for va in list(data.values())[3]:
-            logger.info(va)
+        for i in range(1, len(list(data.values())[3]) + 1):
+            # logger.info(va)
+            va = list(data.values())[3][i-1]
             row_pos = va['exec']
-            func = getattr(http, va['method'], 'not_find')
-            if va['method'].strip().lower().endswith('_api'):
-                resp = func(va['input'], data=va['request_data'], proxies=None)
-            else:
-                resp = func(va['input'], data=va['request_data'])
-            write_to_excel(sheet_obj, 'PASS', row_pos, col_pos_c)
-            write_to_excel(sheet_obj, str(resp), row_pos, col_pos_v)
-            logger.info(f'Function return value：{str(resp)}')
 
-        self.save_excel_teardown(wb, write_path)
+            setattr(http, 'step_num', str(i).zfill(3))
+
+            func = getattr(http, va['method'], 'not_find')
+            # if isinatance(func, str):
+            #     logger.info("aaaa")
+            if va['method'].strip().lower().endswith('_api') and str(va['request_data']).strip() == '':
+                resp = func(va['request_key'])
+            else:
+                resp = func(va['request_key'], va['request_data'])
+            if str(resp[0]) == 'FAIL':
+                write_to_excel(sheet_obj, 'FAIL', row_pos, col_pos_c)
+                write_to_excel(sheet_obj, str(resp[1]), row_pos, col_pos_v)
+            else:
+                write_to_excel(sheet_obj, 'PASS', row_pos, col_pos_c)
+                write_to_excel(sheet_obj, str(resp[1]), row_pos, col_pos_v)
+            # logger.info(f'Function return value：{str(resp)}')
+
+            self.save_excel_teardown(wb, write_path)
 
         logger.info(f"Write Excel：{'save_excel_teardown'}")
 

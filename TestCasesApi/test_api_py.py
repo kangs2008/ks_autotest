@@ -2,7 +2,7 @@ import pytest
 import allure
 from pathlib import Path
 from Common.handle_logger import logger
-from Common.api_key_words import Http
+from Common.api_keywords_excel import Http
 from Common.handle_excel3 import load_excel, excel_to_save
 
 apidata = [[{'method':'seturl', 'url':'http://httpbin.org'},
@@ -24,23 +24,52 @@ class TestAPI():
 
         logger.info('teardown-----------')
 
+    # @pytest.mark.parametrize('data', apidata)
+    # def test_all_api(self, data):
+    #
+    #     http = Http()
+    #
+    #     http.create_session('s1')
+    #     http.seturl(data[0]['url'])
+    #     http.addheader('tou', 'add header')
+    #     http.get_api('s1', data[1]['url'], data={'a':'a1'}, proxies=None)
+    #
+    #     http.post_api('s1', data[2]['url'], data={'d':'d1'})
+    #     x = http.resp_json['headers']['X-Amzn-Trace-Id']
+    #     logger.info(x)
+
+
+
+        # logger.info(f"Write Excel：{'save_excel_teardown'}")
+
     @pytest.mark.parametrize('data', apidata)
-    def test_all_api(self, data):
+    def test_all_api2(self, data):
 
         http = Http()
 
-        http.create_session()
+        http.create_session('s1')
         http.seturl(data[0]['url'])
-        http.addheader('tou', 'add header')
-        http.get_api(data[1]['url'], data={'a':'a1'}, proxies=None)
+        http.setheader('tou', headers={'tou':'add header'})
+        http.setproxy('tou', proxies={'tou': 'add header'})
+        resp = http.get_api('s1', data[1]['url'], data={'a':'a1'})
+        http.save2dict('aa', '=aaaa')
+        http.save2dict('bb', 'headers,X-Amzn-Trace-Id')
+        http.savejson(json={"p": "p1"})
 
-        http.post_api(data[2]['url'], data={'d':'d1'})
+        http.post_api('s1', data[2]['url'], data={'d':'d1'})
         x = http.resp_json['headers']['X-Amzn-Trace-Id']
         logger.info(x)
 
 
 
-        logger.info(f"Write Excel：{'save_excel_teardown'}")
+
+
+
+
+
+
+
+
 
     def allurestep(self, va):
         if va['title'] != '':

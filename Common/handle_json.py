@@ -118,6 +118,18 @@ class HandleJson:
                             continue
                     elif re.match(ignore_reg_pat, v):
                         continue
+                    else:
+                        if str(a_flow[k]) != v:
+                            msg = (
+                                "[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >:{E}".format(K=k,
+                                                                                                                  A=str(
+                                                                                                                      a_flow[
+                                                                                                                          k]),
+                                                                                                                  E=v))
+                            error_count += 1
+                            print(msg)
+                            logger.info(msg)
+
                     if isinstance(str(a_flow[k]), list) and isinstance(v, list):
                         if sorted(str(a_flow[k])) != sorted(v):
                             msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >: {E}".format(K=k, A=a_flow[k], E=v))

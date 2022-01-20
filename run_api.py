@@ -2,7 +2,7 @@ import pytest
 from Common.handle_config import ReadWriteConfFile
 from Common.utils import mDate, mDateTime
 
-excel_file_path = r'D:\desk20201127\ks_web_allure\TestDatas'
+excel_file_path = r'D:\desk20201127\ks_autotest\TestDatas'
 excel_file_name = 'test_apidata.xlsx'
 sheet_names = 't_接'  # 't_接,t_接22'
 sheet_rule = 't_'
