@@ -1,5 +1,7 @@
 import json, re
 from Common.handle_logger import logger
+import allure
+
 class HandleJson:
     """
     定义一个json格式数据处理类
@@ -121,49 +123,40 @@ class HandleJson:
                     else:
                         if str(a_flow[k]) != v:
                             msg = (
-                                "[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >:{E}".format(K=k,
-                                                                                                                  A=str(
-                                                                                                                      a_flow[
-                                                                                                                          k]),
-                                                                                                                  E=v))
+                                f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
                             error_count += 1
-                            print(msg)
-                            logger.info(msg)
+                            allure_step_error(msg)
 
                     if isinstance(str(a_flow[k]), list) and isinstance(v, list):
                         if sorted(str(a_flow[k])) != sorted(v):
-                            msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >: {E}".format(K=k, A=a_flow[k], E=v))
+                            msg = (
+                                f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
                             error_count += 1
-                            print(msg)
-                            logger.info(msg)
+                            allure_step_error(msg)
                         else:
                             if str(a_flow[k]) != v:
-                                msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞：{A} \n < expect >:{E}".format(K=k,A=str(a_flow[k]), E=v))
+                                msg = (
+                                    f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
                                 error_count += 1
-                                print(msg)
-                                logger.info(msg)
+                                allure_step_error(msg)
             else: # 默认全部比较
                 for k, v in iter(e_flow.items()):
                     v = str(v)
                     if isinstance(str(a_flow[k]), list) and isinstance(v, list):
                         if sorted(str(a_flow[k])) != sorted(v):
-                            msg = ("[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞： {A} \n < expect >:{E}".format(K=k, A=str(a_flow[k]), E=v))
+                            msg = (f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
                             error_count += 1
-                            print(msg)
-                            logger.info(msg)
+                            allure_step_error(msg)
                     else:
                         if str(a_flow[k]) != v:
-                            msg = (
-                                "[!] RESPONSE-JSON＝＝＞ [{K}]的＊＊VALUE＊＊不同：\n ＜actual＞： {A} \n < expect >:{E}".format(K=k, A=str(a_flow[k]), E=v))
+                            msg = (f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
                             error_count += 1
-                            print(msg)
-                            logger.info(msg)
+                            allure_step_error(msg)
         else:
             msg = (
-                f"[!] RESPONSE-JSON＝＝＞ ＊＊KEY＊＊不同：\n ＜actual＞：{sorted(a_flow.keys())} \n < expect >:{sorted(e_flow.keys())}")
+                f"[!] RESPONSE-JSON== > ** KEY ** diff:\n < actual >:{sorted(a_flow.keys())} \n < expect >:{sorted(e_flow.keys())}")
             error_count += 1
-            print(msg)
-            logger.info(msg)
+            allure_step_error(msg)
         return  error_count
         # if error_count != 0:
         #     raise 'aaaaaa'
@@ -183,7 +176,9 @@ class HandleJson:
             else:
                 structure['.'.join(i[:-1])] = i[-1]
         return structure
-
+def allure_step_error(value):
+    with allure.step(value):
+        logger.error(value[14:])
 
 if __name__ == '__main__':
     a = {"employees": ["Bill", "戻る", "你好吗"]}

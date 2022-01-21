@@ -29,14 +29,14 @@ class Http(object):
         if alias == '':
             msg = f"[{mTime()}][{self.step_num}][create_session]❌ before-->The input parameter does not empty"
             allure_step_error(msg)
-            return "FAIL", msg[14:]
+            raise Exception(msg)
         else:
             s = requests.Session()
             self._session[alias] = s
 
         allure_step(f"[{mTime()}][{self.step_num}][create_session] after-->self._session[{alias}]==>>{s}")
         allure_step(f"[{mTime()}][{self.step_num}][create_session] method return value:[{self._session}]")
-        return "PASS", self._session
+        return self._session
 
     def __get_alais_url(self, args):
         # if len(args) == 1:  #excel mode
@@ -89,89 +89,6 @@ class Http(object):
                     return "FAIL", msg[14:]
         return new_url
 
-
-    def setheader(self, *args):
-        """
-        A requests session headers
-        :param *args: alias required (excel mode)
-        :return: self._session[alias].headers
-        """
-        try:
-            # if 'headers' in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-            #     alais = (tuple(args)[0]).strip()
-            #     self._session[alais].headers = kwargs['headers']
-            #     logger.info(f"[{sys._getframe().f_code.co_name}]-->self._session[{alais}].headers==>>{self._session[alais].headers}")
-            #     return self._session[alais].headers
-            # elif 'headers' not in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-            #     logger.error(f'[{sys._getframe().f_code.co_name}]-->{kwargs.keys()} is not correct headers, please check it.')
-            # else:  # excel mode
-                request_key = str(tuple(args)[0]).strip()
-                request_data = str(tuple(args)[1]).strip()
-                if ',' not in request_key:
-                    msg = f'[{mTime()}][setheader]❌ No session alias, please check it.'
-                    allure_step_error(msg)
-                    return "FAIL", msg[14:]
-                else:
-                    new_input_data = request_key.split(',', 1)
-                    alias = (new_input_data[0]).strip()
-                    _key = (new_input_data[1]).strip()
-                    try:
-                        self._session[alias].headers[_key] = request_data
-                        allure_step(f"[{mTime()}][setheader]-->self._session[{alias}].headers[{_key}]==>>{request_data}")
-                    except:
-                        msg = f"[{mTime()}][setheader]❌ The input session alias '{alias}' incorrect, please check it. self._session{self._session}"
-                        allure_step_error(msg)
-                        return "FAIL", msg[14:]
-                allure_step(f"[{mTime()}][setheader] method return alias '{self._session[alias].headers}'")
-                return "PASS", self._session[alias].headers
-
-        except Exception as e:
-            msg = f"[{mTime()}][setheader]❌ -->self.session.headers incorrect"
-            allure_step_error(msg)
-            return "FAIL", msg[14:]
-
-    def setproxy(self, *args):
-        """
-        A requests session proxies
-        :param *args: alias required (excel mode)
-        :return: self._session[alias].proxies
-        """
-        try:
-            # if 'headers' in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-            #     alais = (tuple(args)[0]).strip()
-            #     self._session[alais].headers = kwargs['headers']
-            #     logger.info(f"[{sys._getframe().f_code.co_name}]-->self._session[{alais}].headers==>>{self._session[alais].headers}")
-            #     return self._session[alais].headers
-            # elif 'headers' not in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-            #     logger.error(f'[{sys._getframe().f_code.co_name}]-->{kwargs.keys()} is not correct headers, please check it.')
-            # else:  # excel mode
-            request_key = str(tuple(args)[0]).strip()
-            request_data = str(tuple(args)[1]).strip()
-            if ',' not in request_key:
-                msg = f'[{mTime()}][setproxy]❌ No session alias, please check it.'
-                allure_step_error(msg)
-                return "FAIL", msg[14:]
-            else:
-                new_input_data = request_key.split(',', 1)
-                alias = (new_input_data[0]).strip()
-                _key = (new_input_data[1]).strip()
-                try:
-                    self._session[alias].headers[_key] = request_data
-                    allure_step(f"[{mTime()}][setproxy]-->self._session[{alias}].proxies[{_key}]==>>{request_data}")
-                except:
-                    msg = f"[{mTime()}][setproxy]❌ The input session alias '{alias}' incorrect, please check it. self._session{self._session}"
-                    allure_step_error(msg)
-                    return "FAIL", msg[14:]
-            allure_step(f"[{mTime()}][setproxy] method return alias '{self._session[alias].proxies}'")
-            return "PASS", self._session[alias].proxies
-
-        except Exception as e:
-            msg = f"[{mTime()}][setproxy]❌ -->self.session.proxies incorrect"
-            allure_step_error(msg)
-            return "FAIL", msg[14:]
-
-
-
     def seturl(self, *args):
         request_key = str(tuple(args)[0]).strip()
         if (request_key is not None) and (request_key.startswith('http')):
@@ -180,12 +97,12 @@ class Http(object):
         else:
             msg = f"[{mTime()}][seturl]❌ -->The input URl {self.baseurl} incorrect."
             allure_step_error(msg)
-            return "FAIL", msg[14:]
+            raise Exception(msg)
         allure_step(f"[{mTime()}][seturl] method return value:{self.baseurl}")
-        return "PASS", self.baseurl
+        return self.baseurl
 
 
-    def get_api(self, *args, **kwargs):
+    def get_api_py(self, *args, **kwargs):
         """
         for excel mode only (py mode prohibited use)
         :param *args: required (excel mode)
@@ -208,7 +125,7 @@ class Http(object):
             allure_step_error(f"[{mTime()}][get_api]❌ WARNING: {e}]")
             self._json = {}
             self.resp_json = {}
-            return "FAIL", e
+            return Exception(e)
         else:
             try:
                 resp = res.json()
@@ -221,11 +138,12 @@ class Http(object):
                 resp = res.text
                 allure_step(f"[{mTime()}][get_api] after-->[Response.status_code==>>{code}]")
                 allure_step(f"[{mTime()}][get_api] after-->[Response.text==>>\n{resp}]")
+                return code, resp
             else:
                 self._json = {}
                 self.resp_json = resp
                 allure_step(f"[{mTime()}][get_api] method return alias:[{code}/{resp}]")
-                return "PASS", (code, resp)
+                return code, resp
 
     def post_api(self, *args, **kwargs):
         """
@@ -243,15 +161,14 @@ class Http(object):
         if self._json:
             kwargs['json'] = self._json
             allure_step(f"[{mTime()}][post_api] before-->kwargs[json]<==>self._json==>>[{self._json}]")
-        kwargs['timeout'] = 1
+        kwargs['timeout'] = 2
         try:
             res = __session.post(new_url, **kwargs)
         except Exception as e:
             allure_step_error(f"[{mTime()}][post_api]❌ WARNING: {e}]")
             self._json = {}
             self.resp_json = {}
-
-            return "FAIL", e
+            raise Exception(e)
         else:
             try:
                 resp = res.json()
@@ -265,67 +182,12 @@ class Http(object):
                 allure_step(f"warning: {msg}")
                 allure_step(f"[{mTime()}][post_api] after-->[Response.status_code==>>{code}]")
                 allure_step(f"[{mTime()}][post_api] after-->[Response.text==>>\n{resp}]")
+                return code, resp
             else:
                 self._json = {}
                 self.resp_json = resp
                 allure_step(f"[{mTime()}][post_api] method return alias:[{code}/{resp}]")
-                return "PASS", (code, resp)
-
-    def savejson(self, *args, **kwargs):
-        """
-        for get_api/post_api params/data/json (if py mode, json={'p': 'p1'})
-        if tuple(args)[0] == '', tuple(args)[1] required dict
-        if tuple(args)[0] != '', tuple(args)[1] any
-        :param *args: required (excel mode)
-        :param **kwargs: required (py mode)
-        :return: dict/self._json
-        """
-        # if 'json' in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-        #     self._json.update(kwargs['json'])
-        #     logger.info(f"[{sys._getframe().f_code.co_name}]-->self._json.update(kwargs['json'])==>>{self._json}")
-        #     return self._json
-        # elif 'data' in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-        #     self._json.update(kwargs['data'])
-        #     logger.info(f"[{sys._getframe().f_code.co_name}]-->self._json.update(kwargs['data'])==>>{self._json}")
-        #     return self._json
-        # elif 'params' in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-        #     self._json.update(kwargs['params'])
-        #     logger.info(f"[{sys._getframe().f_code.co_name}]-->self._json.update(kwargs['params'])==>>{self._json}")
-        #     return self._json
-        # elif 'params' not in kwargs.keys() and 'data' not in kwargs.keys() and 'json' not in kwargs.keys() and len(kwargs.keys()) != 0:  # py mode
-        #     logger.error(f"[{sys._getframe().f_code.co_name}]-->{kwargs.keys()} is not corrrect parameters, please check it. [params/data/json]")
-        # else:  # excel mode
-        _dict = {}
-        try:
-            input_data = (tuple(args)[0]).strip()
-            request_data = str(tuple(args)[1])
-            allure_step(f"[{mTime()}][savejson] before-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
-            if (request_data.strip().startswith('{') and request_data.strip().endswith('}')) or (request_data.strip().startswith('[') and request_data.strip().endswith(']')):
-                _vlue = request_data.strip().replace('\'', '"').replace('\n', '').replace('\r', '').replace('\t', '')
-                _vluen = self.__get_relations(_vlue)
-                try:
-                    _dict = json.loads(str(_vluen))
-                except Exception as e:
-                    msg = f"[{mTime()}][savejson]❌ convert dict error"
-                    allure_step_error(msg)
-                    return "FAIL", msg[14:]
-                if input_data == '':
-                    self._json = _dict
-                else:
-                    self._json[input_data] = _dict
-                allure_step(f"[{mTime()}][savejson] after-->self._json==>>[{self._json}]")
-                allure_step(f"[{mTime()}][savejson] method return value:[{self._json}]")
-                return "PASS", self._json
-            else:
-                _valuen = self.__get_relations(request_data)
-                self._json[input_data] = _valuen
-                allure_step(f"[{mTime()}][savejson] after-->self._json[{input_data}]==>>[{_valuen}]")
-                allure_step(f"[{mTime()}][savejson] method return value:[{_valuen}]")
-                return "PASS", {f"{input_data}": f"{_valuen}"}
-        except Exception as e:
-            msg = f"[{mTime()}][savejson]❌ convert dict error."
-            allure_step_error(msg)
-            return "FAIL", msg[14:]
+                return code, resp
 
     def save2dict(self, *args, **kwargs):
         """
@@ -345,7 +207,7 @@ class Http(object):
                 if jsonpath.jsonpath(self.resp_json, f"$..{end}") is False:
                     msg = f"[{mTime()}][save2dict] The input path '{end}' not in self.resp_josn, please check it. self.resp_json:\n{self.resp_json}"
                     allure_step_error(msg)
-                    return "FAIL", msg[14:]
+                    return Exception(msg)
                 else:
                     request_data_value = eval(str(self.resp_json) + str(request_data_path))
                     self.relations[request_key] = request_data_value
@@ -356,7 +218,7 @@ class Http(object):
         except Exception as e:
             msg = f"[{mTime()}][save2dict]❌ save dict error.."
             allure_step_error(msg)
-            return "FAIL", msg[14:]
+            return Exception(msg)
 
     def put_api(self):
         pass
@@ -394,7 +256,7 @@ class Http(object):
                             allure_step(f"[{mTime()}]----------数据预处理after:--self.relations[{key}]>>{self.relations[key]}--")
             return param
 
-    def assertInJson(self, *args):
+    def assertInJson_py(self, *args):
         """
         get value through jsonpath(self.resp_json, f'$..{json_path}')
         WARNING: get jsonpath value maybe not unipue
@@ -419,7 +281,7 @@ class Http(object):
         except AssertionError as e:
             msg = f"[{mTime()}][assertInJson]❌ FAIL"
             allure_step_error(msg)
-            return "FAIL", f'ACTUAL_VALUE :[{res}]' + f'<>EXPECT_VALUE :[{request_data}]'
+            return AssertionError(msg)
         else:
             allure_step(f"[{mTime()}][assertInJson] PASS")
             return 'PASS', f'ACTUAL_VALUE :{res}' + f'<>EXPECT_VALUE :{request_data}'
@@ -446,7 +308,7 @@ class Http(object):
         except AssertionError as e:
             msg = f"[{mTime()}][assertAbsPath]❌ FAIL"
             allure_step_error(msg)
-            return "FAIL", f'ACTUAL_VALUE :[{search_value}]' + f'<>EXPECT_VALUE :[{request_data}]'
+            return AssertionError(msg)
         else:
             allure_step(f"[{mTime()}][assertAbsPath] PASS")
             return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{request_data}'
@@ -469,11 +331,11 @@ class Http(object):
                 msg = f"[{mTime()}][assertResp2Json]❌ after--> convert request_data to dict error.{expect_json}"
                 allure_step_error(msg)
                 allure_step_error(f"[{mTime()}][assertResp2Json]❌ FAIL")
-                return "FAIL", msg[14:]
+                return Exception(msg)
         else:
             msg = f"[{mTime()}][assertResp2Json]❌ The input request_data '{expect_json}' incorrect, should be dict string."
             allure_step_error(msg)
-            return "FAIL", msg[14:]
+            return Exception(msg)
         error_count = HandleJson().json_assert(self.resp_json, _dict)
         allure_step(f"[{mTime()}][assertResp2Json] ACTUAL_VALUE:[{self.resp_json}]")
         allure_step(f"[{mTime()}][assertResp2Json] EXPECT_VALUE:[{_dict}]")
@@ -482,7 +344,7 @@ class Http(object):
         except AssertionError as e:
             msg = f"[{mTime()}][assertResp2Json]❌ FAIL"
             allure_step_error(msg)
-            return "FAIL", f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
+            raise AssertionError(msg)
         else:
             allure_step(f"[{mTime()}][assertResp2Json] PASS")
             return 'PASS', f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
@@ -510,7 +372,7 @@ class Http(object):
             except Exception as e:
                 msg = f"[{mTime()}][assertMatch2Json]❌ after--> convert request_data to dict error.{expect_json}"
                 allure_step_error(msg)
-                return "FAIL", msg[14:]
+                raise Exception(msg)
 
             error_count = HandleJson().json_assert(search_value, _dict)
             allure_step(f"[{mTime()}][assertMatch2Json] ACTUAL_VALUE:[{self.resp_json}]")
@@ -520,7 +382,7 @@ class Http(object):
             except AssertionError as e:
                 msg = f"[{mTime()}][assertMatch2Json]❌ FAIL"
                 allure_step_error(msg)
-                return "FAIL", msg[14:] + f' ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
+                raise AssertionError(msg)
             else:
                 allure_step(f"[{mTime()}][assertMatch2Json] PASS")
                 return 'PASS', f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
@@ -534,7 +396,7 @@ class Http(object):
             except AssertionError as e:
                 msg = f"[{mTime()}][assertMatch2Json]❌ FAIL"
                 allure_step_error(msg)
-                return "FAIL", f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_valuen}'
+                raise AssertionError(msg)
             else:
                 allure_step(f"[{mTime()}][assertMatch2Json] PASS")
                 return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_valuen}'

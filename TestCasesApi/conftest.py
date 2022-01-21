@@ -57,11 +57,26 @@ def pytest_configure(config):
 def set_report_folder_api(request):
     """set_report_folder_api
     """
+    flag = request.config.getoption("--html")
     report_dir = ReadWriteConfFile().get_option('report', 'report_dir_folder')
-    logger.info('----set_report_folder_api---report_dir--------')
-    if report_dir == '':
-        _set_exec_ini('report', 'report_dir_folder', mDate()+'_html_api')
-        _set_exec_ini('report', 'report_file_name', f'report_{mDateTime()}.html')
+    if flag is not None:  # html mode
+        if report_dir == '':
+            f1 = mDate()+'_html_api'
+            f2 = f'report_{mDateTime()}.html'
+            _set_exec_ini('report', 'report_dir_folder', f1)
+            _set_exec_ini('report', 'report_file_name', f2)
+            report_path = Path().joinpath('./Report', f1)
+            if not Path(report_path).exists():
+                Path(report_path).mkdir(parents=True, exist_ok=True)
+    else:
+        if report_dir == '':
+            f1 = mDate()+'_allure_api'
+            f2 = f'allure_{mDateTime()}'
+            _set_exec_ini('report', 'report_dir_folder', f1)
+            _set_exec_ini('report', 'report_file_name', f2)
+            report_path = Path().joinpath('./Report', f1, f2)
+            if not Path(report_path).exists():
+                Path(report_path).mkdir(parents=True, exist_ok=True)
     yield
     _set_exec_ini('report', 'report_dir_folder', '')
     _set_exec_ini('report', 'report_file_name', '')
