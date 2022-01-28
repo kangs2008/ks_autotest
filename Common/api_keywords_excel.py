@@ -406,7 +406,8 @@ class Http(object):
         allure_step(f"[{mTime()}][assertInJson] before--> self.resp_json==>>{self.resp_json}")
         allure_step(f"[{mTime()}][assertInJson] before--> request_data(expect)==>>{request_data}")
         res = jsonpath.jsonpath(self.resp_json, f'$..{input_data}')  # 找不到是结果是 False
-
+        if res is None:
+            allure_step(f"[{mTime()}]WARNING jsonpath-->>f'$..{input_data}'==>>{res}==>>{type(res)}")
         allure_step(f"[{mTime()}][assertInJson] ACTUAL_VALUE:[{res}]")
         allure_step(f"[{mTime()}][assertInJson] EXPECT_VALUE:[{request_data}]")
         try:
@@ -415,7 +416,7 @@ class Http(object):
             elif isinstance(res, list) and len(res) > 1:
                 assert request_data in res
             else:
-                assert request_data == res
+                assert request_data == str(res)
         except AssertionError as e:
             msg = f"[{mTime()}][assertInJson]❌ FAIL"
             allure_step_error(msg)
@@ -500,44 +501,56 @@ class Http(object):
         expect_json = str(tuple(args)[1])
         allure_step(f"[{mTime()}][assertMatch2Json] before-->self.resp_json==>>{self.resp_json}")
         allure_step(f"[{mTime()}][assertMatch2Json] before-->request_data(expect)==>>{expect_json}")
-        search_value = jmespath.search(part_path, self.resp_json)
-        allure_step(f"[{mTime()}][assertMatch2Json] after-->self.resp_json.{part_path}==>>{search_value}")
-        if expect_json.strip().startswith('{') or expect_json.strip().startswith('['):
-            _value = expect_json.strip().replace('\'', '"').replace('\n', '').replace('\r', '').replace('\t', '')
-            _valuen = self.__get_relations(_value)
-            try:
-                _dict = json.loads(str(_valuen))
-            except Exception as e:
-                msg = f"[{mTime()}][assertMatch2Json]❌ after--> convert request_data to dict error.{expect_json}"
-                allure_step_error(msg)
-                return "FAIL", msg[14:]
 
-            error_count = HandleJson().json_assert(search_value, _dict)
+        if part_path == '' or part_path == 'null' or part_path == 'None' or part_path == 'resp_json':
+            _expect = self.__resp_assert(expect_json)
+            error_count = HandleJson().json_assert(self.resp_json, _expect)
             allure_step(f"[{mTime()}][assertMatch2Json] ACTUAL_VALUE:[{self.resp_json}]")
-            allure_step(f"[{mTime()}][assertMatch2Json] EXPECT_VALUE:[{_dict}]")
+            allure_step(f"[{mTime()}][assertMatch2Json] EXPECT_VALUE:[{_expect}]")
             try:
                 assert error_count == 0
             except AssertionError as e:
                 msg = f"[{mTime()}][assertMatch2Json]❌ FAIL"
                 allure_step_error(msg)
-                return "FAIL", msg[14:] + f' ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
+                return "FAIL", f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_expect}'
             else:
                 allure_step(f"[{mTime()}][assertMatch2Json] PASS")
-                return 'PASS', f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_dict}'
-        else:  # should be str value, not dict
-            _valuen = self.__get_relations(expect_json)
+                return 'PASS', f'ACTUAL_VALUE :{self.resp_json}' + f'<>EXPECT_VALUE :{_expect}'
+        else:
+            search_value = jmespath.search(part_path, self.resp_json)  # 检索不到返回 None
+            if search_value is None:
+                allure_step(f"[{mTime()}]WARNING jmespath.search-->>f'{part_path}'==>>{search_value}")
+            allure_step(f"[{mTime()}][assertMatch2Json] after-->self.resp_json.{part_path}==>>{search_value}")
+
+            _expect = self.__get_relations(expect_json)
+            error_count = HandleJson().json_assert(search_value, _expect)
 
             allure_step(f"[{mTime()}][assertMatch2Json] ACTUAL_VALUE:[{self.resp_json}]")
-            allure_step(f"[{mTime()}][assertMatch2Json] EXPECT_VALUE:[{_valuen}]")
+            allure_step(f"[{mTime()}][assertMatch2Json] EXPECT_VALUE:[{_expect}]")
             try:
-                assert search_value == _valuen
+                assert error_count == 0
             except AssertionError as e:
                 msg = f"[{mTime()}][assertMatch2Json]❌ FAIL"
                 allure_step_error(msg)
-                return "FAIL", f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_valuen}'
+                return "FAIL", f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_expect}'
             else:
                 allure_step(f"[{mTime()}][assertMatch2Json] PASS")
-                return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_valuen}'
+                return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_expect}'
+
+    def __resp_assert(self, expect_json):
+        if expect_json.strip().startswith('{') or expect_json.strip().startswith('['):
+            _value = expect_json.strip()
+            _valuen = self.__get_relations(_value)
+            try:
+                _dict = eval(str(_valuen))
+            except Exception as e:
+                msg = f"[{mTime()}][assertResp2Json]❌ after--> convert request_data to dict error.{expect_json}"
+                allure_step_error(msg)
+                return "FAIL", msg[14:]
+            return _dict
+        else:
+            _valuen = self.__get_relations(expect_json.strip())
+            return _valuen
 
 def allure_step(value):
     with allure.step(value):

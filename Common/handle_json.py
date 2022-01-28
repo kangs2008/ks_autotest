@@ -56,7 +56,14 @@ class HandleJson:
         :return:
         """
         key_value = key_value[:] if key_value else []
-        if isinstance(indict, dict):
+        if isinstance(indict, list):
+            tier = -1
+            for v in indict:
+                tier = tier+1
+                for d in self.json_generator(v, key_value +['[{0}]'.format(tier)]):
+                    yield d
+
+        elif isinstance(indict, dict):
             for key, value in indict.items():
                 tier = -1
                 if isinstance(value, dict):
@@ -76,7 +83,7 @@ class HandleJson:
                 else:
                     yield key_value + [key, value]
         else:
-            if not key_value:
+            if not key_value == []:
                 yield indict
             else:
                 yield key_value + [indict]
