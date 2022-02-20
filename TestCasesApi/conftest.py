@@ -77,6 +77,11 @@ def set_report_folder_api(request):
             report_path = Path().joinpath('./Report', f1, f2)
             if not Path(report_path).exists():
                 Path(report_path).mkdir(parents=True, exist_ok=True)
+
+@pytest.fixture(scope="function", autouse=False)
+def set_report_folder_api_teardown(request):
+    """set_report_folder_api_teardown
+    """
     yield
     _set_exec_ini('report', 'report_dir_folder', '')
     _set_exec_ini('report', 'report_file_name', '')
@@ -94,7 +99,7 @@ def _set_exec_ini(section, option, value):
 
 def pytest_generate_tests(metafunc):
     """for TestCasesApi data"""
-    if 'data' in metafunc.fixturenames:
+    if '_data' in metafunc.fixturenames:
         excel_file_path = metafunc.config.getoption("--path").strip()
         excel_file_name = metafunc.config.getoption("--name").strip()
         sheet_names = metafunc.config.getoption("--sheet").strip()
@@ -112,16 +117,16 @@ def pytest_generate_tests(metafunc):
             ReadWriteConfFile().get_option('test_data', 'sheet_names')
             ReadWriteConfFile().get_option('test_data', 'sheet_rule')
             ReadWriteConfFile().get_option('test_data', 'sheet_kvconfig')
-        if ',' in sheet_names:
-             sheet_names = sheet_names.split(',')
-        if ',' in sheet_kvconfig:
-            sheet_kvconfig = sheet_kvconfig.split(',')
-        logger.info(f'----pytest_generate_tests---{metafunc.config.getoption("--path")}--------')
 
+        sheet_names = (sheet_names.replace('[','').replace(']','').replace(' ','').replace('\'','').replace('\"','')).split(',')
+        sheet_kvconfig = (sheet_kvconfig.replace('[','').replace(']','').replace(' ','').replace('\'','').replace('\"','')).split(',')
 
         path = Path().joinpath(excel_file_path, excel_file_name)
-        logger.info(f'----pytest_generate_tests---{path}--------')
-        logger.info(f'----pytest_generate_tests---path2--------')
+        logger.info(f'----pytest_generate_tests(--path){excel_file_path}')
+        logger.info(f'----pytest_generate_tests(--name){excel_file_name}')
+        logger.info(f'----pytest_generate_tests(--sheet){sheet_names}')
+        logger.info(f'----pytest_generate_tests(--rule){sheet_rule}')
+        logger.info(f'----pytest_generate_tests(--conf){sheet_kvconfig}')
         api_data = excel_to_case(path, sheet_names, sheet_rule, sheet_kvconfig)
-        logger.info('----pytest_generate_tests---api_data--------')
-        metafunc.parametrize('data', api_data)
+        logger.info(f'----pytest_generate_tests---excel_to_case-->>{api_data}')
+        metafunc.parametrize('_data', api_data)

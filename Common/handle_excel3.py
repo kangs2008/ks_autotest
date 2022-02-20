@@ -308,20 +308,25 @@ def _check_input_sheet_name_in_excel(multi_excel_list, sheet_name_list):
 def _check_input_sheet_name_rule_in_excel(sheet_name_list, sheet_name_rule):
     if isinstance(sheet_name_list, list):
         count = 0
-        for one_sheet in sheet_name_list:
-            if isinstance(sheet_name_rule, list):
-                    msg = f'Input sheet_name_rule type "string", type "list" incorrect.'
-                    raise
-            else:
-                if sheet_name_rule in one_sheet:
-                    count += 1
-        if count != len(sheet_name_list):
-            print(f'Input sheet_name_rule "{sheet_name_rule}" not in sheet_name_list "{sheet_name_list}".')
-            raise
+        if len(sheet_name_list) == 1 and sheet_name_list[0] == '':
+            pass
+        else:
+            for one_sheet in sheet_name_list:
+                if isinstance(sheet_name_rule, list):
+                        msg = f'Input sheet_name_rule type "string", type "list" incorrect.'
+                        print(msg)
+                        raise
+                else:
+                    if sheet_name_rule in one_sheet:
+                        count += 1
+            if count != len(sheet_name_list):
+                print(f'Input sheet_name_rule "{sheet_name_rule}" not in sheet_name_list "{sheet_name_list}".')
+                raise
     else:
         if sheet_name_list != '' and sheet_name_list != None:
             if isinstance(sheet_name_rule, list):
                     msg = f'Input sheet_name_rule type "string", type "list" incorrect.'
+                    print(msg)
                     raise
             else:
                 if sheet_name_rule not in sheet_name_list:
@@ -402,7 +407,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], sheet_name_rule='t_', co
                             sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_one)
                             excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re(sheet_obj,
                                                                                                       config_list,
-                                                                                                      exec_type)
+                                                                                                      exec_value, exec_type)
                             case_kv[f'sheetname'] = sheet_one
                             case_kv[f'file'] = name
                             case_kv[f'filepath'] = Path(file_name)
