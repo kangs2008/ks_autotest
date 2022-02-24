@@ -3,7 +3,7 @@ import pytest, time
 from Common.handle_logger import logger
 from Common.handle_config import ReadWriteConfFile
 from Common.utils import mDate, mDateTime
-from Common.handle_excel3 import excel_to_case
+from Common.handle_excel4 import excel_to_case
 from pathlib import Path
 from py.xml import html
 
@@ -61,7 +61,7 @@ def set_report_folder_api(request):
     report_dir = ReadWriteConfFile().get_option('report', 'report_dir_folder')
     if flag is not None:  # html mode
         if report_dir == '':
-            f1 = mDate()+'_html_api'
+            f1 = mDate() + '_html_api'
             f2 = f'report_{mDateTime()}.html'
             _set_exec_ini('report', 'report_dir_folder', f1)
             _set_exec_ini('report', 'report_file_name', f2)
@@ -70,7 +70,7 @@ def set_report_folder_api(request):
                 Path(report_path).mkdir(parents=True, exist_ok=True)
     else:
         if report_dir == '':
-            f1 = mDate()+'_allure_api'
+            f1 = mDate() + '_allure_api'
             f2 = f'allure_{mDateTime()}'
             _set_exec_ini('report', 'report_dir_folder', f1)
             _set_exec_ini('report', 'report_file_name', f2)
@@ -99,6 +99,7 @@ def _set_exec_ini(section, option, value):
 
 def pytest_generate_tests(metafunc):
     """for TestCasesApi data"""
+    logger.info('*' * 50)
     if '_data' in metafunc.fixturenames:
         excel_file_path = metafunc.config.getoption("--path").strip()
         excel_file_name = metafunc.config.getoption("--name").strip()
@@ -130,3 +131,4 @@ def pytest_generate_tests(metafunc):
         api_data = excel_to_case(path, sheet_names, sheet_rule, sheet_kvconfig)
         logger.info(f'----pytest_generate_tests---excel_to_case-->>{api_data}')
         metafunc.parametrize('_data', api_data)
+    logger.info('*'*50)

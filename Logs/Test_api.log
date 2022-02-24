@@ -1,44 +1,45 @@
-2022-01-20 20:29:48,972 LOG INFO conftest.py-104 line：----pytest_generate_tests---D:\desk20201127\ks_autotest\TestDatas--------
-2022-01-20 20:29:48,972 LOG INFO conftest.py-108 line：----pytest_generate_tests---D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx--------
-2022-01-20 20:29:48,972 LOG INFO conftest.py-109 line：----pytest_generate_tests---path2--------
-2022-01-20 20:29:49,144 LOG INFO conftest.py-111 line：----pytest_generate_tests---api_data--------
-2022-01-20 20:29:49,144 LOG INFO conftest.py-61 line：----set_report_folder_api---report_dir--------
-2022-01-20 20:29:49,144 LOG INFO test_api_excel.py-22 line：-----------setup-----------
-2022-01-20 20:29:49,144 LOG INFO test_api_excel.py-33 line：The report file name is test_apidata.xlsx
-2022-01-20 20:29:49,144 LOG INFO test_api_excel.py-36 line：The report file name is ['test_apidata_report(2).xlsx']
-2022-01-20 20:29:49,144 LOG INFO test_api_excel.py-37 line：The report file path is D:\desk20201127\ks_autotest\Report\html_api\20220120_html_api
-2022-01-20 20:29:49,159 LOG INFO test_api_excel.py-50 line：API_interface_test
-2022-01-20 20:29:49,159 LOG INFO test_api_excel.py-51 line：FILE SHEET： t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx
-2022-01-20 20:29:49,159 LOG INFO test_api_excel.py-109 line：['test_apidata_report(2).xlsx']
-2022-01-20 20:29:49,190 LOG INFO test_api_excel.py-111 line：<openpyxl.workbook.workbook.Workbook object at 0x00000229958063C8>
-2022-01-20 20:29:49,190 LOG INFO test_api_excel.py-112 line：<Worksheet "t_接">
-2022-01-20 20:29:49,284 LOG INFO test_api_excel.py-58 line：Execute test suite: TestAPI
-2022-01-20 20:29:49,284 LOG INFO test_api_excel.py-59 line：Execute test case: t_接
-2022-01-20 20:29:49,284 LOG INFO api_keywords_excel.py-548 line：[001][seturl]-->http://httpbin.org
-2022-01-20 20:29:49,284 LOG INFO api_keywords_excel.py-548 line：[seturl] method return value:http://httpbin.org
-2022-01-20 20:29:49,362 LOG INFO api_keywords_excel.py-548 line：[002][create_session] after-->self._session[s1]==>><requests.sessions.Session object at 0x0000022995926C88>
-2022-01-20 20:29:49,362 LOG INFO api_keywords_excel.py-548 line：[002][create_session] method return value:[{'s1': <requests.sessions.Session object at 0x0000022995926C88>}]
-2022-01-20 20:29:49,456 LOG INFO api_keywords_excel.py-548 line：[setproxy]-->self._session[s1].proxies[https]==>>
-2022-01-20 20:29:49,456 LOG INFO api_keywords_excel.py-548 line：[setproxy] method return alias '{}'
-2022-01-20 20:29:49,534 LOG INFO api_keywords_excel.py-548 line：[savejson] before-->[*ARGS:('p', '康')],[**KWARGS:{}]
-2022-01-20 20:29:49,534 LOG INFO api_keywords_excel.py-548 line：[savejson] after-->self._json[p]==>>[康]
-2022-01-20 20:29:49,534 LOG INFO api_keywords_excel.py-548 line：[savejson] method return value:[康]
-2022-01-20 20:29:49,612 LOG INFO api_keywords_excel.py-548 line：[005][get_api] before-->[URL:http://httpbin.org/get],[*ARGS:('s1,get',)],[**KWARGS:{}]
-2022-01-20 20:29:49,612 LOG INFO api_keywords_excel.py-548 line：[005][get_api] before-->__session[<requests.sessions.Session object at 0x0000022995926C88>]
-2022-01-20 20:29:49,612 LOG INFO api_keywords_excel.py-548 line：[get_api] before-->kwargs[params]<==>self._json==>>[{'p': '康'}]
-2022-01-20 20:29:50,175 LOG INFO api_keywords_excel.py-548 line：[get_api] after-->[Response.status_code==>>200]
-2022-01-20 20:29:50,175 LOG INFO api_keywords_excel.py-548 line：[get_api] after-->[Response.json()==>>{'args': {'p': '康'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'Https': '', 'User-Agent': 'python-requests/2.27.1', 'X-Amzn-Trace-Id': 'Root=1-61e955bb-369a4cd073fff8fa0b25baf5'}, 'origin': '112.42.4.134', 'url': 'http://httpbin.org/get?p=康'}]
-2022-01-20 20:29:50,175 LOG INFO api_keywords_excel.py-548 line：[get_api] method return alias:[200/{'args': {'p': '康'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'Https': '', 'User-Agent': 'python-requests/2.27.1', 'X-Amzn-Trace-Id': 'Root=1-61e955bb-369a4cd073fff8fa0b25baf5'}, 'origin': '112.42.4.134', 'url': 'http://httpbin.org/get?p=康'}]
-2022-01-20 20:29:50,253 LOG INFO api_keywords_excel.py-548 line：[save2dict] before-->[*ARGS:('auser', '=hh')],[**KWARGS:{}]
-2022-01-20 20:29:50,253 LOG INFO api_keywords_excel.py-548 line：[save2dict] after-->self.relations[auser]==>>[hh]
-2022-01-20 20:29:50,253 LOG INFO api_keywords_excel.py-548 line：[save2dict] method return value:[hh]
-2022-01-20 20:29:50,347 LOG INFO api_keywords_excel.py-548 line：[savejson] before-->[*ARGS:('', "{'Accept11':'11*/*'}")],[**KWARGS:{}]
-2022-01-20 20:29:50,347 LOG INFO api_keywords_excel.py-548 line：[savejson] after-->self._json==>>[{'Accept11': '11*/*'}]
-2022-01-20 20:29:50,362 LOG INFO api_keywords_excel.py-548 line：[savejson] method return value:[{'Accept11': '11*/*'}]
-2022-01-20 20:29:50,487 LOG INFO api_keywords_excel.py-548 line：[assertInJson] before--> self.resp_json==>>{'args': {'p': '康'}, 'headers': {'Accept': '*/*', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'Https': '', 'User-Agent': 'python-requests/2.27.1', 'X-Amzn-Trace-Id': 'Root=1-61e955bb-369a4cd073fff8fa0b25baf5'}, 'origin': '112.42.4.134', 'url': 'http://httpbin.org/get?p=康'}
-2022-01-20 20:29:50,487 LOG INFO api_keywords_excel.py-548 line：[assertInJson] before--> request_data(expect)==>>118.159.231.128
-2022-01-20 20:29:50,487 LOG INFO api_keywords_excel.py-548 line：[assertInJson] ACTUAL_VALUE:[['112.42.4.134']]
-2022-01-20 20:29:50,487 LOG INFO api_keywords_excel.py-548 line：[assertInJson] EXPECT_VALUE:[118.159.231.128]
-2022-01-20 20:29:50,487 LOG INFO api_keywords_excel.py-552 line：[assertInJson]❌ FAIL
-2022-01-20 20:29:50,581 LOG INFO test_api_excel.py-83 line：Write Excel：save_excel_teardown
-2022-01-20 20:29:50,581 LOG INFO test_api_excel.py-40 line：-----------teardown-----------
+2022-02-24 20:47:16,805 LOG INFO conftest.py-102 line：**************************************************
+2022-02-24 20:47:16,837 LOG INFO conftest.py-126 line：----pytest_generate_tests(--path)D:\desk20201127\ks_autotest\TestDatas
+2022-02-24 20:47:16,837 LOG INFO conftest.py-127 line：----pytest_generate_tests(--name)test_apidata.xlsx
+2022-02-24 20:47:16,837 LOG INFO conftest.py-128 line：----pytest_generate_tests(--sheet)['t_接']
+2022-02-24 20:47:16,837 LOG INFO conftest.py-129 line：----pytest_generate_tests(--rule)t_
+2022-02-24 20:47:16,837 LOG INFO conftest.py-130 line：----pytest_generate_tests(--conf)['config']
+2022-02-24 20:47:17,071 LOG INFO conftest.py-132 line：----pytest_generate_tests---excel_to_case-->>[{'sheet_name': 't_接', 'insert_sheet': 'for_t_接', 'file_name': 'test_apidata.xlsx', 'file_path': WindowsPath('D:/desk20201127/ks_autotest/TestDatas/test_apidata.xlsx'), 'file_sheet': [{'num': '1', 'exec': '1', 'title': 'for_t_接', 'method': 'savejson', 'request_key': '', 'request_data': "{'Accept11':'11*/*'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '3', 'exec': '3', 'title': 'for_t_接', 'method': 'assertInJson', 'request_key': 'origin', 'request_data': '118.159.231.128', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '17', 'exec': '17', 'title': '', 'method': 'assertInJson', 'request_key': 'origin', 'request_data': '118.159.231.128', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-02-24 20:47:17,071 LOG INFO conftest.py-134 line：**************************************************
+2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-25 line：****************************************************************************************************
+2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-26 line：---TestAPI--------setup-----------
+2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-42 line：The report file name is : test_apidata.xlsx
+2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-48 line：The report html name is : report_20220224_204715.html
+2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-49 line：The report excel name is : ['test_apidata_report.xlsx']
+2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-50 line：The report file path is : D:\desk20201127\ks_autotest\Report\20220224_html_api
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-71 line：API_interface_test
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-72 line：FILE SHEET： t_接  FILE INSERT SHEET： for_t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-75 line：Execute test suite: TestAPI
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-76 line：Execute test case: t_接
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-81 line：3333333
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-120 line：[001]Test title：for_t_接
+2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-138 line：[001]Test datas:【num:[1], title:[for_t_接], method:[savejson], request_key:[], request_data:[{'Accept11':'11*/*'}]】
+2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] before-->[*ARGS:('', "{'Accept11':'11*/*'}")],[**KWARGS:{}]
+2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] after-->self._json==>>[{'Accept11': '11*/*'}]
+2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] method return value:[{'Accept11': '11*/*'}]
+2022-02-24 20:47:17,243 LOG INFO test_api_excel2.py-112 line：555555
+2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-81 line：3333333
+2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-120 line：[002]Test title：for_t_接
+2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-138 line：[002]Test datas:【num:[3], title:[for_t_接], method:[assertInJson], request_key:[origin], request_data:[118.159.231.128]】
+2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> self.resp_json==>>{}
+2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> request_data(expect)==>>118.159.231.128
+2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] ACTUAL_VALUE:[False]
+2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] EXPECT_VALUE:[118.159.231.128]
+2022-02-24 20:47:17,305 LOG ERROR api_keywords_excel.py-525 line：[assertInJson]❌ FAIL
+2022-02-24 20:47:17,446 LOG INFO test_api_excel2.py-112 line：555555
+2022-02-24 20:47:17,508 LOG INFO test_api_excel2.py-81 line：3333333
+2022-02-24 20:47:17,508 LOG INFO test_api_excel2.py-138 line：[003]Test datas:【num:[17], title:[], method:[assertInJson], request_key:[origin], request_data:[118.159.231.128]】
+2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> self.resp_json==>>{}
+2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> request_data(expect)==>>118.159.231.128
+2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] ACTUAL_VALUE:[False]
+2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] EXPECT_VALUE:[118.159.231.128]
+2022-02-24 20:47:17,508 LOG ERROR api_keywords_excel.py-525 line：[assertInJson]❌ FAIL
+2022-02-24 20:47:17,633 LOG INFO test_api_excel2.py-112 line：555555
+2022-02-24 20:47:17,696 LOG INFO test_api_excel2.py-115 line：Write Excel：save_excel_teardown
+2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-57 line：---TestAPI--------teardown-----------
+2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-58 line：****************************************************************************************************
