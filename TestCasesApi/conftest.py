@@ -89,8 +89,6 @@ def set_report_folder_api_teardown(request):
     _set_exec_ini('test_data', 'excel_file_path', '')
     _set_exec_ini('test_data', 'excel_file_name', '')
     _set_exec_ini('test_data', 'sheet_names', '')
-    _set_exec_ini('test_data', 'sheet_rule', '')
-    _set_exec_ini('test_data', 'sheet_kvconfig', '')
 
 def _set_exec_ini(section, option, value):
     ReadWriteConfFile().add_section(section)
@@ -104,31 +102,22 @@ def pytest_generate_tests(metafunc):
         excel_file_path = metafunc.config.getoption("--path").strip()
         excel_file_name = metafunc.config.getoption("--name").strip()
         sheet_names = metafunc.config.getoption("--sheet").strip()
-        sheet_rule = metafunc.config.getoption("--rule").strip()
-        sheet_kvconfig = metafunc.config.getoption("--conf").strip()
         if excel_file_path.lower() != 'no_set_path':
             ReadWriteConfFile().set_option('test_data', 'excel_file_path', excel_file_path)
             ReadWriteConfFile().set_option('test_data', 'excel_file_name', excel_file_name)
             ReadWriteConfFile().set_option('test_data', 'sheet_names', sheet_names)
-            ReadWriteConfFile().set_option('test_data', 'sheet_rule', sheet_rule)
-            ReadWriteConfFile().set_option('test_data', 'sheet_kvconfig', sheet_kvconfig)
         else:
             ReadWriteConfFile().get_option('test_data', 'excel_file_path')
             ReadWriteConfFile().get_option('test_data', 'excel_file_name')
             ReadWriteConfFile().get_option('test_data', 'sheet_names')
-            ReadWriteConfFile().get_option('test_data', 'sheet_rule')
-            ReadWriteConfFile().get_option('test_data', 'sheet_kvconfig')
 
         sheet_names = (sheet_names.replace('[','').replace(']','').replace(' ','').replace('\'','').replace('\"','')).split(',')
-        sheet_kvconfig = (sheet_kvconfig.replace('[','').replace(']','').replace(' ','').replace('\'','').replace('\"','')).split(',')
 
         path = Path().joinpath(excel_file_path, excel_file_name)
         logger.info(f'----pytest_generate_tests(--path){excel_file_path}')
         logger.info(f'----pytest_generate_tests(--name){excel_file_name}')
         logger.info(f'----pytest_generate_tests(--sheet){sheet_names}')
-        logger.info(f'----pytest_generate_tests(--rule){sheet_rule}')
-        logger.info(f'----pytest_generate_tests(--conf){sheet_kvconfig}')
-        api_data = excel_to_case(path, sheet_names, sheet_rule, sheet_kvconfig)
+        api_data = excel_to_case(path, sheet_names)
         logger.info(f'----pytest_generate_tests---excel_to_case-->>{api_data}')
         metafunc.parametrize('_data', api_data)
     logger.info('*'*50)
