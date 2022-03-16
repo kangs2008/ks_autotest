@@ -493,6 +493,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                             if sheet_one in name_rule_list:
                                 case_kv = {}
                                 sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_one)
+                                pub_sheets = Handle_excel(file_name).get_sheets_by_rule(public_sheet)
                                 rule_sheets = Handle_excel(file_name).get_sheets_by_rule('for_' + sheet_one)
                                 insert_sheets, one_insert_sheet = __get_insert_sheets_re(rule_sheets, sheet_one, insert_rule='for_')
 
@@ -503,7 +504,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                     all_sheet_names = Handle_excel(file_name).get_sheets()
                                     print(f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
 
-                                excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, config_sheets, insert_sheets, exec_value, exec_type)
+                                excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, pub_sheets, config_sheets, insert_sheets, exec_value, exec_type)
                                 case_kv[f'sheet_name'] = sheet_one
                                 case_kv[f'insert_sheet'] = one_insert_sheet
                                 case_kv[f'config_sheet'] = one_config_sheet
@@ -516,6 +517,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                     for i, sheet_one in enumerate(name_rule_list):
                         case_kv = {}
                         sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_one)
+                        pub_sheets = Handle_excel(file_name).get_sheets_by_rule(public_sheet)
                         rule_sheets = Handle_excel(file_name).get_sheets_by_rule('for_' + sheet_one)
                         insert_sheets, one_insert_sheet = __get_insert_sheets_re(rule_sheets, sheet_one,
                                                                                 insert_rule='for_')
@@ -527,7 +529,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                             print(
                                 f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
 
-                        excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj,
+                        excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, pub_sheets,
                                                                                                    config_sheets, insert_sheets,
                                                                                                    exec_value,
                                                                                                    exec_type)
@@ -543,6 +545,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                 if sheet_name_list in name_rule_list:
                     case_kv = {}
                     sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_name_list)
+                    pub_sheets = Handle_excel(file_name).get_sheets_by_rule(public_sheet)
                     rule_sheets = Handle_excel(file_name).get_sheets_by_rule('for_' + sheet_name_list)
                     insert_sheets, one_insert_sheet = __get_insert_sheets_re(rule_sheets, sheet_name_list,
                                                                             insert_rule='for_')
@@ -554,7 +557,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                         print(
                             f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
 
-                    excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj,
+                    excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, pub_sheets,
                                                                                                config_sheets,
                                                                                                insert_sheets,
                                                                                                exec_value,
@@ -582,6 +585,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                         if sheet_one in name_rule_list:
                             case_kv = {}
                             sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_one)
+                            pub_sheets = Handle_excel(file_name).get_sheets_by_rule(public_sheet)
                             rule_sheets = Handle_excel(file_name).get_sheets_by_rule('for_' + sheet_one)
                             insert_sheets, one_insert_sheet = __get_insert_sheets_re(rule_sheets, sheet_one,
                                                                                     insert_rule='for_')
@@ -593,7 +597,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                 print(
                                     f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
 
-                            excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj,
+                            excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, pub_sheets,
                                                                                                        config_sheets,
                                                                                                        insert_sheets,
                                                                                                        exec_value,
@@ -610,6 +614,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                 for i, sheet_one in enumerate(name_rule_list):
                     case_kv = {}
                     sheet_obj = Handle_excel(file_name).get_sheet_by_name(sheet_one)
+                    pub_sheets = Handle_excel(file_name).get_sheets_by_rule(public_sheet)
                     rule_sheets = Handle_excel(file_name).get_sheets_by_rule('for_' + sheet_one)
                     insert_sheets, one_insert_sheet = __get_insert_sheets_re(rule_sheets, sheet_name_list,
                                                                             insert_rule='for_')
@@ -621,7 +626,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                         print(
                             f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
 
-                    excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj,
+                    excel_kv_values = Handle_excel(file_name).get_exec_dictList_from_sheet_re2(sheet_obj, pub_sheets,
                                                                                                config_sheets,
                                                                                                insert_sheets,
                                                                                                exec_value,
