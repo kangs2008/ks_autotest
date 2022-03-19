@@ -43,3 +43,132 @@
 2022-02-24 20:47:17,696 LOG INFO test_api_excel2.py-115 line：Write Excel：save_excel_teardown
 2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-57 line：---TestAPI--------teardown-----------
 2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-58 line：****************************************************************************************************
+2022-03-19 11:57:25,021 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
+ < actual >: ['Bill', '戻る', '你好吗'] 
+ < expect >:['Bill', '戻るあ', '你好吗']
+2022-03-19 11:57:37,036 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
+ < actual >: [1, '戻る', '你好吗'] 
+ < expect >:[1, '戻るあ', '你好吗']
+2022-03-19 11:57:49,347 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
+ < actual >: [2, '戻る', '你好吗'] 
+ < expect >:[1, '戻る', '你好吗']
+2022-03-19 12:59:50,856 LOG ERROR handle_json.py-197 line：SON== > ** KEY ** diff:
+ < actual >:['employees'] 
+ < expect >:['employees1']
+2022-03-19 13:00:11,399 LOG ERROR handle_json.py-197 line：SON== > ** KEY ** diff:
+ < actual >:['employees'] 
+ < expect >:['employees1']
+2022-03-19 13:00:58,701 LOG ERROR handle_json.py-198 line：SON== > ** KEY ** diff:
+ < actual >:['employees'] 
+ < expect >:['employees1']
+2022-03-19 13:27:16,528 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:["[.'.e.m.p.l.o.y.e.e.s.[.0.].'.]...戻"] 
+ < expect >:["[.'.e.m.p.l.o.y.e.e.s.1.[.0.].'.]...戻"]
+2022-03-19 13:27:48,532 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...戻'] 
+ < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...戻']
+2022-03-19 13:28:43,735 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:["e.m.p.l.o.y.e.e.s.[.0.]...[.'.戻.る.'"] 
+ < expect >:["e.m.p.l.o.y.e.e.s.1.[.0.]...[.'.戻.る.'"]
+2022-03-19 13:30:15,333 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...[.".戻.る.]'] 
+ < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...[.".戻.る.]']
+2022-03-19 13:30:38,389 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...[.".戻.る."'] 
+ < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...[.".戻.る."']
+2022-03-19 13:36:57,182 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['employees[0]'] 
+ < expect >:['employees1[0]']
+2022-03-19 13:37:39,717 LOG ERROR handle_json.py-211 line：SON== > [employees[0]] ** VALUE ** diff:
+ < actual >: 戻る1 
+ < expect >:戻る
+2022-03-19 13:38:06,298 LOG ERROR handle_json.py-211 line：SON== > [employees[1]] ** VALUE ** diff:
+ < actual >: 1 
+ < expect >:2
+2022-03-19 13:38:25,205 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['employees1[0]', 'employees1[1]'] 
+ < expect >:['employees[0]', 'employees[1]']
+2022-03-19 13:38:49,721 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['employees'] 
+ < expect >:['employees1']
+2022-03-19 13:39:14,456 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['aaa', 'employees'] 
+ < expect >:['aaa', 'employees1']
+2022-03-19 13:39:24,488 LOG ERROR handle_json.py-211 line：SON== > [aaa] ** VALUE ** diff:
+ < actual >: aaa1 
+ < expect >:aaa12
+2022-03-19 13:39:34,457 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['aaa', 'employees'] 
+ < expect >:['aaa1', 'employees']
+2022-03-19 13:39:51,317 LOG ERROR handle_json.py-211 line：SON== > [aaa1] ** VALUE ** diff:
+ < actual >: aaa1 
+ < expect >:aaa12
+2022-03-19 13:40:23,615 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['[0].aaa1', '[0].employees1'] 
+ < expect >:['[0].aaa1', '[0].employees']
+2022-03-19 13:40:48,803 LOG ERROR handle_json.py-211 line：SON== > [[0].employees] ** VALUE ** diff:
+ < actual >: 113 
+ < expect >:11
+2022-03-19 13:41:32,115 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['[0].aaa12', '[0].employees'] 
+ < expect >:['[0].aaa1', '[0].employees']
+2022-03-19 13:41:43,040 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1] ** VALUE ** diff:
+ < actual >: aaa1 
+ < expect >:aaa1z
+2022-03-19 13:42:08,509 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1[1]] ** VALUE ** diff:
+ < actual >: 2 
+ < expect >:21
+2022-03-19 13:42:26,821 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1[0]] ** VALUE ** diff:
+ < actual >: 戻る 
+ < expect >:戻る1
+2022-03-19 13:42:38,212 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees'] 
+ < expect >:['[0].aaa21[0]', '[0].aaa21[1]', '[0].employees']
+2022-03-19 13:43:09,090 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['employees1'] 
+ < expect >:['employees']
+2022-03-19 13:43:20,731 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
+ < actual >: 戻る 
+ < expect >:戻る1
+2022-03-19 13:43:32,839 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
+ < actual >: 11 
+ < expect >:戻る
+2022-03-19 13:43:39,638 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
+ < actual >: 11 
+ < expect >:22
+2022-03-19 13:44:49,592 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
+ < actual >: 121 
+ < expect >:11
+2022-03-19 13:44:57,154 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
+ < actual >:['employees1'] 
+ < expect >:['employees']
+2022-03-19 13:46:44,612 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
+ < actual >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees'] 
+ < expect >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees1']
+2022-03-19 13:47:02,222 LOG ERROR handle_json.py-204 line：SON== > [employees] ** VALUE ** diff:
+ < actual >: 121 
+ < expect >:11
+2022-03-19 13:47:06,253 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
+ < actual >:['employees1'] 
+ < expect >:['employees']
+2022-03-19 13:47:13,893 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
+ < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2]'] 
+ < expect >:['aaa1', 'employees1[0]', 'employees1[1]', 'employees1[2]']
+2022-03-19 13:47:29,427 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
+ < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2]'] 
+ < expect >:['aaa', 'employees1[0]', 'employees1[1]', 'employees1[2]']
+2022-03-19 13:47:42,676 LOG ERROR handle_json.py-204 line：SON== > [employees[1]] ** VALUE ** diff:
+ < actual >: 戻る 
+ < expect >:戻る1
+2022-03-19 13:48:43,452 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
+ < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb1'] 
+ < expect >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb']
+2022-03-19 13:48:53,107 LOG ERROR handle_json.py-204 line：SON== > [employees[2].bbb] ** VALUE ** diff:
+ < actual >: b2bb1 
+ < expect >:bbb1
+2022-03-19 13:49:56,468 LOG ERROR handle_json.py-204 line：SON== > [[0]] ** VALUE ** diff:
+ < actual >: 33 
+ < expect >:44
+2022-03-19 13:51:11,141 LOG ERROR handle_json.py-203 line：SON== > [[1]] ** VALUE ** diff:
+ < actual >: 22 
+ < expect >:222

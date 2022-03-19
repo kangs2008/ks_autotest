@@ -49,45 +49,6 @@ class HandleJson:
         with open(filename, mode='w', encoding='utf-8') as fp:
             json.dump(data, fp)
 
-    def json_generator(self, indict, key_value=None):
-        """
-        :param indict:
-        :param key_value:
-        :return:
-        """
-        key_value = key_value[:] if key_value else []
-        if isinstance(indict, list):
-            tier = -1
-            for v in indict:
-                tier = tier+1
-                for d in self.json_generator(v, key_value +['[{0}]'.format(tier)]):
-                    yield d
-
-        elif isinstance(indict, dict):
-            for key, value in indict.items():
-                tier = -1
-                if isinstance(value, dict):
-                    if len(value)==0:
-                        yield key_value + [key, '{}']
-                    else:
-                        for d in self.json_generator(value, key_value + [key]):
-                            yield d
-                elif isinstance(value, list):
-                    if len(value) == 0:
-                        yield key_value + [key, '[]']
-                    else:
-                        for v in value:
-                            tier =tier +1
-                            for d in self.json_generator(v, key_value + [key +'[{0}]'.format(tier)]):
-                                yield d
-                else:
-                    yield key_value + [key, value]
-        else:
-            if not key_value == []:
-                yield indict
-            else:
-                yield key_value + [indict]
-
     def json_assert(self, a_json, e_json):
 
         """
@@ -164,9 +125,57 @@ class HandleJson:
                 f"[!] RESPONSE-JSON== > ** KEY ** diff:\n < actual >:{sorted(a_flow.keys())} \n < expect >:{sorted(e_flow.keys())}")
             error_count += 1
             allure_step_error(msg)
-        return  error_count
+        return error_count
         # if error_count != 0:
         #     raise 'aaaaaa'
+
+    def json_generator(self, indict, key_value=None):
+        """
+        :param indict:
+        :param key_value:
+        :return:
+        """
+        key_value = key_value[:] if key_value else []
+        # print(indict)
+        if isinstance(indict, list):
+            print('00')
+            tier = -1
+            for v in indict:
+                tier = tier+1
+                for d in self.json_generator(v, key_value + ['[{0}]'.format(tier)]):
+                    yield d
+
+        elif isinstance(indict, dict):
+            print(indict)
+            print(11)
+            for key, value in indict.items():
+                tier = -1
+                print(f"--key--{key}-value-{value}--")
+                if isinstance(value, dict):
+                    print(22)
+                    if len(value) == 0:
+                        yield key_value + [key, '{}']
+                    else:
+                        for d in self.json_generator(value, key_value + [key]):
+                            yield d
+                elif isinstance(value, list):
+                    print(33)
+
+                    if len(value) == 0:
+                        yield key_value + [key, '[]']
+                    else:
+                        for v in value:
+                            tier = tier + 1
+                            print(v, key_value + [key + '[{0}]'.format(tier)])
+                            for d in self.json_generator(v, key_value + [key + '[{0}]'.format(tier)]):
+                                print(f'-d---{d}-------')
+                                yield d
+                else:
+                    print(44)
+                    yield key_value + [key, value]
+        else:
+            yield key_value + [indict]
+
 
     def structure_flow_sub(self, json_gen_obj):
         """
@@ -175,24 +184,36 @@ class HandleJson:
         """
         structure = {}
         for i in self.json_generator(json_gen_obj):
+            print(f"---i----{i}--------{i[:-1]}----{structure.keys()}--------")
             if '.'.join(i[:-1]) in structure.keys() and not isinstance(structure['.'.join(i[:-1])], list):
+                print('---a')
                 structure['.'.join(i[:-1])] = [structure['.'.join(i[:-1])]]
                 structure['.'.join(i[:-1])].append(i[-1])
             elif '.'.join(i[:-1]) in structure.keys() and isinstance(structure['.'.join(i[:-1])], list):
+                print('---b')
                 structure['.'.join(i[:-1])].append(i[-1])
             else:
+                print('---c----------')
                 structure['.'.join(i[:-1])] = i[-1]
         return structure
+
+
 def allure_step_error(value):
     with allure.step(value):
         logger.error(value[14:])
 
 if __name__ == '__main__':
-    a = {"employees": ["Bill", "戻る", "你好吗"]}
-    b = {"employees": ["Bill", "戻るあ", "你好吗"]}
-    # HandleJson().json_assert(a, b)
+    # a = {"employees": [2, "戻る", {'bbb': 'bbb1'}], 'aaa': 'aaa1'}
+    # b = {"employees": [2, "戻る", {'bbb': 'bbb1'}], 'aaa': 'aaa1'}
+    # a = {"employees1": 121}
+    # b = {"employees": 11}
+    # a = [33,{"employees": '11', 'aaa1': ["戻る", 2]}]
+    # b = [33,{"employees": '11', 'aaa1': ["戻る", 2]}]
+    a = [121, 22]
+    b = [121, 22]
+    print(HandleJson().json_assert(a, b))
     # HandleJson().structure_flow_sub(a)
-    print(HandleJson().json_generator(a))
+    # print(HandleJson().json_generator(a))
 
 
 
