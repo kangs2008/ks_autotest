@@ -9,7 +9,7 @@ class RandomData:
     def __init__(self):
         self.f = Faker(locale='zh_CN')  # zh_CN代表中文，不传locale默认值为en_US
 
-    def random_name(self):
+    def random_name(self, *args):
         """
         随机姓名
         :return:

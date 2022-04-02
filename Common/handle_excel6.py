@@ -2,6 +2,7 @@ from openpyxl import load_workbook
 from openpyxl.styles import Font
 import re, os, sys
 from pathlib import Path
+from Common.handle_logger import logger
 
 class Handle_excel():
     def __init__(self, filepath):
@@ -235,7 +236,9 @@ class Handle_excel():
                 _dict_conf.update(_dict)
         else:
             print(f'WARNING: Input config_list is "{config_list}", should be list.')
-
+        # print(f'-pub_dict_conf--{pub_dict_conf}')
+        # print(f'-_dict_conf--{_dict_conf}')
+        pub_dict_conf.update(_dict_conf)
         sheet_values_list = []
         if exec_value is None or exec_value == '':
             sheet_values_list = self.get_dictList_from_sheet(sheet_obj)
@@ -286,21 +289,45 @@ class Handle_excel():
                                     else:
                                         raise Exception(
                                             f'WARNING: The rule_sheets name "{insert_sheet}" not included "{str(value).strip()}".')
-                        change_pub = self._get_re_parameter(pub_dict_conf, value)
-                        change_value = self._get_re_parameter(_dict_conf, value)
-                        if change_pub.startswith('${') and change_pub.endswith('}'):
-                            if change_value.startswith('${') and change_value.endswith('}'):
-                                tempdict[title_value] = change_pub
-                            else:
-                                tempdict[title_value] = change_value
-                        else:
-                            if change_value.startswith('${') and change_value.endswith('}'):
-                                tempdict[title_value] = change_pub
-                            else:
-                                tempdict[title_value] = change_value
+
+                        change_value = self._get_re_parameter(pub_dict_conf, value)
+
+                        tempdict[title_value] = change_value
+
                     if not _insert:
                         sheet_values_list.append(tempdict)
         return sheet_values_list
+
+    def _get_re_parameter2(self, pub_dict, dict_kv, para):
+        pattern = r'[$][{](.*?)[}]'
+        para = str(para)
+        for key in dict_kv.keys():
+            print(f'key-{key}')
+
+            for pub_key in pub_dict.keys():
+                print(f'pub-{pub_key}')
+                if key == pub_key:
+                    res = re.findall(pattern, str(para))  # ${aa}
+                    print(f'res1-{res}-----{para}-')
+                    if res:
+                        for r in res:
+                            if r == key:
+                                # para = para.replace('${' + r + '}', str(pub_dict.get(r, r)))
+                                para = para.replace('${' + r + '}', str(dict_kv.get(r, r)))
+                        # para = [para.replace('{' + r + '}', str(dict_kv.get(r, r))) for r in enumerate(res) if r == key]
+                else:
+                    res = re.findall(pattern, str(para))  # ${aa}
+                    print(f'res2-{res}-----{para}-')
+                    if res:
+                        for r in res:
+                            if r == key:
+                                para = para.replace('${' + r + '}', str(pub_dict.get(r, r)))
+                                # para = para.replace('${' + r + '}', str(dict_kv.get(r, r)))
+        return para
+
+
+
+
 
     def _get_exec_dictList_from_insert_from_sheet_re(self, insert_sheet_one, one_value, config_dict, exec_value='exec', exec_type='y'):
 
@@ -500,6 +527,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                 config_rule_sheets = Handle_excel(file_name).get_sheets_by_rule('config_' + sheet_one)
                                 config_sheets, one_config_sheet = __get_insert_sheets_re(config_rule_sheets, sheet_one,
                                                                                          insert_rule='config_')
+                                logger.error(11)
                                 if not config_sheets:
                                     all_sheet_names = Handle_excel(file_name).get_sheets()
                                     print(f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
@@ -533,6 +561,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                    config_sheets, insert_sheets,
                                                                                                    exec_value,
                                                                                                    exec_type)
+                        logger.error(22)
                         case_kv[f'sheet_name'] = sheet_one
                         case_kv[f'insert_sheet'] = one_insert_sheet
                         case_kv[f'config_sheet'] = one_config_sheet
@@ -562,6 +591,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                insert_sheets,
                                                                                                exec_value,
                                                                                                exec_type)
+                    logger.error(33)
                     case_kv[f'sheet_name'] = sheet_name_list
                     case_kv[f'insert_sheet'] = one_insert_sheet
                     case_kv[f'config_sheet'] = one_config_sheet
@@ -602,6 +632,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                        insert_sheets,
                                                                                                        exec_value,
                                                                                                        exec_type)
+                            logger.error(44)
                             case_kv[f'sheet_name'] = sheet_one
                             case_kv[f'insert_sheet'] = one_insert_sheet
                             case_kv[f'config_sheet'] = one_config_sheet
@@ -631,6 +662,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                insert_sheets,
                                                                                                exec_value,
                                                                                                exec_type)
+                    logger.error(55)
                     case_kv[f'sheet_name'] = sheet_one
                     case_kv[f'insert_sheet'] = one_insert_sheet
                     case_kv[f'config_sheet'] = one_config_sheet
@@ -656,7 +688,8 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                        config_sheets, insert_sheets,
                                                                                        exec_value,
                                                                                        exec_type)
-            print(excel_kv_values)
+            logger.error(66)
+            # print(excel_kv_values)
             case_kv[f'sheet_name'] = sheet_name_list
             case_kv[f'insert_sheet'] = one_insert_sheet
             case_kv[f'config_sheet'] = one_config_sheet
@@ -685,6 +718,6 @@ def __get_insert_sheets_re(rule_sheets: list, input_sheet, insert_rule='for_'):
 
 if __name__ == '__main__':
     path=r'D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx'
-    aa = excel_to_case(path, 't_接')
+    aa = excel_to_case(path, ['t_接'])
     print(aa)
     pass

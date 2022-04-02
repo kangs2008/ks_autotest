@@ -3,7 +3,7 @@ import pytest, time
 from Common.handle_logger import logger
 from Common.handle_config import ReadWriteConfFile
 from Common.utils import mDate, mDateTime
-from Common.handle_excel4 import excel_to_case
+from Common.handle_excel6 import excel_to_case
 from pathlib import Path
 from py.xml import html
 

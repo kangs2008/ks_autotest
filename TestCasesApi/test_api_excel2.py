@@ -78,7 +78,7 @@ class TestAPI():
         for i in range(1, len(list(_data.values())[4]) + 1):
             va = list(_data.values())[4][i-1]
             row_pos = va['exec']
-            logger.info(3333333)
+            # logger.info(3333333)
             self.allurestep(va, str(i).zfill(3))
             self.__t_data(va, str(i).zfill(3))
 
@@ -109,7 +109,7 @@ class TestAPI():
                 write_to_excel(obj, str(resp), row_pos, col_pos_v)
                 if code:
                     write_to_excel(obj, str(code), row_pos, col_pos_s)
-            logger.info(555555)
+            # logger.info(555555)
             self.save_excel_teardown()
 
         logger.info(f"Write Excel：{'save_excel_teardown'}")

@@ -1,17 +1,27 @@
 import datetime
 import time
+from Common.setting import BASE_DIR
 from functools import wraps
 from Common.handle_logger import logger as case_logger
 import allure
 
-def mTime():
+def basePath(*args):
+    return BASE_DIR
+
+def mTime(*args):
     return str(datetime.datetime.now().strftime('%H:%M:%S.%f')[:-3])
-def mDate():
+def mDate(*args):
     return str(datetime.datetime.now().strftime('%Y%m%d'))
-def mDateTime():
+
+def mDate2(*args):
+    aa = tuple(*args)[0]
+    bb = tuple(*args)[1]
+    return str(datetime.datetime.now().strftime('%Y%m%d'))
+
+def mDateTime(*args):
     return str(datetime.datetime.now().strftime('%Y%m%d_%H%M%S'))
 
-def formatTime():
+def formatTime(*args):
     return time.strftime("%Y-%m-%d_%H-%M-%S", time.localtime())
 
 

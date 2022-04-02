@@ -1,222 +1,78 @@
-2022-02-24 20:47:16,805 LOG INFO conftest.py-102 line：**************************************************
-2022-02-24 20:47:16,837 LOG INFO conftest.py-126 line：----pytest_generate_tests(--path)D:\desk20201127\ks_autotest\TestDatas
-2022-02-24 20:47:16,837 LOG INFO conftest.py-127 line：----pytest_generate_tests(--name)test_apidata.xlsx
-2022-02-24 20:47:16,837 LOG INFO conftest.py-128 line：----pytest_generate_tests(--sheet)['t_接']
-2022-02-24 20:47:16,837 LOG INFO conftest.py-129 line：----pytest_generate_tests(--rule)t_
-2022-02-24 20:47:16,837 LOG INFO conftest.py-130 line：----pytest_generate_tests(--conf)['config']
-2022-02-24 20:47:17,071 LOG INFO conftest.py-132 line：----pytest_generate_tests---excel_to_case-->>[{'sheet_name': 't_接', 'insert_sheet': 'for_t_接', 'file_name': 'test_apidata.xlsx', 'file_path': WindowsPath('D:/desk20201127/ks_autotest/TestDatas/test_apidata.xlsx'), 'file_sheet': [{'num': '1', 'exec': '1', 'title': 'for_t_接', 'method': 'savejson', 'request_key': '', 'request_data': "{'Accept11':'11*/*'}", 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '3', 'exec': '3', 'title': 'for_t_接', 'method': 'assertInJson', 'request_key': 'origin', 'request_data': '118.159.231.128', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '17', 'exec': '17', 'title': '', 'method': 'assertInJson', 'request_key': 'origin', 'request_data': '118.159.231.128', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
-2022-02-24 20:47:17,071 LOG INFO conftest.py-134 line：**************************************************
-2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-25 line：****************************************************************************************************
-2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-26 line：---TestAPI--------setup-----------
-2022-02-24 20:47:17,071 LOG INFO test_api_excel2.py-42 line：The report file name is : test_apidata.xlsx
-2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-48 line：The report html name is : report_20220224_204715.html
-2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-49 line：The report excel name is : ['test_apidata_report.xlsx']
-2022-02-24 20:47:17,087 LOG INFO test_api_excel2.py-50 line：The report file path is : D:\desk20201127\ks_autotest\Report\20220224_html_api
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-71 line：API_interface_test
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-72 line：FILE SHEET： t_接  FILE INSERT SHEET： for_t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-75 line：Execute test suite: TestAPI
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-76 line：Execute test case: t_接
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-81 line：3333333
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-120 line：[001]Test title：for_t_接
-2022-02-24 20:47:17,133 LOG INFO test_api_excel2.py-138 line：[001]Test datas:【num:[1], title:[for_t_接], method:[savejson], request_key:[], request_data:[{'Accept11':'11*/*'}]】
-2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] before-->[*ARGS:('', "{'Accept11':'11*/*'}")],[**KWARGS:{}]
-2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] after-->self._json==>>[{'Accept11': '11*/*'}]
-2022-02-24 20:47:17,133 LOG INFO api_keywords_excel.py-521 line：[savejson] method return value:[{'Accept11': '11*/*'}]
-2022-02-24 20:47:17,243 LOG INFO test_api_excel2.py-112 line：555555
-2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-81 line：3333333
-2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-120 line：[002]Test title：for_t_接
-2022-02-24 20:47:17,305 LOG INFO test_api_excel2.py-138 line：[002]Test datas:【num:[3], title:[for_t_接], method:[assertInJson], request_key:[origin], request_data:[118.159.231.128]】
-2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> self.resp_json==>>{}
-2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> request_data(expect)==>>118.159.231.128
-2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] ACTUAL_VALUE:[False]
-2022-02-24 20:47:17,305 LOG INFO api_keywords_excel.py-521 line：[assertInJson] EXPECT_VALUE:[118.159.231.128]
-2022-02-24 20:47:17,305 LOG ERROR api_keywords_excel.py-525 line：[assertInJson]❌ FAIL
-2022-02-24 20:47:17,446 LOG INFO test_api_excel2.py-112 line：555555
-2022-02-24 20:47:17,508 LOG INFO test_api_excel2.py-81 line：3333333
-2022-02-24 20:47:17,508 LOG INFO test_api_excel2.py-138 line：[003]Test datas:【num:[17], title:[], method:[assertInJson], request_key:[origin], request_data:[118.159.231.128]】
-2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> self.resp_json==>>{}
-2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] before--> request_data(expect)==>>118.159.231.128
-2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] ACTUAL_VALUE:[False]
-2022-02-24 20:47:17,508 LOG INFO api_keywords_excel.py-521 line：[assertInJson] EXPECT_VALUE:[118.159.231.128]
-2022-02-24 20:47:17,508 LOG ERROR api_keywords_excel.py-525 line：[assertInJson]❌ FAIL
-2022-02-24 20:47:17,633 LOG INFO test_api_excel2.py-112 line：555555
-2022-02-24 20:47:17,696 LOG INFO test_api_excel2.py-115 line：Write Excel：save_excel_teardown
-2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-57 line：---TestAPI--------teardown-----------
-2022-02-24 20:47:17,712 LOG INFO test_api_excel2.py-58 line：****************************************************************************************************
-2022-03-19 11:57:25,021 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
- < actual >: ['Bill', '戻る', '你好吗'] 
- < expect >:['Bill', '戻るあ', '你好吗']
-2022-03-19 11:57:37,036 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
- < actual >: [1, '戻る', '你好吗'] 
- < expect >:[1, '戻るあ', '你好吗']
-2022-03-19 11:57:49,347 LOG ERROR handle_json.py-188 line：SON== > [] ** VALUE ** diff:
- < actual >: [2, '戻る', '你好吗'] 
- < expect >:[1, '戻る', '你好吗']
-2022-03-19 12:59:50,856 LOG ERROR handle_json.py-197 line：SON== > ** KEY ** diff:
- < actual >:['employees'] 
- < expect >:['employees1']
-2022-03-19 13:00:11,399 LOG ERROR handle_json.py-197 line：SON== > ** KEY ** diff:
- < actual >:['employees'] 
- < expect >:['employees1']
-2022-03-19 13:00:58,701 LOG ERROR handle_json.py-198 line：SON== > ** KEY ** diff:
- < actual >:['employees'] 
- < expect >:['employees1']
-2022-03-19 13:27:16,528 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:["[.'.e.m.p.l.o.y.e.e.s.[.0.].'.]...戻"] 
- < expect >:["[.'.e.m.p.l.o.y.e.e.s.1.[.0.].'.]...戻"]
-2022-03-19 13:27:48,532 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...戻'] 
- < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...戻']
-2022-03-19 13:28:43,735 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:["e.m.p.l.o.y.e.e.s.[.0.]...[.'.戻.る.'"] 
- < expect >:["e.m.p.l.o.y.e.e.s.1.[.0.]...[.'.戻.る.'"]
-2022-03-19 13:30:15,333 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...[.".戻.る.]'] 
- < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...[.".戻.る.]']
-2022-03-19 13:30:38,389 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['e.m.p.l.o.y.e.e.s.[.0.]...[.".戻.る."'] 
- < expect >:['e.m.p.l.o.y.e.e.s.1.[.0.]...[.".戻.る."']
-2022-03-19 13:36:57,182 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['employees[0]'] 
- < expect >:['employees1[0]']
-2022-03-19 13:37:39,717 LOG ERROR handle_json.py-211 line：SON== > [employees[0]] ** VALUE ** diff:
- < actual >: 戻る1 
- < expect >:戻る
-2022-03-19 13:38:06,298 LOG ERROR handle_json.py-211 line：SON== > [employees[1]] ** VALUE ** diff:
- < actual >: 1 
- < expect >:2
-2022-03-19 13:38:25,205 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['employees1[0]', 'employees1[1]'] 
- < expect >:['employees[0]', 'employees[1]']
-2022-03-19 13:38:49,721 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['employees'] 
- < expect >:['employees1']
-2022-03-19 13:39:14,456 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees'] 
- < expect >:['aaa', 'employees1']
-2022-03-19 13:39:24,488 LOG ERROR handle_json.py-211 line：SON== > [aaa] ** VALUE ** diff:
- < actual >: aaa1 
- < expect >:aaa12
-2022-03-19 13:39:34,457 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees'] 
- < expect >:['aaa1', 'employees']
-2022-03-19 13:39:51,317 LOG ERROR handle_json.py-211 line：SON== > [aaa1] ** VALUE ** diff:
- < actual >: aaa1 
- < expect >:aaa12
-2022-03-19 13:40:23,615 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['[0].aaa1', '[0].employees1'] 
- < expect >:['[0].aaa1', '[0].employees']
-2022-03-19 13:40:48,803 LOG ERROR handle_json.py-211 line：SON== > [[0].employees] ** VALUE ** diff:
- < actual >: 113 
- < expect >:11
-2022-03-19 13:41:32,115 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['[0].aaa12', '[0].employees'] 
- < expect >:['[0].aaa1', '[0].employees']
-2022-03-19 13:41:43,040 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1] ** VALUE ** diff:
- < actual >: aaa1 
- < expect >:aaa1z
-2022-03-19 13:42:08,509 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1[1]] ** VALUE ** diff:
- < actual >: 2 
- < expect >:21
-2022-03-19 13:42:26,821 LOG ERROR handle_json.py-211 line：SON== > [[0].aaa1[0]] ** VALUE ** diff:
- < actual >: 戻る 
- < expect >:戻る1
-2022-03-19 13:42:38,212 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees'] 
- < expect >:['[0].aaa21[0]', '[0].aaa21[1]', '[0].employees']
-2022-03-19 13:43:09,090 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['employees1'] 
- < expect >:['employees']
-2022-03-19 13:43:20,731 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 戻る 
- < expect >:戻る1
-2022-03-19 13:43:32,839 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 11 
- < expect >:戻る
-2022-03-19 13:43:39,638 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 11 
- < expect >:22
-2022-03-19 13:44:49,592 LOG ERROR handle_json.py-211 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 121 
- < expect >:11
-2022-03-19 13:44:57,154 LOG ERROR handle_json.py-211 line：SON== > ** KEY ** diff:
- < actual >:['employees1'] 
- < expect >:['employees']
-2022-03-19 13:46:44,612 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
- < actual >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees'] 
- < expect >:['[0].aaa1[0]', '[0].aaa1[1]', '[0].employees1']
-2022-03-19 13:47:02,222 LOG ERROR handle_json.py-204 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 121 
- < expect >:11
-2022-03-19 13:47:06,253 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
- < actual >:['employees1'] 
- < expect >:['employees']
-2022-03-19 13:47:13,893 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2]'] 
- < expect >:['aaa1', 'employees1[0]', 'employees1[1]', 'employees1[2]']
-2022-03-19 13:47:29,427 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2]'] 
- < expect >:['aaa', 'employees1[0]', 'employees1[1]', 'employees1[2]']
-2022-03-19 13:47:42,676 LOG ERROR handle_json.py-204 line：SON== > [employees[1]] ** VALUE ** diff:
- < actual >: 戻る 
- < expect >:戻る1
-2022-03-19 13:48:43,452 LOG ERROR handle_json.py-204 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb1'] 
- < expect >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb']
-2022-03-19 13:48:53,107 LOG ERROR handle_json.py-204 line：SON== > [employees[2].bbb] ** VALUE ** diff:
- < actual >: b2bb1 
- < expect >:bbb1
-2022-03-19 13:49:56,468 LOG ERROR handle_json.py-204 line：SON== > [[0]] ** VALUE ** diff:
- < actual >: 33 
- < expect >:44
-2022-03-19 13:51:11,141 LOG ERROR handle_json.py-203 line：SON== > [[1]] ** VALUE ** diff:
- < actual >: 22 
- < expect >:222
-2022-03-19 14:01:06,858 LOG ERROR handle_json.py-206 line：SON== > [[1]] ** VALUE ** diff:
- < actual >: 22 
- < expect >:212
-2022-03-19 14:01:27,341 LOG ERROR handle_json.py-206 line：SON== > ** KEY ** diff:
- < actual >:['[0]', '[1].aaa1[0]', '[1].aaa1[1]', '[1].employees'] 
- < expect >:['[0]', '[1].aaa1[0]', '[1].aaa1[1]', '[1].employees1']
-2022-03-19 14:02:00,147 LOG ERROR handle_json.py-206 line：SON== > [[1].employees] ** VALUE ** diff:
- < actual >: 11 
- < expect >:112
-2022-03-19 14:02:16,454 LOG ERROR handle_json.py-206 line：SON== > ** KEY ** diff:
- < actual >:['[0]', '[1].aaa1[0]', '[1].aaa1[1]', '[1].employees'] 
- < expect >:['[0]', '[1].aaa12[0]', '[1].aaa12[1]', '[1].employees']
-2022-03-19 14:02:24,704 LOG ERROR handle_json.py-206 line：SON== > [[1].aaa1[0]] ** VALUE ** diff:
- < actual >: 戻る 
- < expect >:戻る1
-2022-03-19 14:02:33,969 LOG ERROR handle_json.py-206 line：SON== > [[1].aaa1[1]] ** VALUE ** diff:
- < actual >: 2 
- < expect >:22
-2022-03-19 14:02:47,390 LOG ERROR handle_json.py-206 line：SON== > ** KEY ** diff:
- < actual >:['employees1'] 
- < expect >:['employees']
-2022-03-19 14:02:56,874 LOG ERROR handle_json.py-206 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 121 
- < expect >:11
-2022-03-19 14:03:15,107 LOG ERROR handle_json.py-206 line：SON== > ** KEY ** diff:
- < actual >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb'] 
- < expect >:['aaa', 'employees1[0]', 'employees1[1]', 'employees1[2].bbb']
-2022-03-19 14:03:42,023 LOG ERROR handle_json.py-206 line：SON== > [employees[2].bbb] ** VALUE ** diff:
- < actual >: bbb1 
- < expect >:bbb12
-2022-03-19 14:04:37,888 LOG ERROR handle_json.py-188 line：SON== > [employees[1]] ** VALUE ** diff:
- < actual >: 戻る1 
- < expect >:戻る
-2022-03-19 14:04:54,668 LOG ERROR handle_json.py-188 line：SON== > ** KEY ** diff:
- < actual >:['aaa1', 'employees[0]', 'employees[1]', 'employees[2].bbb'] 
- < expect >:['aaa', 'employees[0]', 'employees[1]', 'employees[2].bbb']
-2022-03-19 14:05:08,808 LOG ERROR handle_json.py-188 line：SON== > [[1]] ** VALUE ** diff:
- < actual >: 22 
- < expect >:212
-2022-03-19 14:05:26,681 LOG ERROR handle_json.py-188 line：SON== > [[1]] ** VALUE ** diff:
- < actual >: 221 
- < expect >:22
-2022-03-19 14:05:41,337 LOG ERROR handle_json.py-188 line：SON== > [employees] ** VALUE ** diff:
- < actual >: 111 
- < expect >:11
-2022-03-19 14:05:45,102 LOG ERROR handle_json.py-188 line：SON== > ** KEY ** diff:
- < actual >:['employees1'] 
- < expect >:['employees']
+2022-04-02 22:51:38,344 LOG INFO conftest.py-100 line：**************************************************
+2022-04-02 22:51:38,359 LOG INFO conftest.py-117 line：----pytest_generate_tests(--path)D:\desk20201127\ks_autotest\TestDatas
+2022-04-02 22:51:38,359 LOG INFO conftest.py-118 line：----pytest_generate_tests(--name)test_apidata.xlsx
+2022-04-02 22:51:38,359 LOG INFO conftest.py-119 line：----pytest_generate_tests(--sheet)['t_接']
+2022-04-02 22:51:38,641 LOG ERROR handle_excel6.py-635 line：44
+2022-04-02 22:51:38,641 LOG INFO conftest.py-121 line：----pytest_generate_tests---excel_to_case-->>[{'sheet_name': 't_接', 'insert_sheet': 'for_t_接', 'config_sheet': 'config_t_接', 'file_name': 'test_apidata.xlsx', 'file_path': WindowsPath('D:/desk20201127/ks_autotest/TestDatas/test_apidata.xlsx'), 'file_sheet': [{'num': '1', 'exec': '1', 'title': 'y', 'method': 'seturl', 'request_key': 'http://httpbin.org', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '2', 'exec': '2', 'title': 'y', 'method': 'create_session', 'request_key': 's1', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '3', 'exec': '3', 'title': 'y', 'method': 'setproxy', 'request_key': 's1,https', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '4', 'exec': '4', 'title': '', 'method': 'setheader', 'request_key': 's1,Accept', 'request_data': 'application/json', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '5', 'exec': '5', 'title': 'y', 'method': 'savejson', 'request_key': 'p', 'request_data': '康2222', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '6', 'exec': '6', 'title': '', 'method': 'otherUtils', 'request_key': 'date1', 'request_data': '康2222-#{mDate}--康2222--1234567890-', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '7', 'exec': '7', 'title': '', 'method': 'readJsonFile', 'request_key': 'kw', 'request_data': '#{basePath}/TestDatas/a.json', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '8', 'exec': '8', 'title': 'y', 'method': 'get_api', 'request_key': 's1,get', 'request_data': '', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}, {'num': '9', 'exec': '9', 'title': 'y', 'method': 'save2dict', 'request_key': 'auser', 'request_data': '=hh', 'status': '', 'expect': '', 'return_code': '', 'return_values': ''}]}]
+2022-04-02 22:51:38,641 LOG INFO conftest.py-123 line：**************************************************
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-25 line：****************************************************************************************************
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-26 line：---TestAPI--------setup-----------
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-42 line：The report file name is : test_apidata.xlsx
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-48 line：The report html name is : report_20220402_225137.html
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-49 line：The report excel name is : ['test_apidata_report.xlsx']
+2022-04-02 22:51:38,656 LOG INFO test_api_excel6.py-50 line：The report file path is : D:\desk20201127\ks_autotest\Report\20220402_html_api
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-71 line：API_interface_test
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-72 line：FILE SHEET： t_接  FILE INSERT SHEET： for_t_接  FILE CONFIG SHEET： config_t_接  FILE NAME： test_apidata.xlsx  FILE PATH： D:\desk20201127\ks_autotest\TestDatas\test_apidata.xlsx
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-75 line：Execute test suite: TestAPI
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-76 line：Execute test case: t_接
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-120 line：[001]Test title：y
+2022-04-02 22:51:38,703 LOG INFO test_api_excel6.py-138 line：[001]Test datas:【num:[1], title:[y], method:[seturl], request_key:[http://httpbin.org], request_data:[]】
+2022-04-02 22:51:38,703 LOG INFO api_keywords_excel.py-607 line：[001][seturl]-->http://httpbin.org
+2022-04-02 22:51:38,703 LOG INFO api_keywords_excel.py-607 line：[001][seturl] method return value:http://httpbin.org
+2022-04-02 22:51:38,828 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:38,922 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:38,922 LOG INFO test_api_excel6.py-120 line：[002]Test title：y
+2022-04-02 22:51:38,922 LOG INFO test_api_excel6.py-138 line：[002]Test datas:【num:[2], title:[y], method:[create_session], request_key:[s1], request_data:[]】
+2022-04-02 22:51:38,922 LOG INFO api_keywords_excel.py-607 line：[002][create_session] self._session[s1] == <requests.sessions.Session object at 0x00000208BA076908>
+2022-04-02 22:51:39,094 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:39,188 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:39,188 LOG INFO test_api_excel6.py-120 line：[003]Test title：y
+2022-04-02 22:51:39,188 LOG INFO test_api_excel6.py-138 line：[003]Test datas:【num:[3], title:[y], method:[setproxy], request_key:[s1,https], request_data:[]】
+2022-04-02 22:51:39,188 LOG INFO api_keywords_excel.py-607 line：[003][setproxy]-->self._session[s1].proxies[https]==>>
+2022-04-02 22:51:39,344 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:39,422 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:39,422 LOG INFO test_api_excel6.py-138 line：[004]Test datas:【num:[4], title:[], method:[setheader], request_key:[s1,Accept], request_data:[application/json]】
+2022-04-02 22:51:39,422 LOG INFO api_keywords_excel.py-607 line：[004][setheader]-->self._session[s1].headers[Accept]==>>application/json
+2022-04-02 22:51:39,563 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:39,641 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:39,641 LOG INFO test_api_excel6.py-120 line：[005]Test title：y
+2022-04-02 22:51:39,641 LOG INFO test_api_excel6.py-138 line：[005]Test datas:【num:[5], title:[y], method:[savejson], request_key:[p], request_data:[康2222]】
+2022-04-02 22:51:39,641 LOG INFO api_keywords_excel.py-607 line：[005][savejson] before-->[*ARGS:('p', '康2222')],[**KWARGS:{}]
+2022-04-02 22:51:39,641 LOG INFO api_keywords_excel.py-607 line：[005][savejson] after-->self._json[p]==>>[康2222]
+2022-04-02 22:51:39,641 LOG INFO api_keywords_excel.py-607 line：[005][savejson] method return value:[康2222]
+2022-04-02 22:51:39,797 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:39,859 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:39,859 LOG INFO test_api_excel6.py-138 line：[006]Test datas:【num:[6], title:[], method:[otherUtils], request_key:[date1], request_data:[康2222-#{mDate}--康2222--1234567890-]】
+2022-04-02 22:51:39,859 LOG INFO api_keywords_excel.py-607 line：[006][otherUtils] before-->[*ARGS:('date1', '康2222-#{mDate}--康2222--1234567890-')]
+2022-04-02 22:51:39,859 LOG INFO api_keywords_excel.py-607 line：[006]--<__get_utils>--------数据预处理after:--_method:mDate>>康2222-20220402--康2222--1234567890-
+2022-04-02 22:51:39,859 LOG INFO api_keywords_excel.py-607 line：[006][otherUtils] after-->self.relations['date1']=康2222-20220402--康2222--1234567890-
+2022-04-02 22:51:39,859 LOG INFO api_keywords_excel.py-607 line：[006][otherUtils] method return value:[{'date1':'康2222-20220402--康2222--1234567890-'}]
+2022-04-02 22:51:40,000 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:40,078 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:40,094 LOG INFO test_api_excel6.py-138 line：[007]Test datas:【num:[7], title:[], method:[readJsonFile], request_key:[kw], request_data:[#{basePath}/TestDatas/a.json]】
+2022-04-02 22:51:40,094 LOG INFO api_keywords_excel.py-607 line：[007]--<__get_utils>--------数据预处理after:--_method:basePath>>D:\desk20201127\ks_autotest/TestDatas/a.json
+2022-04-02 22:51:40,094 LOG INFO api_keywords_excel.py-607 line：[007][readJsonFile] after-->self.relations['kw']={'aa_key': 'aa_value'}
+2022-04-02 22:51:40,094 LOG INFO api_keywords_excel.py-607 line：[007][readJsonFile] method return value:{'aa_key': 'aa_value'}
+2022-04-02 22:51:40,250 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:40,344 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:40,344 LOG INFO test_api_excel6.py-120 line：[008]Test title：y
+2022-04-02 22:51:40,344 LOG INFO test_api_excel6.py-138 line：[008]Test datas:【num:[8], title:[y], method:[get_api], request_key:[s1,get], request_data:[]】
+2022-04-02 22:51:40,344 LOG INFO api_keywords_excel.py-607 line：[008] self._session[s1]
+2022-04-02 22:51:40,344 LOG INFO api_keywords_excel.py-607 line：[008][get_api] before-->[URL:http://httpbin.org/get],[*ARGS:('s1,get',)],[**KWARGS:{}]
+2022-04-02 22:51:40,344 LOG INFO api_keywords_excel.py-607 line：[008][get_api] before-->__session[<requests.sessions.Session object at 0x00000208BA076908>]
+2022-04-02 22:51:40,344 LOG INFO api_keywords_excel.py-607 line：[008][get_api] before-->kwargs[params]<==>self._json==>>[{'p': '康2222'}]
+2022-04-02 22:51:41,016 LOG INFO api_keywords_excel.py-607 line：[008][get_api] after-->[Response.status_code==>>200]
+2022-04-02 22:51:41,016 LOG INFO api_keywords_excel.py-607 line：[008][get_api] after-->[Response.json()==>>{'args': {'p': '康2222'}, 'headers': {'Accept': 'application/json', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.27.1', 'X-Amzn-Trace-Id': 'Root=1-624862fa-2e616aa90c77c8767dbcd7cd'}, 'origin': '112.42.4.210', 'url': 'http://httpbin.org/get?p=康2222'}]
+2022-04-02 22:51:41,016 LOG INFO api_keywords_excel.py-607 line：[008][get_api] method return alias:[200/{'args': {'p': '康2222'}, 'headers': {'Accept': 'application/json', 'Accept-Encoding': 'gzip, deflate', 'Host': 'httpbin.org', 'User-Agent': 'python-requests/2.27.1', 'X-Amzn-Trace-Id': 'Root=1-624862fa-2e616aa90c77c8767dbcd7cd'}, 'origin': '112.42.4.210', 'url': 'http://httpbin.org/get?p=康2222'}]
+2022-04-02 22:51:41,203 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:41,281 LOG INFO test_api_excel6.py-81 line：3333333
+2022-04-02 22:51:41,281 LOG INFO test_api_excel6.py-120 line：[009]Test title：y
+2022-04-02 22:51:41,281 LOG INFO test_api_excel6.py-138 line：[009]Test datas:【num:[9], title:[y], method:[save2dict], request_key:[auser], request_data:[=hh]】
+2022-04-02 22:51:41,281 LOG INFO api_keywords_excel.py-607 line：[009][save2dict] before-->[*ARGS:('auser', '=hh')],[**KWARGS:{}]
+2022-04-02 22:51:41,281 LOG INFO api_keywords_excel.py-607 line：[009][save2dict] after-->self.relations[auser]==>>[hh]
+2022-04-02 22:51:41,281 LOG INFO api_keywords_excel.py-607 line：[009][save2dict] method return value:[hh]
+2022-04-02 22:51:41,424 LOG INFO test_api_excel6.py-112 line：555555
+2022-04-02 22:51:41,518 LOG INFO test_api_excel6.py-115 line：Write Excel：save_excel_teardown
+2022-04-02 22:51:41,518 LOG INFO test_api_excel6.py-57 line：---TestAPI--------teardown-----------
+2022-04-02 22:51:41,518 LOG INFO test_api_excel6.py-58 line：****************************************************************************************************
