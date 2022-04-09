@@ -20,6 +20,7 @@ class Http(object):
     def __init__(self):
         self.baseurl = ''
         self.resp_json = {}
+        self.resp_json_alias = {}
         self.relations = {}
         self._json = {}
         self.proxy = {}
@@ -144,7 +145,7 @@ class Http(object):
                 return "FAIL", msg[14:]
             else:
                 allure_step(f"[{mTime()}][{self.step_num}] self._session[{alais}]")
-        return _session, url
+        return _session, url, alais
 
     def __url(self, url_path):
         new_url = ''
@@ -254,7 +255,7 @@ class Http(object):
         :param **kwargs: required (py mode)
         :return: status_code/self.resp_json
         """
-        __session, url = self.__get_alais_url(args)
+        __session, url, alais = self.__get_alais_url(args)
         new_url = self.__url(url)
         if '${' in new_url or '#{' in new_url:
             new_url = self.__get_utils(new_url, py_module)
@@ -282,12 +283,14 @@ class Http(object):
                 allure_step_error(f"[{mTime()}][{self.step_num}][get_api]❌ WARNING: {msg}]")
                 code = res.status_code
                 resp = res.text
+                self.resp_json_alias[alais] = resp
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] after-->[Response.status_code==>>{code}]")
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] after-->[Response.text==>>\n{resp}]")
                 return "PASS", resp, code
             else:
                 self._json = {}
                 self.resp_json = resp
+                self.resp_json_alias[alais] = self.resp_json
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] method return alias:[{code}/{resp}]")
                 return "PASS", resp, code
 
@@ -298,7 +301,7 @@ class Http(object):
         :param **kwargs: required (py mode)
         :return: status_code/self.resp_json
         """
-        __session, url = self.__get_alais_url(args)
+        __session, url, alais = self.__get_alais_url(args)
         new_url = self.__url(url)
         if '${' in new_url or '#{' in new_url:
             new_url = self.__get_utils(new_url, py_module)
@@ -326,6 +329,7 @@ class Http(object):
                 allure_step_error(f"[{mTime()}][{self.step_num}][post_api]❌ WARNING: {msg}]")
                 code = res.status_code
                 resp = res.text
+                self.resp_json_alias[alais] = resp
                 allure_step(f"warning: {msg}")
                 allure_step(f"[{mTime()}][{self.step_num}][post_api] after-->[Response.status_code==>>{code}]")
                 allure_step(f"[{mTime()}][{self.step_num}][post_api] after-->[Response.text==>>\n{resp}]")
@@ -333,8 +337,20 @@ class Http(object):
             else:
                 self._json = {}
                 self.resp_json = resp
+                self.resp_json_alias[alais] = self.resp_json
                 allure_step(f"[{mTime()}][{self.step_num}][post_api] method return alias:[{code}/{resp}]")
                 return "PASS", resp, code
+
+    def resp(self, *args, **kwargs):
+        input_data = (tuple(args)[0]).strip()
+        try:
+            _resp = self.resp_json_alias[input_data]
+        except:
+            msg = f'[{mTime()}]❌ The input alais "{input_data}" incorrect, please check it.'
+            allure_step_error(msg)
+            return "FAIL", msg[14:]
+        allure_step(f"[{mTime()}][{self.step_num}][resp] after-->self.resp_json_alias[{input_data}]==>>{_resp}")
+        return "PASS", _resp
 
     def savejson(self, *args, **kwargs):
         """
@@ -349,67 +365,206 @@ class Http(object):
         try:
             input_data = (tuple(args)[0]).strip()
             request_data = str(tuple(args)[1])
-            allure_step(f"[{mTime()}][{self.step_num}][savejson] before-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
-            if (request_data.strip().startswith('{') and request_data.strip().endswith('}')) or (request_data.strip().startswith('[') and request_data.strip().endswith(']')):
-                _vlue = request_data.strip().replace('\'', '"').replace('\n', '').replace('\r', '').replace('\t', '')
-                _value = self.__get_utils(_vlue, py_module)
-                _vluen = self.__get_relations(_value)
-                try:
-                    _dict = json.loads(str(_vluen))
-                except Exception as e:
-                    msg = f"[{mTime()}][{self.step_num}][savejson]❌ convert dict error"
+            allure_step(f"[{mTime()}][{self.step_num}][savejson] before1-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
+            _value = self.__get_utils(request_data, py_module)
+            logger.error(_value)
+            _valuen = self.__get_relations(_value)
+            allure_step(f"[{mTime()}][{self.step_num}][savejson] before2-->request_data:{_valuen}")
+            logger.error(_valuen)
+            if input_data == '':
+                if _valuen.startswith('{\'') or _valuen.startswith('[{\'') or \
+                        _valuen.startswith('{\"') or _valuen.startswith('[{\"'):
+                    try:
+                        _dict = eval(_valuen)
+                    except Exception as e:
+                        msg = f"[{mTime()}][{self.step_num}][savejson]1❌ convert dict error.\n{e}"
+                        allure_step_error(msg)
+                        return "FAIL", msg[14:]
+                    self._json = _dict
+                    allure_step(f"[{mTime()}][{self.step_num}][savejson]1 after-->self._json==>>{self._json}")
+                    allure_step(f"[{mTime()}][{self.step_num}][savejson]1 method return value:{self._json}")
+                    return "PASS", self._json
+                else:
+                    msg = f"[{mTime()}][{self.step_num}][savejson]1 WARNING: The 'request_key' is '', should be 'dict' type."
                     allure_step_error(msg)
                     return "FAIL", msg[14:]
-                if input_data == '':
-                    self._json = _dict
-                else:
-                    self._json[input_data] = _dict
-                allure_step(f"[{mTime()}][{self.step_num}][savejson] after-->self._json==>>[{self._json}]")
-                allure_step(f"[{mTime()}][{self.step_num}][savejson] method return value:[{self._json}]")
-                return "PASS", self._json
             else:
-                _value = self.__get_utils(request_data, py_module)
-                _valuen = self.__get_relations(_value)
-                self._json[input_data] = _valuen
-                allure_step(f"[{mTime()}][{self.step_num}][savejson] after-->self._json[{input_data}]==>>[{_valuen}]")
-                allure_step(f"[{mTime()}][{self.step_num}][savejson] method return value:[{_valuen}]")
-                return "PASS", {f"{input_data}": f"{_valuen}"}
+                search_value = jmespath.search(input_data, self._json)  # 检索不到返回 None
+                if _valuen.startswith('{\'') or _valuen.startswith('[{\'') or \
+                        _valuen.startswith('{\"') or _valuen.startswith('[{\"'):
+                    try:
+                        _dict = eval(_valuen)
+                    except Exception as e:
+                        msg = f"[{mTime()}][{self.step_num}][savejson]2❌ convert dict error.\n{e}"
+                        allure_step_error(msg)
+                        return "FAIL", msg[14:]
+                    if search_value is None:
+                        allure_step(f"[{mTime()}][{self.step_num}][savejson]2 WARNING: jmespath.search({input_data},self._json)==>>{search_value}")
+                        if '.' in input_data:
+                            msg = f"[{mTime()}][{self.step_num}][savejson]2 WARNING: '.' is in the request_key '{input_data}'"
+                            allure_step_error(msg)
+                            return "FAIL", msg[14:]
+                        self._json[input_data] = _dict
+                    else:
+                        self.__abs_jmespath(input_data, _dict)
+                    allure_step(f"[{mTime()}][{self.step_num}][savejson]2 after-->self._json==>>{self._json}")
+                    allure_step(f'[{mTime()}][{self.step_num}][savejson]2 method return value:{self._json}')
+                    return "PASS", self._json
+                else:
+                    if search_value is None:
+                        allure_step(f"[{mTime()}][{self.step_num}][savejson]3 WARNING: jmespath.search({input_data},self._json)==>>{search_value}")
+                        if '.' in input_data:
+                            msg = f"[{mTime()}][{self.step_num}][savejson]3 WARNING: '.' is in the request_key '{input_data}'"
+                            allure_step_error(msg)
+                            return "FAIL", msg[14:]
+                        self._json[input_data] = _valuen
+                    else:
+                        self.__abs_jmespath(input_data, _valuen)
+
+                    allure_step(f"[{mTime()}][{self.step_num}][savejson]3 after-->self._json==>>{self._json}")
+                    allure_step(f'[{mTime()}][{self.step_num}][savejson]3 method return value:{self._json}')
+                    return "PASS", self._json
+
         except Exception as e:
-            msg = f"[{mTime()}][{self.step_num}][savejson]❌ convert dict error."
+            msg = f"[{mTime()}][{self.step_num}][savejson]❌ convert dict error.\n{e}"
             allure_step_error(msg)
             return "FAIL", msg[14:]
 
-    def save2dict(self, *args, **kwargs):
+    def __abs_jmespath(self, datan, _dict):
+        """ for self._json """
+        dataL = datan.split('.')
+        _list = []
+        for one in dataL:
+            if one.startswith('['):
+                onen = one.replace('[', '').replace(']', '')
+                _list.append(onen)
+            elif not one.startswith('[') and '[' in one:
+                onen = one.split('[')
+                _list.append(onen[0])
+                _list.append(onen[1][:-1])
+            else:
+                _list.append(one)
+        allure_step(f"[{mTime()}][{self.step_num}]----------数据预处理after:self.__abs_jmespath({datan,_dict})")
+        length = len(_list)
+        if length == 1:
+            self._json[_list[0]] = _dict
+        elif length == 2:
+            self._json[_list[0]][_list[1]] = _dict
+        elif length == 3:
+            self._json[_list[0]][_list[1]][_list[2]] = _dict
+        elif length == 4:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]] = _dict
+        elif length == 5:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]] = _dict
+        elif length == 6:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]][_list[5]] = _dict
+        elif length == 7:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]][_list[5]][_list[6]] = _dict
+        elif length == 8:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]][_list[5]][_list[6]][_list[7]] = _dict
+        elif length == 9:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]][_list[5]][_list[6]][_list[7]][_list[8]] = _dict
+        elif length == 10:
+            self._json[_list[0]][_list[1]][_list[2]][_list[3]][_list[4]][_list[5]][_list[6]][_list[7]][_list[8]][_list[9]] = _dict
+        else:
+            print('length > 10')
+
+    def resp2dict(self, *args, **kwargs):
         """
         get vlaue from self.resp_json to self.relations[key]=value
-        1. to self.relations['xcode']=10001 from self.resp_json['a']['b']
+        1. from self.resp_json['a']['b'] to self.relations['xcode']=10001
         2. to self.relations['xcode']=10001 if args contains '=' e.g. =10001
         """
+        _dict = {}
         try:
-            request_key = (tuple(args)[0]).strip()
+            input_data = (tuple(args)[0]).strip()
             request_data = str(tuple(args)[1])
-            allure_step(f"[{mTime()}][{self.step_num}][save2dict] before-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
-            if request_data.startswith('='):
-                _value = self.__get_utils(request_data[1:], py_module)
+            allure_step(f"[{mTime()}][{self.step_num}][resp2json] before-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
+
+            if input_data == '':
+                msg = f"[{mTime()}][{self.step_num}][resp2json]❌ The 'request_key' is '', should not be empty."
+                allure_step_error(msg)
+                return "FAIL", msg[14:]
+            elif request_data.lstrip().startswith('='):
+                _value = self.__get_utils(request_data.lstrip()[1:], py_module)
                 request_data_value = self.__get_relations(_value)
-                self.relations[request_key] = request_data_value
-            else:  # get data from self.resp_json
-                request_data_path, end = self.__abs(request_data)
-                if jsonpath.jsonpath(self.resp_json, f"$..{end}") is False:
-                    msg = f"[{mTime()}][{self.step_num}][save2dict] The input path '{end}' not in self.resp_josn, please check it. self.resp_json:\n{self.resp_json}"
+                if request_data_value.startswith('{\'') or request_data_value.startswith('[{\'') or \
+                        request_data_value.startswith('{\"') or request_data_value.startswith('[{\"'):
+                    try:
+                        _dict = eval(request_data_value)
+                    except Exception as e:
+                        msg = f"[{mTime()}][{self.step_num}][resp2json]1❌ convert dict error.\n{e}"
+                        allure_step_error(msg)
+                        return "FAIL", msg[14:]
+                    self.relations[input_data] = _dict
+                    allure_step(f"[{mTime()}][{self.step_num}][resp2json]1 after-->self.relations==>>{self.relations}")
+                    allure_step(f'[{mTime()}][{self.step_num}][resp2json]1 method return value:'+"{"+f'"{input_data}\": "{_dict}"'+"}")
+                    # return "PASS", {f'{input_data}': f'{_dict}'}
+                    return "PASS", self.relations
+                else:
+                    self.relations[input_data] = request_data_value
+                    allure_step(f"[{mTime()}][{self.step_num}][resp2json]2 after-->self.relations==>>{self.relations}")
+                    allure_step(f'[{mTime()}][{self.step_num}][resp2json]2 method return value:'+"{"+f'"{input_data}\": "{request_data_value}"'+"}")
+                    # return "PASS", {f'{input_data}': f'{request_data_value}'}
+                    return "PASS", self.relations
+            else:
+                _value = self.__get_utils(request_data.strip(), py_module)
+                request_data_value = self.__get_relations(_value)
+                if request_data_value.startswith('{\'') or request_data_value.startswith('[{\'') or \
+                        request_data_value.startswith('{') or request_data_value.startswith('[{') or \
+                        request_data_value.startswith('{\"') or request_data_value.startswith('[{\"'):
+                    msg = f"[{mTime()}][{self.step_num}][resp2json]❌ The 'request_data' startswith '{request_data_value}' incorret."
+                    allure_step_error(msg)
+                    return "FAIL", msg[14:]
+                search_value = jmespath.search(request_data_value, self.resp_json)  # 检索不到返回 None
+                if search_value is None:
+                    msg = f"[{mTime()}][{self.step_num}][resp2json]❌ jmespath.search({request_data_value},self.resp_json)==>>{search_value}"
                     allure_step_error(msg)
                     return "FAIL", msg[14:]
                 else:
-                    request_data_value = eval(str(self.resp_json) + str(request_data_path))
-                    self.relations[request_key] = request_data_value
-
-            allure_step(f"[{mTime()}][{self.step_num}][save2dict] after-->self.relations[{request_key}]==>>[{self.relations[request_key]}]")
-            allure_step(f"[{mTime()}][{self.step_num}][save2dict] method return value:[{request_data_value}]")
-            return "PASS", self.relations
+                    self.relations[input_data] = search_value
+                    allure_step(f"[{mTime()}][{self.step_num}][resp2json]3 after-->self.relations==>>{search_value}")
+                    allure_step(f'[{mTime()}][{self.step_num}][resp2json]3 method return value:'+"{"+f'"{input_data}\": "{search_value}"'+"}")
+                    # return "PASS", {f'{input_data}': f'{search_value}'}
+                    return "PASS", self.relations
         except Exception as e:
-            msg = f"[{mTime()}][{self.step_num}][save2dict]❌ save dict error.."
+            msg = f"[{mTime()}][{self.step_num}][resp2json]❌ convert dict error.\n{e}"
             allure_step_error(msg)
             return "FAIL", msg[14:]
+
+
+
+    # def save2dict(self, *args, **kwargs):
+    #     """
+    #     get vlaue from self.resp_json to self.relations[key]=value
+    #     1. to self.relations['xcode']=10001 from self.resp_json['a']['b']
+    #     2. to self.relations['xcode']=10001 if args contains '=' e.g. =10001
+    #     """
+    #     try:
+    #         request_key = (tuple(args)[0]).strip()
+    #         request_data = str(tuple(args)[1])
+    #         allure_step(f"[{mTime()}][{self.step_num}][save2dict] before-->[*ARGS:{args}],[**KWARGS:{kwargs}]")
+    #         if request_data.startswith('='):
+    #             _value = self.__get_utils(request_data[1:], py_module)
+    #             request_data_value = self.__get_relations(_value)
+    #             self.relations[request_key] = request_data_value
+    #         else:  # get data from self.resp_json
+    #             request_data_path, end = self.__abs(request_data)
+    #             if jsonpath.jsonpath(self.resp_json, f"$..{end}") is False:
+    #                 msg = f"[{mTime()}][{self.step_num}][save2dict] The input path '{end}' not in self.resp_josn, please check it. self.resp_json:\n{self.resp_json}"
+    #                 allure_step_error(msg)
+    #                 return "FAIL", msg[14:]
+    #             else:
+    #                 request_data_value = eval(str(self.resp_json) + str(request_data_path))
+    #                 self.relations[request_key] = request_data_value
+    #
+    #         allure_step(f"[{mTime()}][{self.step_num}][save2dict] after-->self.relations[{request_key}]==>>[{self.relations[request_key]}]")
+    #         allure_step(f"[{mTime()}][{self.step_num}][save2dict] method return value:[{request_data_value}]")
+    #         return "PASS", self.relations
+    #     except Exception as e:
+    #         msg = f"[{mTime()}][{self.step_num}][save2dict]❌ save dict error.."
+    #         allure_step_error(msg)
+    #         return "FAIL", msg[14:]
 
     def put_api(self):
         pass
