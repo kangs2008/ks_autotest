@@ -1,3 +1,4 @@
+import inspect
 import json, sys
 import re
 import allure
@@ -113,18 +114,14 @@ class Http(object):
         """
         alias = (tuple(args)[0]).strip()
         s = requests.Session()
+        self.__random_s = 'alias' + str(random.randint(1000, 9999))
         if alias == '':
-            # msg = f"[{mTime()}][{self.step_num}][create_session]❌ before-->The input parameter does not empty"
-            # allure_step_error(msg)
-            # return "FAIL", msg[14:]
-            self.__random_s = 'alias' + str(random.randint(1000, 9999))
+
             self._session[self.__random_s] = s
             allure_step(f"[{mTime()}][{self.step_num}][create_session] self._session[{self.__random_s}] == {s}")
         else:
             self._session[alias] = s
             allure_step(f"[{mTime()}][{self.step_num}][create_session] self._session[{alias}] == {s}")
-
-        # allure_step(f"[{mTime()}][{self.step_num}][create_session] method return value:[{self._session}]")
         return "PASS", self._session
 
     def __get_alais_url(self, args):
@@ -146,6 +143,27 @@ class Http(object):
             else:
                 allure_step(f"[{mTime()}][{self.step_num}] self._session[{alais}]")
         return _session, url, alais
+
+    def __alias_split(self, args):
+        input_data = (tuple(args)[0]).strip()
+        if ',' not in input_data:
+            _session = self._session[self.__random_s]
+            _key = input_data
+            alias = self.__random_s
+            allure_step(f"[{mTime()}][{self.step_num}][{inspect.stack()[1][3]}.create_session] self._session[{self.__random_s}]")
+        else:
+            new_input_data = input_data.split(',', 1)
+            alias = (new_input_data[0]).strip()
+            _key = (new_input_data[1]).strip()
+            try:
+                _session = self._session[alias]
+            except:
+                msg = f'[{mTime()}]❌ The input alais "{alias}" incorrect, please check it. self._session{self._session}'
+                allure_step_error(msg)
+                return "FAIL", msg[14:]
+            else:
+                allure_step(f"[{mTime()}][{self.step_num}] self._session[{alias}]")
+        return alias, _key, _session
 
     def __url(self, url_path):
         new_url = ''
@@ -210,25 +228,13 @@ class Http(object):
         try:
             request_key = str(tuple(args)[0]).strip()
             request_data = str(tuple(args)[1]).strip()
-            if ',' not in request_key:
-                # msg = f'[{mTime()}][setproxy]❌ No session alias, please check it.'
-                # allure_step_error(msg)
-                # return "FAIL", msg[14:]
+            alias, _key, _session = self.__alias_split(args)
+            if alias is None:
                 self._session[self.__random_s].proxies[request_key] = request_data
                 allure_step(f"[{mTime()}][{self.step_num}][setheader] method return alias '{self._session[self.__random_s].headers}'")
                 return "PASS", self._session[self.__random_s].proxies
             else:
-                new_input_data = request_key.split(',', 1)
-                alias = (new_input_data[0]).strip()
-                _key = (new_input_data[1]).strip()
-                try:
-                    self._session[alias].proxies[_key] = request_data
-                    allure_step(f"[{mTime()}][{self.step_num}][setproxy]-->self._session[{alias}].proxies[{_key}]==>>{request_data}")
-                except:
-                    msg = f"[{mTime()}][{self.step_num}][setproxy]❌ The input session alias '{alias}' incorrect, please check it. self._session{self._session}"
-                    allure_step_error(msg)
-                    return "FAIL", msg[14:]
-                # allure_step(f"[{mTime()}][setproxy] method return alias '{self._session[alias].proxies}'")
+                self._session[self.__random_s].proxies[_key] = request_data
                 return "PASS", self._session[alias].proxies
 
         except Exception as e:
@@ -255,8 +261,8 @@ class Http(object):
         :param **kwargs: required (py mode)
         :return: status_code/self.resp_json
         """
-        __session, url, alais = self.__get_alais_url(args)
-        new_url = self.__url(url)
+        alias, _key, __session = self.__alias_split(args)
+        new_url = self.__url(_key)
         if '${' in new_url or '#{' in new_url:
             new_url = self.__get_utils(new_url, py_module)
             new_url = self.__get_relations(new_url)
@@ -283,14 +289,14 @@ class Http(object):
                 allure_step_error(f"[{mTime()}][{self.step_num}][get_api]❌ WARNING: {msg}]")
                 code = res.status_code
                 resp = res.text
-                self.resp_json_alias[alais] = resp
+                self.resp_json_alias[alias] = resp
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] after-->[Response.status_code==>>{code}]")
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] after-->[Response.text==>>\n{resp}]")
                 return "PASS", resp, code
             else:
                 self._json = {}
                 self.resp_json = resp
-                self.resp_json_alias[alais] = self.resp_json
+                self.resp_json_alias[alias] = self.resp_json
                 allure_step(f"[{mTime()}][{self.step_num}][get_api] method return alias:[{code}/{resp}]")
                 return "PASS", resp, code
 
@@ -501,6 +507,14 @@ class Http(object):
                     allure_step(f'[{mTime()}][{self.step_num}][resp2json]1 method return value:'+"{"+f'"{input_data}\": "{_dict}"'+"}")
                     # return "PASS", {f'{input_data}': f'{_dict}'}
                     return "PASS", self.relations
+                elif request_data_value == '':
+                    self.relations[input_data] = self.resp_json
+                    allure_step(f"[{mTime()}][{self.step_num}][resp2json]2 after-->self.relations==>>{self.relations}")
+                    allure_step(
+                        f'[{mTime()}][{self.step_num}][resp2json]2 method return value:' + "{" + f'"{input_data}\": "{request_data_value}"' + "}")
+                    # return "PASS", {f'{input_data}': f'{request_data_value}'}
+                    return "PASS", self.relations
+
                 else:
                     self.relations[input_data] = request_data_value
                     allure_step(f"[{mTime()}][{self.step_num}][resp2json]2 after-->self.relations==>>{self.relations}")
