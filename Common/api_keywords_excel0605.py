@@ -725,23 +725,24 @@ class Http(object):
     #     else:
     #         allure_step(f"[{mTime()}][{self._step_num}][assertInJson] PASS")
     #         return 'PASS', f'ACTUAL_VALUE :{res}' + f'<>EXPECT_VALUE :{request_data}'
-    def __resp_assert(self, expect_json):
-        if expect_json.strip().startswith('{') or expect_json.strip().startswith('['):
-            _value = expect_json.strip()
-            _value = self.__get_utils(_value, py_module)
-            _valuen = self.__get_relations(_value)
-            try:
-                _dict = eval(str(_valuen))
-            except Exception as e:
-                msg = f"[{mTime()}][{self._step_num}][assertResp2Json]❌ after--> convert request_data to dict error.{expect_json} \n{e}"
-                with allure.step(msg):
-                    logger.error(msg[14:])
-                return "FAIL", msg[19:]
-            return _dict
-        else:
-            _value = self.__get_utils(expect_json.strip(), py_module)
-            _valuen = self.__get_relations(_value)
-            return _valuen
+
+    # def __resp_assert(self, expect_json):
+    #     if expect_json.strip().startswith('{') or expect_json.strip().startswith('['):
+    #         _value = expect_json.strip()
+    #         _value = self.__get_utils(_value, py_module)
+    #         _valuen = self.__get_relations(_value)
+    #         try:
+    #             _dict = eval(str(_valuen))
+    #         except Exception as e:
+    #             msg = f"[{mTime()}][{self._step_num}][assertResp2Json]❌ after--> convert request_data to dict error.{expect_json} \n{e}"
+    #             with allure.step(msg):
+    #                 logger.error(msg[14:])
+    #             return "FAIL", msg[19:]
+    #         return _dict
+    #     else:
+    #         _value = self.__get_utils(expect_json.strip(), py_module)
+    #         _valuen = self.__get_relations(_value)
+    #         return _valuen
 
     def assert_resp_json(self, *args):
         """
@@ -772,12 +773,12 @@ class Http(object):
                     msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ Convert 'request_data' to dict incorrect, string >> '{_valuen}' \n{e}"
                     with allure.step(msg):
                         logger.error(msg[14:])
-                    return "FAIL", msg[19:], 'ERROR'
+                    return "FAIL", msg[19:]
             else:
                 msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❓ WARNING Please check string '{expect_json}', should be dict/list ?"
                 with allure.step(msg):
                     logger.error(msg[14:])
-                return "FAIL", msg[19:], 'ERROR'
+                return "FAIL", msg[19:]
 
             msg = f"[{mTime()}][{self._step_num}][assert_resp_json] ACTUAL_VALUE:[{self._recent_resp_json}]"
             with allure.step(msg):
@@ -807,7 +808,6 @@ class Http(object):
             msg = f"[{mTime()}][{self._step_num}][assert_resp_json] after-->jmespath.search({part_path}, self._recent_resp_json)==>>{search_value}"
             with allure.step(msg):
                 logger.info(msg[14:])
-            # _expect = self.__resp_assert(expect_json)
             if (expect_json.startswith('{') and expect_json.endswith('}')) or \
                 (expect_json.startswith('[') and expect_json.endswith(']')):
                 _value = self.__get_utils(expect_json, py_module)
@@ -818,19 +818,19 @@ class Http(object):
                     msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ Convert request_data to dict incorrect, string >> '{_valuen}' \n{e}"
                     with allure.step(msg):
                         logger.error(msg[14:])
-                    return "FAIL", msg[19:], 'ERROR'
+                    return "FAIL", msg[19:]
             else:
                 msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❓ WARNING Please check string '{expect_json}', should be dict/list ?"
                 with allure.step(msg):
                     logger.error(msg[14:])
-                return "FAIL", msg[19:], 'ERROR'
+                return "FAIL", msg[19:]
             try:
                 _search_value = eval(str(search_value))
             except Exception as e:
                 msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ Convert search_value to dict incorrect, string >> '{str(search_value)}' \n{e}"
                 with allure.step(msg):
                     logger.error(msg[14:])
-                return "FAIL", msg[19:], 'ERROR'
+                return "FAIL", msg[19:]
             error_count = HandleJson().json_assert(search_value, _dict)
 
             msg = f"[{mTime()}][{self._step_num}][assert_resp_json] ACTUAL_VALUE:[{search_value}]"
@@ -852,31 +852,69 @@ class Http(object):
                     logger.info(msg[14:])
                 return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{_dict}'
 
+    def assert_resp_str(self, *args):
+        """
+        match dict/str from self.resp_json to compare
+        self.resp_json = {"a": [{"b": "b1"}, {"c": "c1"}]}
+        assertMatch2Json(self, 'a[0]', '{"b": "b1"}')
+        doc: https://jmespath.org/
+        :param part_path: get value from self.resp_json[part_path]
+        :param expect_value: dict/str
+        """
+        part_path = str(tuple(args)[0]).strip()
+        expect_json = str(tuple(args)[1])
+        msg = f"[{mTime()}][{self._step_num}][assert_resp_json] before-->[*ARGS:{args}]"
+        with allure.step(msg):
+            logger.info(msg[14:])
+        msg = f"[{mTime()}][{self._step_num}][assert_resp_json] before-->self._recent_resp_json = {self._recent_resp_json}"
+        with allure.step(msg):
+            logger.info(msg[14:])
 
+        if part_path == '':
+            msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ WARNING The 'request_key' should not empty!"
+            with allure.step(msg):
+                logger.error(msg[14:])
+            return "FAIL", msg[19:]
+        else:
+            search_value = jmespath.search(part_path, self._recent_resp_json)  # 检索不到返回 None
+            if search_value is None:
+                msg = f"[{mTime()}][{self._step_num}]❌ WARNING jmespath.search({part_path}, self._recent_resp_json)==>>{search_value}"
+                with allure.step(msg):
+                    logger.error(msg[14:])
+            msg = f"[{mTime()}][{self._step_num}][assert_resp_json] after-->jmespath.search({part_path}, self._recent_resp_json)==>>{search_value}"
+            with allure.step(msg):
+                logger.info(msg[14:])
 
-    # def resp(self, *args):
-    #     input_data = str(tuple(args)[0]).strip()
-    #     if input_data == '':
-    #         msg = f'[{mTime()}]❌ Save response alias is empty, please check it.'
-    #         allure_step_error(msg)
-    #         return "FAIL", msg[14:]
-    #     else:
-    #         try:
-    #             self.relations[self._sheet_name][self.__random_s]
-    #         except Exception as e:
-    #             self.relations[self._sheet_name][self.__random_s] = {}
-    #         finally:
-    #             try:
-    #                 self.relations[self._sheet_name][self.__random_s][input_data]
-    #             except Exception as e2:
-    #                 self.relations[self._sheet_name][self.__random_s][input_data] = {}
-    #             finally:
-    #                 msg1 = f'[{mTime()}] Create self.relations[{self._sheet_name}][{self.__random_s}][{input_data}]'
-    #                 allure_step(msg1)
-    #                 self.relations[self._sheet_name][self.__random_s][input_data] = self.resp_json_alias[self.__random_s]
-    #         msg = f'[{mTime()}] Save response >> self.relations[{self._sheet_name}][{self.__random_s}][{input_data}] = {self.resp_json_alias[self.__random_s]}'
-    #         allure_step(msg)
-    #         return "PASS", {self.__random_s: {input_data: self.resp_json_alias[self.__random_s]}}
+            try:
+                _search_value = eval(str(search_value))
+            except Exception as e:
+                msg = f"[{mTime()}][{self._step_num}][assert_resp_json]? string >> '{str(search_value)}' \n{e}"
+                with allure.step(msg):
+                    logger.warning(msg[14:])
+            else:
+                msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ The 'search_value' should be String type."
+                with allure.step(msg):
+                    logger.error(msg[14:])
+                return "FAIL", msg[19:]
+
+            msg = f"[{mTime()}][{self._step_num}][assert_resp_json] ACTUAL_VALUE:[{search_value}]"
+            with allure.step(msg):
+                logger.info(msg[14:])
+            msg = f"[{mTime()}][{self._step_num}][assert_resp_json] EXPECT_VALUE:[{expect_json}]"
+            with allure.step(msg):
+                logger.info(msg[14:])
+            try:
+                assert search_value == expect_json
+            except AssertionError as e:
+                msg = f"[{mTime()}][{self._step_num}][assert_resp_json]❌ FAIL {e}"
+                with allure.step(msg):
+                    logger.error(msg[14:])
+                return "FAIL", f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{expect_json}'
+            else:
+                msg = f"[{mTime()}][{self._step_num}][assert_resp_json] PASS"
+                with allure.step(msg):
+                    logger.info(msg[14:])
+                return 'PASS', f'ACTUAL_VALUE :{search_value}' + f'<>EXPECT_VALUE :{expect_json}'
 
     def assert2json(self, *args):
         """
