@@ -3,7 +3,7 @@ from Common.handle_config import ReadWriteConfFile
 from Common.utils import mDate, mDateTime
 from pathlib import Path
 
-excel_file_path = r'D:\desk20201127\ks_autotest\TestDatas'
+excel_file_path = r'E:\git_\ks_autotest\TestDatas'
 excel_file_name = 'test_apidata.xlsx'
 sheet_names = 't_接'  # 't_接,t_接22'
 

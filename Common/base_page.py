@@ -12,7 +12,7 @@ from Common.handle_logger import logger as case_logger
 from Common.setting import PIC_DIR, FREQUENCY, TIMEOUT, RELATIVE_DIR
 from Common.utils import usageTime, mTime
 
-from appium.webdriver.common.mobileby import MobileBy
+# from appium.webdriver.common.mobileby import MobileBy
 
 
 
@@ -27,7 +27,7 @@ LOCATOR_LIST = {
     'tag': By.TAG_NAME,
     'class_name': By.CLASS_NAME,
     # appium
-    'ios': MobileBy.IOS_PREDICATE
+    # 'ios': MobileBy.IOS_PREDICATE
 }
 
 

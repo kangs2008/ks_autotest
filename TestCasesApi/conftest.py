@@ -53,7 +53,7 @@ def pytest_configure(config):
 
 
 
-@pytest.fixture(scope="function", autouse=False)
+@pytest.fixture(scope="class", autouse=False)
 def set_report_folder_api(request):
     """set_report_folder_api
     """
@@ -78,7 +78,7 @@ def set_report_folder_api(request):
             if not Path(report_path).exists():
                 Path(report_path).mkdir(parents=True, exist_ok=True)
 
-@pytest.fixture(scope="function", autouse=False)
+@pytest.fixture(scope="class", autouse=False)
 def set_report_folder_api_teardown(request):
     """set_report_folder_api_teardown
     """

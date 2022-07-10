@@ -62,8 +62,9 @@ class HandleJson:
         a_flow = self.structure_flow_sub(a_json)
         e_flow = self.structure_flow_sub(e_json)
         #检查期望结果是否使用｛IGNORE｝
-        start_reg_pat = u'.*'
+        start_reg_pat = '.*'
         ignore_reg_pat = start_reg_pat + u"{{IGNORE}}\s*$"
+        # ignore_reg_pat = start_reg_pat + "{{IGNORE}}*$"
         ignore_count = 0
         msg = 'success'
         for e_v in e_flow.values():
@@ -91,20 +92,20 @@ class HandleJson:
                     else:
                         if str(a_flow[k]) != v:
                             msg = (
-                                f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
+                                f"[!] RESPONSE-JSON >> [{k}] ** VALUE ** diff:\n < actual >:{str(a_flow[k])}\n < expect >:{v}")
                             error_count += 1
                             allure_step_error(msg)
 
                     if isinstance(str(a_flow[k]), list) and isinstance(v, list):
                         if sorted(str(a_flow[k])) != sorted(v):
                             msg = (
-                                f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
+                                f"[!] RESPONSE-JSON >> [{k}] ** VALUE ** diff:\n < actual >:{str(a_flow[k])}\n < expect >:{v}")
                             error_count += 1
                             allure_step_error(msg)
                         else:
                             if str(a_flow[k]) != v:
                                 msg = (
-                                    f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
+                                    f"[!] RESPONSE-JSON >> [{k}] ** VALUE ** diff:\n < actual >:{str(a_flow[k])}\n < expect >:{v}")
                                 error_count += 1
                                 allure_step_error(msg)
             else: # 默认全部比较
@@ -112,17 +113,17 @@ class HandleJson:
                     v = str(v)
                     if isinstance(str(a_flow[k]), list) and isinstance(v, list):
                         if sorted(str(a_flow[k])) != sorted(v):
-                            msg = (f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
+                            msg = (f"[!] RESPONSE-JSON >> [{k}] ** VALUE ** diff:\n < actual >:{str(a_flow[k])}\n < expect >:{v}")
                             error_count += 1
                             allure_step_error(msg)
                     else:
                         if str(a_flow[k]) != v:
-                            msg = (f"[!] RESPONSE-JSON== > [{k}] ** VALUE ** diff:\n < actual >: {str(a_flow[k])} \n < expect >:{v}")
+                            msg = (f"[!] RESPONSE-JSON >> [{k}] ** VALUE ** diff:\n < actual >:{str(a_flow[k])}\n < expect >:{v}")
                             error_count += 1
                             allure_step_error(msg)
         else:
             msg = (
-                f"[!] RESPONSE-JSON== > ** KEY ** diff:\n < actual >:{sorted(a_flow.keys())} \n < expect >:{sorted(e_flow.keys())}")
+                f"[!] RESPONSE-JSON >> ** KEY ** diff:\n < actual >:{sorted(a_flow.keys())}\n < expect >:{sorted(e_flow.keys())}")
             error_count += 1
             allure_step_error(msg)
         return error_count
@@ -185,10 +186,12 @@ class HandleJson:
 
 def allure_step_error(value):
     with allure.step(value):
-        logger.error(value[14:])
+        logger.error(value)
 
 if __name__ == '__main__':
-    print(HandleJson().json_assert(a, b))
+
+    # print(HandleJson().json_assert(a, b))
+    pass
 
 
 

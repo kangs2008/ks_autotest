@@ -1,3 +1,4 @@
 {	
-	"aa_key": "aa_value"
+	"aa_key": "aa_value",
+	"bb_key": ["bb_value1", "bb_value2"]
 }

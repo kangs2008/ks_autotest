@@ -7,7 +7,7 @@ from Common.handle_logger import logger
 class Handle_excel():
     def __init__(self, filepath):
         self.fp = filepath
-        self.wb = load_workbook(filepath)
+        self.wb = load_workbook(filepath, data_only=True)
 
     def get_sheets(self):
         sheet_names = self.wb.sheetnames
@@ -527,7 +527,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                 config_rule_sheets = Handle_excel(file_name).get_sheets_by_rule('config_' + sheet_one)
                                 config_sheets, one_config_sheet = __get_insert_sheets_re(config_rule_sheets, sheet_one,
                                                                                          insert_rule='config_')
-                                logger.error(11)
+                                # logger.error(11)
                                 if not config_sheets:
                                     all_sheet_names = Handle_excel(file_name).get_sheets()
                                     print(f'WARNING: The config_sheet "config_{sheet_obj.title}" not found, please check it. Excel file sheets:{all_sheet_names}')
@@ -561,7 +561,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                    config_sheets, insert_sheets,
                                                                                                    exec_value,
                                                                                                    exec_type)
-                        logger.error(22)
+                        # logger.error(22)
                         case_kv[f'sheet_name'] = sheet_one
                         case_kv[f'insert_sheet'] = one_insert_sheet
                         case_kv[f'config_sheet'] = one_config_sheet
@@ -591,7 +591,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                insert_sheets,
                                                                                                exec_value,
                                                                                                exec_type)
-                    logger.error(33)
+                    # logger.error(33)
                     case_kv[f'sheet_name'] = sheet_name_list
                     case_kv[f'insert_sheet'] = one_insert_sheet
                     case_kv[f'config_sheet'] = one_config_sheet
@@ -632,7 +632,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                        insert_sheets,
                                                                                                        exec_value,
                                                                                                        exec_type)
-                            logger.error(44)
+                            # logger.error(44)
                             case_kv[f'sheet_name'] = sheet_one
                             case_kv[f'insert_sheet'] = one_insert_sheet
                             case_kv[f'config_sheet'] = one_config_sheet
@@ -662,7 +662,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                                insert_sheets,
                                                                                                exec_value,
                                                                                                exec_type)
-                    logger.error(55)
+                    # logger.error(55)
                     case_kv[f'sheet_name'] = sheet_one
                     case_kv[f'insert_sheet'] = one_insert_sheet
                     case_kv[f'config_sheet'] = one_config_sheet
@@ -688,7 +688,7 @@ def excel_to_case(multi_excel_list, sheet_name_list=[], public_sheet='public', s
                                                                                        config_sheets, insert_sheets,
                                                                                        exec_value,
                                                                                        exec_type)
-            logger.error(66)
+            # logger.error(66)
             # print(excel_kv_values)
             case_kv[f'sheet_name'] = sheet_name_list
             case_kv[f'insert_sheet'] = one_insert_sheet
